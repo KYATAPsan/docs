@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-// @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
-
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
-
-=======
->>>>>>> c5d9e38 (first commit)
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "24san Server",
@@ -165,20 +156,12 @@ const config = {
         ],
         copyright: `Copyright © 24san Server ${new Date().getFullYear()}. All rights reserved.`,
       },
-<<<<<<< HEAD
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-        additionalLanguages: ["php"],
-      },
-=======
       // Prism settings are removed here as requested
       // prism: {
       //   theme: lightCodeTheme,
       //   darkTheme: darkCodeTheme,
       //   additionalLanguages: ["php"],
       // },
->>>>>>> c5d9e38 (first commit)
       announcementBar: {
         id: "support_us",
         content:
@@ -208,8 +191,4 @@ const config = {
   ]
 };
 
-<<<<<<< HEAD
 module.exports = config;
-=======
-module.exports = config;
->>>>>>> c5d9e38 (first commit)
