@@ -15,12 +15,22 @@ function HomepageHeader() {
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
+        <p className="hero__subtitle">
+          {siteConfig.tagline} - A thriving community for Minecraft players.
+          Join us to explore, build, and conquer in the world of 24san!
+        </p>
+        <div className={clsx(styles.buttons, 'flex justify-between')}>
+          {/* 左側の「サーバーに参加する」ボタン */}
+          <Link
+            className="button button--primary button--lg"
+            to="/join">
+            サーバーに参加する ⏱️
+          </Link>
+          {/* 右側の「仕様・コマンドを見る」ボタン */}
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            to="/docs/commands">
+            仕様・コマンドを見る 📄
           </Link>
         </div>
       </div>
@@ -32,8 +42,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.title}`}
+      description="Join the 24san Minecraft Server and experience one of the most dynamic and engaging Minecraft communities!">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
