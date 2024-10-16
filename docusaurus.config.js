@@ -61,7 +61,7 @@ const config = {
         title: "24san",
         logo: {
           alt: "24san Logo",
-          src: "https://minotar.net/helm/KYATAP_san_sub/96.png",
+          src: "img/back_KYATAP.png",
         },
         items: [
           {
