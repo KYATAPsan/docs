@@ -1,14 +1,8 @@
-import React from "react";
-import clsx from "clsx";
-import Layout from "@theme/Layout";
-import Link from "@docusaurus/Link";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import styles from "./index.module.css";
-import HomeFeatures from "../components/HomeFeatures";
-import HomeShotTabs from "../components/HomeShotTabs";
-import HomeFeaturePreview from "../components/HomeFeaturePreview";
-import HomeTestimonials from "../components/HomeTestimonials";
-import HomeCraftDeploy from "../components/HomeCraftDeploy";
+import clsx from 'clsx';
+import Link from '@docusaurus/Link';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Layout from '@theme/Layout';
+import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
@@ -21,15 +15,12 @@ function HomepageHeader() {
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
-        <p className="hero__subtitle">
-          {siteConfig.tagline} - A thriving community for Minecraft players.
-          Join us to explore, build, and conquer in the world of 24san!
-        </p>
+        <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Get Started - Join the 24san Server ⏱️
+            Docusaurus Tutorial - 5min ⏱️
           </Link>
         </div>
       </div>
@@ -41,8 +32,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title}`}
-      description="Join the 24san Minecraft Server and experience one of the most dynamic and engaging Minecraft communities!">
+      title={`Hello from ${siteConfig.title}`}
+      description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
