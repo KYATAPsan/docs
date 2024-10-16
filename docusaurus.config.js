@@ -101,13 +101,13 @@ const config = {
             title: "Documentation",
             items: [
               {
-                label: "Get Started",
+                label: "ドキュメント",
                 to: "/docs/introduction/what-is-24san",
               },
             ],
           },
           {
-            title: "Community",
+            title: "コミュニティ",
             items: [
               {
                 label: "Discord",
@@ -115,41 +115,41 @@ const config = {
               },
               {
                 label: "Twitter",
-                to: "https://twitter.com/24sanserver",
+                to: "https://twitter.com/24san_KYATAP",
               },
               {
-                label: "SpigotMC",
-                to: "https://www.spigotmc.org/resources/24san-suite.102378/",
-              },
-            ],
-          },
-          {
-            title: "Services",
-            items: [
-              {
-                label: "Managed Hosting",
-                to: "https://craftdeploy.com",
-              },
-              {
-                label: "Install Service",
-                to: "https://discord.com/invite/QthB6rPBf7",
-              },
-              {
-                label: "Development",
-                to: "https://discord.com/invite/QthB6rPBf7",
+                label: "YouTube",
+                to: "https://www.youtube.com/@KYATAP",
               },
             ],
           },
           {
-            title: "More",
+            title: "サービス",
             items: [
               {
-                label: "Blog",
+                label: "コマンドの使い方",
+                to: "/docs/introduction/what-is-24san",
+              },
+              {
+                label: "お問い合わせ",
+                to: "https://discord.com/invite/QthB6rPBf7",
+              },
+              {
+                label: "サーバールール",
+                to: "https://discord.com/invite/QthB6rPBf7",
+              },
+            ],
+          },
+          {
+            title: "その他",
+            items: [
+              {
+                label: "お知らせ",
                 to: "/blog",
               },
               {
-                label: "GitHub",
-                to: "https://github.com/24san",
+                label: "チャンネル登録お願いします。",
+                to: "https://www.youtube.com/@KYATAP",
               },
             ],
           },
