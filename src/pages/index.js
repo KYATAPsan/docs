@@ -19,7 +19,8 @@ function HomepageHeader() {
           {siteConfig.tagline} - A thriving community for Minecraft players.
           Join us to explore, build, and conquer in the world of 24san!
         </p>
-        <div className={clsx(styles.buttons, 'flex justify-between')}>
+        {/* ボタンを左右に配置するためのFlexbox */}
+        <div className="flex justify-between mt-4">
           {/* 左側の「サーバーに参加する」ボタン */}
           <Link
             className="button button--primary button--lg"
