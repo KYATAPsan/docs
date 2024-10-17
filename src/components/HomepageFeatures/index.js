@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: "便利なパネル機能",
-    Svg: require('@site/static/img/compass_docs.webp').default,
+    Svg: require('@site/static/img/compass_docs.png').default,
     description: (
       <>
         「24san」では、コンパスやリカバリーコンパスを使ってパネルを開くことで、
