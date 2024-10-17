@@ -61,7 +61,7 @@ const config = {
         title: "24san",
         logo: {
           alt: "24san Logo",
-          src: "https://github.com/KYATAPsan/mc.24san.github.io/blob/main/panel_images/bedrock/Back_KYATAP.png?raw=true",
+          src: "static/img/logo_docs.svg",
         },
         items: [
           {
@@ -93,7 +93,7 @@ const config = {
         style: "dark",
         logo: {
           alt: '24san Logo',
-          src: 'https://github.com/KYATAPsan/mc.24san.github.io/blob/main/panel_images/bedrock/Back_KYATAP.png?raw=true',
+          src: 'static/img/logo_docs.svg',
           className: 'w-64'
         },
         links: [
