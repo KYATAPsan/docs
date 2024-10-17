@@ -28,8 +28,7 @@ const FeatureList = [
     Svg: require('@site/static/img/survival_docs.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        24sanのサバイバルは、初心者でも気軽に楽しめる便利で楽な環境が魅力！いつでも誰かと一緒に遊べるので、24時間いつでもサバイバルを満喫できます。仲間と協力して、楽しい時間を過ごしましょう！
       </>
     ),
   },
