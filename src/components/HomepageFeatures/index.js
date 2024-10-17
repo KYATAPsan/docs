@@ -25,7 +25,7 @@ const FeatureList = [
   },
   {
     title: 'サバイバルを楽しもう！',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/survival_docs.svg').default,
     description: (
       <>
         Extend or customize your website layout by reusing React. Docusaurus can
