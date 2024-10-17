@@ -15,7 +15,7 @@ const FeatureList = [
   },
   {
     title: 'ギルドを作成・参加しよう！',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/guild_docs.svg').default,
     description: (
       <>
         Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
