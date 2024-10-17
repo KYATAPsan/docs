@@ -18,8 +18,8 @@ const FeatureList = [
     Svg: require('@site/static/img/guild_docs.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        ギルドを作成して、自分だけのコミュニティを作りましょう！友達を誘って、一緒に冒険や建築を楽しんでください！
+        ギルドの作成・参加するにはパネルかコマンドを使用します。 <code>docs</code> からパネルやコマンドを確認してみましょう！
       </>
     ),
   },
