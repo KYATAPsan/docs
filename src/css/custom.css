@@ -68,3 +68,12 @@
 .imgFeaturePreview {
   max-width: 1000px;
 }
+.hero-banner {
+  background: var(--ifm-color-primary) url('light_top_back.png') no-repeat top center;
+  background-size: cover;
+}
+
+[data-theme='dark'] .hero-banner {
+  background: var(--ifm-color-primary) url('dark_top_back.png') no-repeat top center;
+  background-size: cover;
+}
