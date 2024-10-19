@@ -32,8 +32,6 @@ const FeatureList = [
       </>
     ),
   },
-];
-const FeatureList_down = [
   {
     title: 'コンテンツ検索',
     Svg: require('@site/static/img/survival_docs.svg').default,
@@ -54,28 +52,17 @@ const FeatureList_down = [
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
+    <div className={clsx('col col--6')} style={{ display: 'flex', justifyContent: 'center', textAlign: 'center' }}>
+      <div>
         <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3" className={styles.boldTitle}>{title}</Heading>
-        <p>{description}</p>
-      </div>
-    </div>
-  );
-}
-function Feature_down({Svg, title, description}) {
-  return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3" className={styles.boldTitle}>{title}</Heading>
-        <p>{description}</p>
+        <div className="padding-horiz--md">
+          <Heading as="h3" className={styles.boldTitle}>
+            {title}
+          </Heading>
+          <p>{description}</p>
+        </div>
       </div>
     </div>
   );
