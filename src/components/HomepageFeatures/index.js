@@ -55,19 +55,45 @@ const FeatureList = [
 function Feature({ Svg, title, description }) {
   return (
     <div
-      className={clsx('col col--6')}
-      style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '2rem' }}
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        marginBottom: '2rem',
+        maxWidth: '500px',
+        flex: '1 1 45%',
+        margin: '1rem',
+      }}
     >
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <Svg role="img" style={{ maxWidth: '100%' }} />
       </div>
-      <div className="text--center padding-horiz--md" style={{ textAlign: 'center', maxWidth: '900px', width: '100%' }}>
-        <Heading as="h3" className={styles.boldTitle}>
-          {title}
-        </Heading>
+      <div className="text--center padding-horiz--md" style={{ textAlign: 'center' }}>
+        <Heading as="h3">{title}</Heading>
         <p>{description}</p>
       </div>
     </div>
+  );
+}
+
+export default function HomepageFeatures() {
+  return (
+    <section className={styles.features}>
+      <div
+        className="container"
+        style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          gap: '1rem',
+        }}
+      >
+        {/* 全ての要素をフレックスで配置 */}
+        {FeatureList.map((props, idx) => (
+          <Feature key={idx} {...props} />
+        ))}
+      </div>
+    </section>
   );
 }
 
