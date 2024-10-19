@@ -32,6 +32,8 @@ const FeatureList = [
       </>
     ),
   },
+];
+const FeatureList = [
   {
     title: 'コンテンツ検索',
     Svg: require('@site/static/img/survival_docs.svg').default,
