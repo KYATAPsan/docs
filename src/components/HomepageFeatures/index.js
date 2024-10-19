@@ -61,7 +61,7 @@ function Feature({ Svg, title, description }) {
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
-      <div className="text--center padding-horiz--md" style={{ textAlign: 'center' }}>
+      <div className="text--center padding-horiz--md" style={{ textAlign: 'center', maxWidth: '300px' }}>
         <Heading as="h3" className={styles.boldTitle}>
           {title}
         </Heading>
