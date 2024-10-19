@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 const FeatureList = [
   {
@@ -69,5 +68,27 @@ function Feature({ Svg, title, description }) {
         <p>{description}</p>
       </div>
     </div>
+  );
+}
+export default function HomepageFeatures() {
+  return (
+    <section className={styles.features}>
+      <div className="container">
+        {/* 上段の3つの要素 */}
+        <div className="row">
+          {FeatureList.slice(0, 3).map((props, idx) => (
+            <Feature key={idx} {...props} />
+          ))}
+        </div>
+        {/* 下段の2つの要素 */}
+        <div className="row justify-content-center" style={{ marginTop: '2rem' }}>
+          {FeatureList.slice(3).map((props, idx) => (
+            <div className={clsx('col col--6')} key={idx} style={{ display: 'flex', justifyContent: 'center' }}>
+              <Feature {...props} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
