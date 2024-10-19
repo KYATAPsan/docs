@@ -34,7 +34,7 @@ const FeatureList = [
   },
   {
     title: 'コンテンツ検索',
-    Svg: require('@site/static/img/search_docs.svg').default,
+    Svg: require('@site/static/img/survival_docs.svg').default,
     description: (
       <>
         コミュニティが必要な情報を簡単に見つけられるように、ドキュメント検索をサポートします。
@@ -43,7 +43,7 @@ const FeatureList = [
   },
   {
     title: 'ドキュメントバージョニング',
-    Svg: require('@site/static/img/versioning_docs.svg').default,
+    Svg: require('@site/static/img/survival_docs.svg').default,
     description: (
       <>
         プロジェクトの全てのバージョンに対応したドキュメントをサポートします。ドキュメントバージョニングを使用して、リリースと同期した情報を提供します。
