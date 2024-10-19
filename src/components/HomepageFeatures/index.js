@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import { useEffect, useState } from 'react';
 
 const FeatureList = [
   {
@@ -52,7 +53,7 @@ const FeatureList = [
   },
 ];
 
-function Feature({ Svg, title, description }) {
+function Feature({ Svg, title, description, isSingleColumn }) {
   return (
     <div
       style={{
@@ -60,8 +61,8 @@ function Feature({ Svg, title, description }) {
         flexDirection: 'column',
         alignItems: 'center',
         marginBottom: '2rem',
-        maxWidth: '400px',
-        flex: '1 1 30%',
+        maxWidth: isSingleColumn ? '100%' : '400px',
+        flex: isSingleColumn ? '1 1 100%' : '1 1 30%',
         margin: '1rem',
       }}
     >
@@ -77,6 +78,19 @@ function Feature({ Svg, title, description }) {
 }
 
 export default function HomepageFeatures() {
+  const [isSingleColumn, setIsSingleColumn] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSingleColumn(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // 初期値設定
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <section className={styles.features}>
       <div
@@ -90,7 +104,7 @@ export default function HomepageFeatures() {
       >
         {/* 全ての要素をフレックスで配置 */}
         {FeatureList.map((props, idx) => (
-          <Feature key={idx} {...props} />
+          <Feature key={idx} {...props} isSingleColumn={isSingleColumn} />
         ))}
       </div>
     </section>
