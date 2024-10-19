@@ -55,13 +55,13 @@ const FeatureList = [
 function Feature({ Svg, title, description }) {
   return (
     <div
-      className={clsx('col col--5')}
+      className={clsx('col col--6')}
       style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '2rem' }}
     >
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
-      <div className="text--center padding-horiz--md" style={{ textAlign: 'center' }}>
+      <div className="text--center padding-horiz--md" style={{ textAlign: 'center', maxWidth: '350px' }}>
         <Heading as="h3" className={styles.boldTitle}>
           {title}
         </Heading>
