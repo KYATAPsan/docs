@@ -22,7 +22,6 @@ function HomepageHeader() {
             to="/docs/intro">
             サーバーを見る ➜
           </Link>
-          {/* 新しいボタンを追加 */}
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro"
