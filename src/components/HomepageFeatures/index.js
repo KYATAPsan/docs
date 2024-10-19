@@ -61,35 +61,12 @@ function Feature({ Svg, title, description }) {
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
-      <div className="text--center padding-horiz--md" style={{ textAlign: 'center', maxWidth: '300px' }}>
+      <div className="text--center padding-horiz--md" style={{ textAlign: 'center', maxWidth: '400px' }}>
         <Heading as="h3" className={styles.boldTitle}>
           {title}
         </Heading>
         <p>{description}</p>
       </div>
     </div>
-  );
-}
-
-export default function HomepageFeatures() {
-  return (
-    <section className={styles.features}>
-      <div className="container">
-        {/* 上段の3つの要素 */}
-        <div className="row">
-          {FeatureList.slice(0, 3).map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
-        {/* 下段の2つの要素 */}
-        <div className="row justify-content-center" style={{ marginTop: '2rem' }}>
-          {FeatureList.slice(3).map((props, idx) => (
-            <div className={clsx('col col--6')} key={idx} style={{ display: 'flex', justifyContent: 'center' }}>
-              <Feature {...props} />
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
   );
 }
