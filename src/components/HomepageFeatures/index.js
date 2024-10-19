@@ -9,7 +9,7 @@ const FeatureList = [
     description: (
       <>
         「24san」では、コンパスやリカバリーコンパスを使ってパネルを開くことで、
-      コマンドを入力せずにサーバーの各種機能を簡単に利用することができます！
+        コマンドを入力せずにサーバーの各種機能を簡単に利用することができます！
       </>
     ),
   },
@@ -31,8 +31,9 @@ const FeatureList = [
         24sanのサバイバルは、初心者でも気軽に楽しめる便利で楽な環境が魅力！いつでも誰かと一緒に遊べるので、24時間いつでもサバイバルを満喫できます。仲間と協力して、楽しい時間を過ごしましょう！
       </>
     ),
-  },//新規追加
-    {
+  },
+  // 新規追加
+  {
     title: 'サバイバルを楽しもう！',
     Svg: require('@site/static/img/survival_docs.svg').default,
     description: (
@@ -40,8 +41,9 @@ const FeatureList = [
         24sanのサバイバルは、初心者でも気軽に楽しめる便利で楽な環境が魅力！いつでも誰かと一緒に遊べるので、24時間いつでもサバイバルを満喫できます。仲間と協力して、楽しい時間を過ごしましょう！
       </>
     ),
-  },//新規追加
-    {
+  },
+  // 新規追加
+  {
     title: 'サバイバルを楽しもう！',
     Svg: require('@site/static/img/survival_docs.svg').default,
     description: (
@@ -54,7 +56,7 @@ const FeatureList = [
 
 function Feature({Svg, title, description}) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx('col col--4', styles.feature)}>
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
@@ -70,7 +72,7 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
+        <div className="row justify-content-center">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
