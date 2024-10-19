@@ -21,14 +21,8 @@
   text-align: center;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 1024px) {
   .features > div {
-    flex: 1 1 30%;
-  }
-}
-
-@media (max-width: 767px) {
-  .features > div {
-    flex: 1 1 100%;
+    flex: 1 1 100%; /* 画面が狭い場合は1列で表示 */
   }
 }
