@@ -11,6 +11,7 @@
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #39b9f1;
+  --ifm-background-image: url('light_top_back.png');
   --ifm-color-primary-dark: #33a7d8;
   --ifm-color-primary-darker: #2c8db7;
   --ifm-color-primary-darkest: #1b6e92;
@@ -25,6 +26,7 @@
 
 [data-theme='dark'] {
   --ifm-color-primary: #39b9f1;
+  --ifm-background-image: url('dark_top_back.png');
   --ifm-color-primary-dark: #38b1e4;
   --ifm-color-primary-darker: #32a4d5;
   --ifm-color-primary-darkest: #3ca0cb;
@@ -38,12 +40,13 @@
   --ifm-background-image: url('dark_top_back.png');
 }
 
-/* Apply the background image wherever --ifm-color-primary is used */
+/* Apply the background image to elements using --ifm-color-primary */
 .some-element-using-primary-color {
-  background: var(--ifm-color-primary);
+  background-color: var(--ifm-color-primary);
   background-image: var(--ifm-background-image);
-  background-size: cover;
   background-repeat: no-repeat;
+  background-position: top; /* Aligns the image at the top */
+  background-size: cover; /* Adjusts the image to cover the element */
 }
 
 
