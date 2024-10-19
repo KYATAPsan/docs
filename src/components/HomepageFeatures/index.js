@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 const FeatureList = [
   {
