@@ -32,23 +32,21 @@ const FeatureList = [
       </>
     ),
   },
-  // 新規追加
   {
-    title: 'サバイバルを楽しもう！',
-    Svg: require('@site/static/img/survival_docs.svg').default,
+    title: 'コンテンツ検索',
+    Svg: require('@site/static/img/search_docs.svg').default,
     description: (
       <>
-        24sanのサバイバルは、初心者でも気軽に楽しめる便利で楽な環境が魅力！いつでも誰かと一緒に遊べるので、24時間いつでもサバイバルを満喫できます。仲間と協力して、楽しい時間を過ごしましょう！
+        コミュニティが必要な情報を簡単に見つけられるように、ドキュメント検索をサポートします。
       </>
     ),
   },
-  // 新規追加
   {
-    title: 'サバイバルを楽しもう！',
-    Svg: require('@site/static/img/survival_docs.svg').default,
+    title: 'ドキュメントバージョニング',
+    Svg: require('@site/static/img/versioning_docs.svg').default,
     description: (
       <>
-        24sanのサバイバルは、初心者でも気軽に楽しめる便利で楽な環境が魅力！いつでも誰かと一緒に遊べるので、24時間いつでもサバイバルを満喫できます。仲間と協力して、楽しい時間を過ごしましょう！
+        プロジェクトの全てのバージョンに対応したドキュメントをサポートします。ドキュメントバージョニングを使用して、リリースと同期した情報を提供します。
       </>
     ),
   },
@@ -56,7 +54,7 @@ const FeatureList = [
 
 function Feature({Svg, title, description}) {
   return (
-    <div className={clsx('col col--4', styles.feature)}>
+    <div className={clsx('col col--4')}>
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
@@ -72,9 +70,14 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row justify-content-center">
-          {FeatureList.map((props, idx) => (
+        <div className="row">
+          {FeatureList.slice(0, 3).map((props, idx) => (
             <Feature key={idx} {...props} />
+          ))}
+        </div>
+        <div className="row justify-content-center" style={{ marginTop: '2rem' }}>
+          {FeatureList.slice(3).map((props, idx) => (
+            <Feature key={idx + 3} {...props} />
           ))}
         </div>
       </div>
