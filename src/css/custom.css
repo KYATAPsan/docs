@@ -1,14 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #39b9f1;
   --ifm-color-primary-dark: #33a7d8;
@@ -18,9 +7,11 @@
   --ifm-color-primary-lighter: #44bcef;
   --ifm-color-primary-lightest: #5bc5f2;
   --ifm-code-font-size: 95%;
+  
+  /* Background for light theme */
+  --ifm-background-image-light: url('/path/to/light_top_back.png');
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
   --ifm-color-primary: #39b9f1;
   --ifm-color-primary-dark: #38b1e4;
@@ -29,6 +20,9 @@
   --ifm-color-primary-light: #39b9f1;
   --ifm-color-primary-lighter: #3cc4ff;
   --ifm-color-primary-lightest: #52cbff;
+
+  /* Background for dark theme */
+  --ifm-background-image-dark: url('/path/to/dark_top_back.png');
 
   --ifm-navbar-background-color: #1b1b1d;
 }
@@ -40,14 +34,16 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-.footer--dark {
-  background-color: #303846;
+body {
+  background-color: var(--ifm-color-primary-light);
+  background-image: var(--ifm-background-image-light);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.header-icon-link {
-  display: inline-flex
-}
-
-.imgFeaturePreview {
-  max-width: 1000px;
+[data-theme='dark'] body {
+  background-color: var(--ifm-color-primary-dark);
+  background-image: var(--ifm-background-image-dark);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
