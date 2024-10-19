@@ -36,13 +36,13 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-/* hero-bannerの背景スタイル */
-.hero-banner {
-  background-color: var(--ifm-color-primary);
-  background-image: var(--ifm-background-image);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
+/* hero-bannerの背景スタイルを優先して適用 */
+.hero.hero--primary.heroBanner {
+  background-color: var(--ifm-color-primary) !important;
+  background-image: var(--ifm-background-image) !important;
+  background-repeat: no-repeat !important;
+  background-position: top center !important;
+  background-size: cover !important;
 }
 
 /* ダークモードでも適用される要素のスタイル */
