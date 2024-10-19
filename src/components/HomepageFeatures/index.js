@@ -60,8 +60,8 @@ function Feature({ Svg, title, description }) {
         flexDirection: 'column',
         alignItems: 'center',
         marginBottom: '2rem',
-        maxWidth: '500px',
-        flex: '1 1 45%',
+        maxWidth: '400px',
+        flex: '1 1 30%',
         margin: '1rem',
       }}
     >
