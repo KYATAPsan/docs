@@ -55,13 +55,13 @@ const FeatureList = [
 function Feature({ Svg, title, description }) {
   return (
     <div
-      className={clsx('col col--4')}
+      className={clsx('col col--6')}
       style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '2rem' }}
     >
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
-      <div className="text--center padding-horiz--md" style={{ textAlign: 'center', maxWidth: '400px' }}>
+      <div className="text--center padding-horiz--md" style={{ textAlign: 'center' }}>
         <Heading as="h3" className={styles.boldTitle}>
           {title}
         </Heading>
@@ -70,6 +70,7 @@ function Feature({ Svg, title, description }) {
     </div>
   );
 }
+
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
@@ -83,9 +84,7 @@ export default function HomepageFeatures() {
         {/* 下段の2つの要素 */}
         <div className="row justify-content-center" style={{ marginTop: '2rem' }}>
           {FeatureList.slice(3).map((props, idx) => (
-            <div className={clsx('col col--6')} key={idx} style={{ display: 'flex', justifyContent: 'center' }}>
-              <Feature {...props} />
-            </div>
+            <Feature key={idx + 3} {...props} />
           ))}
         </div>
       </div>
