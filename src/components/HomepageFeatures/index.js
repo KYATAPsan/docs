@@ -84,7 +84,7 @@ export default function HomepageFeatures() {
         {/* 下段の2つの要素 */}
         <div className="row justify-content-center" style={{ marginTop: '2rem' }}>
           {FeatureList.slice(3).map((props, idx) => (
-            <div className={clsx('col col--6')} key={idx} style={{ display: 'flex', justifyContent: 'center' }}>
+            <div className={clsx('col col--4')} key={idx} style={{ display: 'flex', justifyContent: 'center' }}>
               <Feature {...props} />
             </div>
           ))}
