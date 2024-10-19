@@ -1,3 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #39b9f1;
   --ifm-color-primary-dark: #33a7d8;
@@ -8,8 +19,8 @@
   --ifm-color-primary-lightest: #5bc5f2;
   --ifm-code-font-size: 95%;
   
-  /* Background for light theme */
-  --ifm-background-image-light: url('light_top_back.png');
+  /* Apply the background image for light theme */
+  --ifm-background-image: url('/path/to/light_top_back.png');
 }
 
 [data-theme='dark'] {
@@ -21,11 +32,20 @@
   --ifm-color-primary-lighter: #3cc4ff;
   --ifm-color-primary-lightest: #52cbff;
 
-  /* Background for dark theme */
-  --ifm-background-image-dark: url('dark_top_back.png');
-
   --ifm-navbar-background-color: #1b1b1d;
+  
+  /* Apply the background image for dark theme */
+  --ifm-background-image: url('/path/to/dark_top_back.png');
 }
+
+/* Apply the background image wherever --ifm-color-primary is used */
+.some-element-using-primary-color {
+  background: var(--ifm-color-primary);
+  background-image: var(--ifm-background-image);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 
 :root {
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
@@ -34,16 +54,14 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-body {
-  background-color: var(--ifm-color-primary-light);
-  background-image: var(--ifm-background-image-light);
-  background-size: cover;
-  background-repeat: no-repeat;
+.footer--dark {
+  background-color: #303846;
 }
 
-[data-theme='dark'] body {
-  background-color: var(--ifm-color-primary-dark);
-  background-image: var(--ifm-background-image-dark);
-  background-size: cover;
-  background-repeat: no-repeat;
+.header-icon-link {
+  display: inline-flex
+}
+
+.imgFeaturePreview {
+  max-width: 1000px;
 }
