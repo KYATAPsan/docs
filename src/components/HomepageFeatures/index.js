@@ -55,7 +55,7 @@ const FeatureList = [
 function Feature({ Svg, title, description }) {
   return (
     <div
-      className={clsx('col col--6')}
+      className={clsx('col col--5')}
       style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '2rem' }}
     >
       <div className="text--center">
