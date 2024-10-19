@@ -9,7 +9,7 @@
   --ifm-code-font-size: 95%;
   
   /* Background for light theme */
-  --ifm-background-image-light: url('/path/to/light_top_back.png');
+  --ifm-background-image-light: url('light_top_back.png');
 }
 
 [data-theme='dark'] {
@@ -22,7 +22,7 @@
   --ifm-color-primary-lightest: #52cbff;
 
   /* Background for dark theme */
-  --ifm-background-image-dark: url('/path/to/dark_top_back.png');
+  --ifm-background-image-dark: url('dark_top_back.png');
 
   --ifm-navbar-background-color: #1b1b1d;
 }
