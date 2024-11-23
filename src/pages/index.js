@@ -38,6 +38,20 @@ function HomepageHeader() {
       <div className="container">
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
+        {/* ボタン部分 */}
+        <div className={styles.buttons}>
+          <Link className="button button--secondary button--lg" to="/docs/intro">
+            サーバーを見る ➜
+          </Link>
+          <Link
+            className="button button--secondary button--lg"
+            to="/docs/intro"
+            style={{ marginLeft: '10px' }}
+          >
+            サーバーの仕様を確認する
+          </Link>
+        </div>
+        {/* サーバーアドレスカード */}
         <div className={styles.serverAddresses}>
           <ServerAddressCard
             icon="path/to/wifi-icon.png"
