@@ -105,4 +105,8 @@
   .row {
     flex-direction: column; /* スマホでカードを縦並びに */
   }
+
+  .card:first-child {
+    width: 100%; /* JAVA版カードもスマホでは全幅 */
+  }
 }
