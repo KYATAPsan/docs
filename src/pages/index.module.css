@@ -61,8 +61,8 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: transform 0.2s, background-color 0.3s;
-  width: 300px; /* デフォルトのカード幅 */
-  max-width: 90%; /* 小さい画面での調整 */
+  width: 300px; /* 統一されたカード幅 */
+  max-width: 100%; /* 小さい画面では画面幅に収まるように調整 */
   justify-content: space-between; /* アイコンとテキストを分ける */
   text-align: left;
 }
@@ -99,7 +99,7 @@
 /* スマホ用のメディアクエリ */
 @media (max-width: 768px) {
   .card {
-    width: 100%; /* スマホでカードを全幅に */
+    width: 100%; /* スマホでカードを画面幅いっぱいに */
   }
 
   .row {
