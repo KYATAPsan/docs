@@ -14,15 +14,18 @@ function copyToClipboard(text) {
 
 function ServerAddressCard({ icon, label, address }) {
   return (
-    <div className={styles.card}>
+    <div
+      className={styles.card}
+      onClick={() => copyToClipboard(address)}
+      role="button"
+      tabIndex="0"
+    >
       <div className={styles.iconContainer}>
         <img src={icon} alt={`${label} icon`} className={styles.icon} />
       </div>
       <div>
         <div className={styles.label}>{label}</div>
-        <div className={styles.address} onClick={() => copyToClipboard(address)}>
-          {address}
-        </div>
+        <div className={styles.address}>{address}</div>
       </div>
     </div>
   );
