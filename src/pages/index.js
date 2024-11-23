@@ -4,19 +4,21 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
+import React, { useState } from 'react';
 import styles from './index.module.css';
 
-function copyToClipboard(text) {
+function copyToClipboard(text, setNotification) {
   navigator.clipboard.writeText(text).then(() => {
-    alert(`"${text}" をコピーしました！`);
+    setNotification(true);
+    setTimeout(() => setNotification(false), 2000); // 2秒後に通知を消す
   });
 }
 
-function ServerAddressCard({ icon, label, address }) {
+function ServerAddressCard({ icon, label, address, setNotification }) {
   return (
     <div
       className={styles.card}
-      onClick={() => copyToClipboard(address)}
+      onClick={() => copyToClipboard(address, setNotification)}
       role="button"
       tabIndex="0"
     >
@@ -31,8 +33,18 @@ function ServerAddressCard({ icon, label, address }) {
   );
 }
 
+function Notification({ isVisible }) {
+  return (
+    <div className={`${styles.notification} ${isVisible ? styles.visible : ''}`}>
+      コピーしました！
+    </div>
+  );
+}
+
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
+  const [notificationVisible, setNotificationVisible] = useState(false);
+
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
@@ -57,18 +69,23 @@ function HomepageHeader() {
             icon="path/to/wifi-icon.png"
             label="JAVA版"
             address="24san.org"
+            setNotification={setNotificationVisible}
           />
           <ServerAddressCard
             icon="path/to/wifi-icon.png"
             label="統合版アドレス"
             address="24san.org"
+            setNotification={setNotificationVisible}
           />
           <ServerAddressCard
             icon="path/to/port-icon.png"
             label="統合版ポート"
             address="19132"
+            setNotification={setNotificationVisible}
           />
         </div>
+        {/* 通知部分 */}
+        <Notification isVisible={notificationVisible} />
       </div>
     </header>
   );
