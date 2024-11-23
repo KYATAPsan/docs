@@ -165,9 +165,9 @@ const config = {
       announcementBar: {
         id: "support_us",
         content:
-          '<b>⭐️ <a target="_blank" href="https://discord.gg/TYUnM9vP2E" style="color: #1DA1F2;">Discordの参加はこちらから！</a></b>',
-        backgroundColor: "#9ee0fd",
-        textColor: "#091E42",
+          '<b>⭐️ <a target="_blank" href="https://discord.gg/TYUnM9vP2E" style="color: #000000; text-decoration: none;">Discordの参加はこちらから！</a></b>',
+        backgroundColor: "#161CBB",
+        textColor: "#000000",
         isCloseable: true,
       },
       algolia: {
