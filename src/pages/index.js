@@ -58,16 +58,18 @@ function HomepageHeader() {
             label="JAVA版"
             address="24san.org"
           />
-          <ServerAddressCard
-            icon="path/to/wifi-icon.png"
-            label="統合版アドレス"
-            address="24san.org"
-          />
-          <ServerAddressCard
-            icon="path/to/port-icon.png"
-            label="統合版ポート"
-            address="19132"
-          />
+          <div className={styles.row}>
+            <ServerAddressCard
+              icon="path/to/wifi-icon.png"
+              label="統合版アドレス"
+              address="24san.org"
+            />
+            <ServerAddressCard
+              icon="path/to/port-icon.png"
+              label="統合版ポート"
+              address="19132"
+            />
+          </div>
         </div>
       </div>
     </header>
