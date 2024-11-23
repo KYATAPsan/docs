@@ -21,3 +21,49 @@
   align-items: center;
   justify-content: center;
 }
+.heroBanner {
+  padding: 2rem;
+}
+
+.serverAddresses {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  background-color: #374151; /* ダークグレー */
+  border-radius: 8px;
+  padding: 1rem;
+  color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.iconContainer {
+  margin-right: 1rem;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+}
+
+.label {
+  font-size: 0.875rem; /* Smaller text for the label */
+  color: #9ca3af; /* Gray text */
+}
+
+.address {
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.address:hover {
+  color: #60a5fa; /* Light blue on hover */
+}
