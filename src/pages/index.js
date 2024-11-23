@@ -4,7 +4,6 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
-import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
 function copyToClipboard(text) {
@@ -13,61 +12,57 @@ function copyToClipboard(text) {
   });
 }
 
+function ServerAddressCard({ icon, label, address }) {
+  return (
+    <div className={styles.card}>
+      <div className={styles.iconContainer}>
+        <img src={icon} alt={`${label} icon`} className={styles.icon} />
+      </div>
+      <div>
+        <div className={styles.label}>{label}</div>
+        <div className={styles.address} onClick={() => copyToClipboard(address)}>
+          {address}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
+        <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
+          <Link className="button button--secondary button--lg" to="/docs/intro">
             サーバーを見る ➜
           </Link>
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro"
-            style={{ marginLeft: '10px' }}>
+            style={{ marginLeft: '10px' }}
+          >
             サーバーの仕様を確認する
           </Link>
         </div>
-        {/* サーバーアドレス表示部分 */}
-        <div className="mt-4">
-          <h3 className="text-white">サーバーアドレス</h3>
-          <div className="row align-items-center">
-            <div className="col-2">
-              <button
-                className="btn btn-secondary"
-                onClick={() => copyToClipboard('24san.org')}>
-                コピー
-              </button>
-            </div>
-            <div className="col-10 text-white">JAVA版: 24san.org</div>
-          </div>
-          <div className="row align-items-center mt-2">
-            <div className="col-2">
-              <button
-                className="btn btn-secondary"
-                onClick={() => copyToClipboard('24san.org')}>
-                コピー
-              </button>
-            </div>
-            <div className="col-10 text-white">統合版: 24san.org</div>
-          </div>
-          <div className="row align-items-center mt-2">
-            <div className="col-2">
-              <button
-                className="btn btn-secondary"
-                onClick={() => copyToClipboard('19132')}>
-                コピー
-              </button>
-            </div>
-            <div className="col-10 text-white">統合版ポート: 19132</div>
-          </div>
+        <div className={styles.serverAddresses}>
+          <ServerAddressCard
+            icon="path/to/wifi-icon.png"
+            label="JAVA版"
+            address="24san.org"
+          />
+          <ServerAddressCard
+            icon="path/to/wifi-icon.png"
+            label="統合版"
+            address="24san.org"
+          />
+          <ServerAddressCard
+            icon="path/to/port-icon.png"
+            label="統合版ポート"
+            address="19132"
+          />
         </div>
       </div>
     </header>
@@ -77,9 +72,7 @@ function HomepageHeader() {
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+    <Layout title={`Hello from ${siteConfig.title}`} description="Description">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
