@@ -70,3 +70,54 @@
   font-weight: bold;
   color: #ffffff;
 }
+.heroBanner {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 全体を中央揃え */
+}
+
+.serverAddresses {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center; /* カードを横方向に中央揃え */
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  background-color: #374151; /* ダークグレー */
+  border-radius: 8px;
+  padding: 1rem;
+  color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+  width: 300px; /* カードの幅 */
+  max-width: 90%; /* 小さい画面での調整 */
+  justify-content: space-between; /* アイコンとテキストを分ける */
+  text-align: left;
+}
+
+
+.iconContainer {
+  margin-right: 1rem;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+}
+
+.label {
+  font-size: 0.875rem; /* Smaller text for the label */
+  color: #9ca3af; /* Gray text */
+}
+
+.address {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ffffff;
+}
