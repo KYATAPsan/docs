@@ -4,7 +4,7 @@ const config = {
   tagline: "24sanサーバーに参加しよう！",
   url: "https://24san.github.io",
   baseUrl: "/",
-  onBrokenLinks: "warn", // ここを変更
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "24san", // GitHub org/user name for 24san.
@@ -35,6 +35,30 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [
+        {
+          name: "og:image",
+          content: "https://24san.github.io/img/shots/hero-min.png",
+        },
+        {
+          name: "twitter:image",
+          content: "https://24san.github.io/img/shots/hero-min.png",
+        },
+        {
+          name: "twitter:site",
+          content: "@24sanserver",
+        },
+        {
+          name: "keywords",
+          content:
+            "Minecraft, 24san, Spigot, Bukkit, Minecraft analytics, web suite, free analytics tool, Minecraft server tools, player analytics, server performance, Minecraft plugins, server monitoring, Minecraft server suite, server statistics, player tracking",
+        },
+      ],
+      colorMode: {
+        defaultMode: "light",
+      },
+
+      // ナビゲーションバー設定
       navbar: {
         hideOnScroll: true,
         title: "24san",
@@ -74,6 +98,92 @@ const config = {
             className: "header-icon-link",
           },
         ],
+      },
+
+      // フッター設定
+      footer: {
+        style: "dark", // フッターのスタイル（ダークモード）
+        logo: {
+          alt: "24san Logo",
+          src: "img/logo_docs.svg",
+          href: "/",
+        },
+        links: [
+          {
+            title: "Documentation",
+            items: [
+              {
+                label: "ドキュメント",
+                to: "/docs/introduction/what-is-24san",
+              },
+            ],
+          },
+          {
+            title: "コミュニティ",
+            items: [
+              {
+                label: "Discord",
+                to: "https://discord.com/invite/QthB6rPBf7",
+              },
+              {
+                label: "Twitter",
+                to: "https://twitter.com/24san_KYATAP",
+              },
+              {
+                label: "YouTube",
+                to: "https://www.youtube.com/@KYATAP",
+              },
+            ],
+          },
+          {
+            title: "サービス",
+            items: [
+              {
+                label: "コマンドの使い方",
+                to: "/docs/introduction/what-is-24san",
+              },
+              {
+                label: "お問い合わせ",
+                to: "https://discord.com/invite/QthB6rPBf7",
+              },
+              {
+                label: "サーバールール",
+                to: "https://discord.com/invite/QthB6rPBf7",
+              },
+            ],
+          },
+          {
+            title: "その他",
+            items: [
+              {
+                label: "お知らせ",
+                to: "/blog",
+              },
+              {
+                label: "チャンネル登録お願いします。",
+                to: "https://www.youtube.com/@KYATAP",
+              },
+            ],
+          },
+        ],
+        copyright: `Copyright © ${new Date().getFullYear()} 24san Server. All rights reserved.`,
+      },
+
+      // アナウンスメントバー
+      announcementBar: {
+        id: "support_us",
+        content:
+          '<b><a target="_blank" href="https://discord.gg/TYUnM9vP2E" style="color: #FFFFFF; text-decoration: none;" onmouseover="this.style.textDecoration=\'underline\'" onmouseout="this.style.textDecoration=\'none\'">Discordの参加はこちらから！</a></b>',
+        backgroundColor: "#161CBB",
+        textColor: "#FFFFFF",
+        isCloseable: true,
+      },
+
+      // 検索機能
+      algolia: {
+        appId: "AIFFXGFZ5Y",
+        apiKey: "5794bb50b04fbc1f2d432e887c8c4788",
+        indexName: "24san",
       },
     }),
 
