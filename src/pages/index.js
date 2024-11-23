@@ -38,18 +38,6 @@ function HomepageHeader() {
       <div className="container">
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link className="button button--secondary button--lg" to="/docs/intro">
-            サーバーを見る ➜
-          </Link>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro"
-            style={{ marginLeft: '10px' }}
-          >
-            サーバーの仕様を確認する
-          </Link>
-        </div>
         <div className={styles.serverAddresses}>
           <ServerAddressCard
             icon="path/to/wifi-icon.png"
@@ -58,7 +46,7 @@ function HomepageHeader() {
           />
           <ServerAddressCard
             icon="path/to/wifi-icon.png"
-            label="統合版"
+            label="統合版アドレス"
             address="24san.org"
           />
           <ServerAddressCard
@@ -82,4 +70,3 @@ export default function Home() {
       </main>
     </Layout>
   );
-}
