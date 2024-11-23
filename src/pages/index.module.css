@@ -40,6 +40,15 @@
   padding: 1rem;
   color: #ffffff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+  width: 300px; /* カードの幅を狭く調整 */
+  max-width: 90%; /* 小さい画面での調整 */
+}
+
+.card:hover {
+  background-color: #4b5563; /* ホバー時の背景色 */
+  transform: scale(1.02); /* ホバー時の軽いズーム */
 }
 
 .iconContainer {
@@ -59,11 +68,5 @@
 .address {
   font-size: 1.25rem;
   font-weight: bold;
-  cursor: pointer;
   color: #ffffff;
-  transition: color 0.3s;
-}
-
-.address:hover {
-  color: #60a5fa; /* Light blue on hover */
 }
