@@ -5,6 +5,7 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import Heading from '@theme/Heading';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from './index.module.css';
 
 function copyToClipboard(text) {
@@ -36,23 +37,41 @@ function HomepageHeader() {
           </Link>
         </div>
         {/* サーバーアドレス表示部分 */}
-        <div style={{ marginTop: '20px', textAlign: 'left', color: 'white' }}>
-          <h3>サーバーアドレス</h3>
-          <p
-            onClick={() => copyToClipboard('24san.org')}
-            style={{ cursor: 'pointer', textDecoration: 'underline' }}>
-            JAVA版: 24san.org
-          </p>
-          <p
-            onClick={() => copyToClipboard('24san.org')}
-            style={{ cursor: 'pointer', textDecoration: 'underline' }}>
-            統合版: 24san.org
-          </p>
-          <p
-            onClick={() => copyToClipboard('19132')}
-            style={{ cursor: 'pointer', textDecoration: 'underline' }}>
-            統合版ポート: 19132
-          </p>
+        <div className="mt-4">
+          <h3 className="text-white">サーバーアドレス</h3>
+          <div className="row align-items-center">
+            {/* JAVA版 */}
+            <div className="col-2">
+              <button
+                className="btn btn-secondary"
+                onClick={() => copyToClipboard('24san.org')}>
+                コピー
+              </button>
+            </div>
+            <div className="col-10 text-white">JAVA版: 24san.org</div>
+          </div>
+          <div className="row align-items-center mt-2">
+            {/* 統合版 */}
+            <div className="col-2">
+              <button
+                className="btn btn-secondary"
+                onClick={() => copyToClipboard('24san.org')}>
+                コピー
+              </button>
+            </div>
+            <div className="col-10 text-white">統合版: 24san.org</div>
+          </div>
+          <div className="row align-items-center mt-2">
+            {/* 統合版ポート */}
+            <div className="col-2">
+              <button
+                className="btn btn-secondary"
+                onClick={() => copyToClipboard('19132')}>
+                コピー
+              </button>
+            </div>
+            <div className="col-10 text-white">統合版ポート: 19132</div>
+          </div>
         </div>
       </div>
     </header>
