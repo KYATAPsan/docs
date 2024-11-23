@@ -14,7 +14,7 @@ function copyToClipboard(text) {
 }
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
@@ -38,14 +38,20 @@ function HomepageHeader() {
         {/* サーバーアドレス表示部分 */}
         <div style={{ marginTop: '20px', textAlign: 'left', color: 'white' }}>
           <h3>サーバーアドレス</h3>
-          <p onClick={() => copyToClipboard('24san.org')} style={{ cursor: 'pointer' }}>
-            JAVA版: <span style={{ textDecoration: 'underline' }}>24san.org</span>
+          <p
+            onClick={() => copyToClipboard('24san.org')}
+            style={{ cursor: 'pointer', textDecoration: 'underline' }}>
+            JAVA版: 24san.org
           </p>
-          <p onClick={() => copyToClipboard('24san.org')} style={{ cursor: 'pointer' }}>
-            統合版: <span style={{ textDecoration: 'underline' }}>24san.org</span>
+          <p
+            onClick={() => copyToClipboard('24san.org')}
+            style={{ cursor: 'pointer', textDecoration: 'underline' }}>
+            統合版: 24san.org
           </p>
-          <p onClick={() => copyToClipboard('19132')} style={{ cursor: 'pointer' }}>
-            統合版ポート: <span style={{ textDecoration: 'underline' }}>19132</span>
+          <p
+            onClick={() => copyToClipboard('19132')}
+            style={{ cursor: 'pointer', textDecoration: 'underline' }}>
+            統合版ポート: 19132
           </p>
         </div>
       </div>
@@ -54,7 +60,7 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
@@ -65,3 +71,4 @@ export default function Home() {
       </main>
     </Layout>
   );
+}
