@@ -39,16 +39,9 @@
 .serverAddresses {
   margin-top: 2rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* 完全に縦並び */
   gap: 1rem;
   align-items: center; /* カードを横方向に中央揃え */
-}
-
-.row {
-  display: flex;
-  gap: 1rem; /* カード間のスペース */
-  flex-wrap: wrap; /* 小さい画面でカードが縦に並ぶようにする */
-  justify-content: center; /* 小さい画面で中央揃え */
 }
 
 .card {
@@ -61,8 +54,8 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: transform 0.2s, background-color 0.3s;
-  width: 300px; /* 統一されたカード幅 */
-  max-width: 100%; /* 小さい画面では画面幅に収まるように調整 */
+  width: 300px; /* カードの固定幅 */
+  max-width: 100%; /* 小さい画面で画面幅に収まる */
   justify-content: space-between; /* アイコンとテキストを分ける */
   text-align: left;
 }
@@ -70,10 +63,6 @@
 .card:hover {
   background-color: #4b5563; /* ホバー時の背景色 */
   transform: scale(1.02); /* ホバー時の軽いズーム */
-}
-
-.card:first-child {
-  width: calc(300px * 2 + 1rem); /* JAVA版カードの幅を統合版カード2つ分に設定 */
 }
 
 .iconContainer {
@@ -94,19 +83,4 @@
   font-size: 1.25rem;
   font-weight: bold;
   color: #ffffff;
-}
-
-/* スマホ用のメディアクエリ */
-@media (max-width: 768px) {
-  .card {
-    width: 100%; /* スマホでカードを画面幅いっぱいに */
-  }
-
-  .row {
-    flex-direction: column; /* スマホでカードを縦並びに */
-  }
-
-  .card:first-child {
-    width: 100%; /* JAVA版カードもスマホでは全幅 */
-  }
 }
