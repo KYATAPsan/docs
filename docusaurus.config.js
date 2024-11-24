@@ -17,26 +17,32 @@ presets: [
     "classic",
     /** @type {import('@docusaurus/preset-classic').Options} */
     ({
-                docs: {
-                    sidebarPath: require.resolve("./sidebars.ts"),
-                    editUrl:
-                        'https://github.com/24san/24san/tree/master/',
-
-                    routeBasePath: '/wiki',
-                    docItemComponent: "@theme/ApiItem",
-                    path: 'wiki',
+      docs: {
+        path: "docs", // デフォルトの docs パス
+        routeBasePath: "docs", // `/docs` にアクセス
+        sidebarPath: require.resolve("./sidebars.js"),
+        editUrl: "https://github.com/24san/24san.github.io/edit/main/",
       },
       blog: {
-        path: "blog", // デフォルトのブログパス
-        routeBasePath: "blog", // `/blog` にアクセス
-        id: "main-blog", // プラグインインスタンスに一意のIDを設定
         showReadingTime: true,
-        editUrl: "https://github.com/24san/24san.github.io/edit/main/blog/",
+        editUrl: "https://github.com/24san/24san.github.io/edit/main/",
       },
       theme: {
         customCss: require.resolve("./src/css/custom.css"),
       },
     }),
+  ],
+  [
+    "classic",
+    /** Wiki セクションを追加 */
+    {
+      docs: {
+        path: "wiki", // Wiki 用のパスを指定
+        routeBasePath: "wiki", // `/wiki` にアクセス
+        sidebarPath: require.resolve("./sidebars.js"),
+        editUrl: "https://github.com/24san/24san.github.io/edit/main/wiki/",
+      },
+    },
   ],
 ],
 
