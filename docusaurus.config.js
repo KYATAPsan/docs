@@ -24,6 +24,9 @@ presets: [
         editUrl: "https://github.com/24san/24san.github.io/edit/main/docs/",
       },
       blog: {
+        path: "blog", // デフォルトのブログパス
+        routeBasePath: "blog", // `/blog` にアクセス
+        id: "main-blog", // プラグインインスタンスに一意のIDを設定
         showReadingTime: true,
         editUrl: "https://github.com/24san/24san.github.io/edit/main/blog/",
       },
@@ -37,10 +40,10 @@ presets: [
     /** Wiki セクションを追加 */
     {
       docs: {
-        id: "wiki", // セクションを区別するための ID を設定
+        id: "wiki", // セクションを識別する ID
         path: "wiki", // `wiki` フォルダを指定
-        routeBasePath: "wiki", // `/wiki` にアクセス
-        sidebarPath: require.resolve("./sidebarsWiki.js"), // Wiki 用のサイドバー設定
+        routeBasePath: "wiki", // `/wiki` にアクセス可能
+        sidebarPath: require.resolve("./sidebarsWiki.js"), // Wiki 用サイドバー
         editUrl: "https://github.com/24san/24san.github.io/edit/main/wiki/",
       },
     },
