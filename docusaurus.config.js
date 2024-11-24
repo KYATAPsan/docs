@@ -17,11 +17,14 @@ presets: [
     "classic",
     /** @type {import('@docusaurus/preset-classic').Options} */
     ({
-      docs: {
-        path: "docs", // デフォルトの docs パス
-        routeBasePath: "docs", // `/docs` にアクセス
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://github.com/24san/24san.github.io/edit/main/docs/",
+                docs: {
+                    sidebarPath: require.resolve("./sidebars.ts"),
+                    editUrl:
+                        'https://github.com/GeyserMC/GeyserWebsite/tree/master/',
+
+                    routeBasePath: '/wiki',
+                    docItemComponent: "@theme/ApiItem",
+                    path: 'wiki',
       },
       blog: {
         path: "blog", // デフォルトのブログパス
@@ -34,19 +37,6 @@ presets: [
         customCss: require.resolve("./src/css/custom.css"),
       },
     }),
-  ],
-  [
-    "classic",
-    /** Wiki セクションを追加 */
-    {
-      docs: {
-        id: "wiki", // セクションを識別する ID
-        path: "wiki", // `wiki` フォルダを指定
-        routeBasePath: "wiki", // `/wiki` にアクセス可能
-        sidebarPath: require.resolve("./sidebarsWiki.js"), // Wiki 用サイドバー
-        editUrl: "https://github.com/24san/24san.github.io/edit/main/wiki/",
-      },
-    },
   ],
 ],
 
