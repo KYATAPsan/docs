@@ -27,6 +27,7 @@ const config = {
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
+        },
         wiki: {
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/24san/24san.github.io/edit/main/",
