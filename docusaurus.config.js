@@ -12,29 +12,40 @@ const config = {
   deploymentBranch: "gh-pages",
   trailingSlash: false,
 
-  presets: [
-    [
-      "classic",
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
-        docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/24san/24san.github.io/edit/main/",
-        },
-        blog: {
-          showReadingTime: true,
-          editUrl: "https://github.com/24san/24san.github.io/edit/main/",
-        },
-        theme: {
-          customCss: require.resolve("./src/css/custom.css"),
-        },
-        wiki: {
-          sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/24san/24san.github.io/edit/main/",
-        },
-      }),
-    ],
+presets: [
+  [
+    "classic",
+    /** @type {import('@docusaurus/preset-classic').Options} */
+    ({
+      docs: {
+        path: "docs", // デフォルトの docs パス
+        routeBasePath: "docs", // `/docs` にアクセス
+        sidebarPath: require.resolve("./sidebars.js"),
+        editUrl: "https://github.com/24san/24san.github.io/edit/main/docs/",
+      },
+      blog: {
+        showReadingTime: true,
+        editUrl: "https://github.com/24san/24san.github.io/edit/main/blog/",
+      },
+      theme: {
+        customCss: require.resolve("./src/css/custom.css"),
+      },
+    }),
   ],
+  [
+    "classic",
+    /** Wiki セクションを追加 */
+    {
+      docs: {
+        id: "wiki", // セクションを区別するための ID を設定
+        path: "wiki", // `wiki` フォルダを指定
+        routeBasePath: "wiki", // `/wiki` にアクセス
+        sidebarPath: require.resolve("./sidebarsWiki.js"), // Wiki 用のサイドバー設定
+        editUrl: "https://github.com/24san/24san.github.io/edit/main/wiki/",
+      },
+    },
+  ],
+],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
