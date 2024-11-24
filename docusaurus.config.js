@@ -20,7 +20,7 @@ presets: [
                 docs: {
                     sidebarPath: require.resolve("./sidebars.ts"),
                     editUrl:
-                        'https://github.com/GeyserMC/GeyserWebsite/tree/master/',
+                        'https://github.com/24san/24san/tree/master/',
 
                     routeBasePath: '/wiki',
                     docItemComponent: "@theme/ApiItem",
