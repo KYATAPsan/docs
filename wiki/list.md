@@ -1,41 +1,40 @@
-
 ---
-title: Overview of this wiki
+title: 24san Wiki Overview
 permalink: /wiki/
-description: 'This page provides an overview over all sections of the GeyserMC wiki'
+description: 'このページでは、24san Wikiのすべてのセクションの概要を紹介します。'
 ---
 
 import DocCardList from '@theme/DocCardList'
 
-# Overview
+# 24san Wiki Overview
 
-The GeyserMC wiki offers guides on different projects. Select the one you are interested in below!
+24san Wikiでは、サーバーに関する様々な情報やガイドを提供しています。以下から興味のあるセクションを選択してください！
 
 <DocCardList items={[
     {
         "type": "link",
-        "label": "Geyser",
-        "href": "/wiki/geyser/",
-        "docId": "geyser/index",
+        "label": "サーバー情報",
+        "href": "/wiki/server/",
+        "docId": "server/index",
         "unlisted": false
     },
     {
         "type": "link",
-        "label": "Floodgate",
-        "href": "/wiki/floodgate/",
-        "docId": "floodgate/index",
+        "label": "ギルドガイド",
+        "href": "/wiki/guild/",
+        "docId": "guild/index",
         "unlisted": false
     },
     {
         "type": "link",
-        "label": "Other projects",
-        "href": "/wiki/other/",
-        "docId": "other/index",
+        "label": "パネル設定",
+        "href": "/wiki/panel/",
+        "docId": "panel/index",
         "unlisted": false
     },
     {
         "type": "link",
-        "label": "REST APIs",
+        "label": "APIガイド",
         "href": "/wiki/api/",
         "docId": "api/index",
         "unlisted": false
