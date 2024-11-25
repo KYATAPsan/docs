@@ -4,7 +4,7 @@ const config = {
   tagline: "24sanサーバーに参加しよう！",
   url: "https://24san.github.io",
   baseUrl: "/",
-  onBrokenLinks: "warn", // 壊れたリンクを無視してビルド可能に
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "24san", // GitHub org/user name for 24san.
@@ -70,7 +70,7 @@ const config = {
           {
             type: "dropdown",
             label: "Wiki",
-            position: "left", // 左側に配置
+            position: "left",
             items: [
               { to: "/wiki/list", label: "一覧" },
               { to: "/wiki/guild", label: "ギルド" },
@@ -97,24 +97,16 @@ const config = {
             position: "right",
             className: "header-icon-link",
           },
-          {
-            href: "https://www.youtube.com/@KYATAP",
-            html: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="main-grid-item-icon" fill="none">
-            <path d="..." fill="currentColor" />
-            </svg>`,
-            position: "right",
-            className: "header-icon-link",
-          },
         ],
       },
 
       // フッター設定
       footer: {
-        style: "dark",
+        style: "dark", // フッターのスタイル（ダークモード）
         logo: {
           alt: "24san Logo",
-          src: "static/img/logo_docs.svg",
-          className: "w-64",
+          src: "img/logo_docs.svg",
+          href: "/",
         },
         links: [
           {
@@ -174,7 +166,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © 24san Server ${new Date().getFullYear()}. All rights reserved.`,
+        copyright: `Copyright © ${new Date().getFullYear()} 24san Server. All rights reserved.`,
       },
 
       // アナウンスメントバー
