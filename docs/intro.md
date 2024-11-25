@@ -1,30 +1,22 @@
 ---
 title: Overview
-permalink: /other/
-description: 'Other projects or guides not directly referring to Geyser or Floodgate.'
+permalink: /
+description: 'Introduction to the 24san documentation. Navigate to various guides and information pages.'
 ---
 
-import DocCardList from '@theme/DocCardList'
-import { useDocById } from '@docusaurus/theme-common/internal'
+# Overview of Documentation
 
-# Overview of Other projects
-
-The "other" category provides you with information about different projects that are not Geyser or Floodgate.
-This includes community projects, but also other projects by the GeyserMC team, such as Hurricane or Hydraulic.
+Welcome to the documentation for the 24san Server! Below you can find links to various guides and projects available in the documentation.
 
 <DocCardList items={[
-    'community-geyser-projects',
-    'hurricane',
-    'geyseroptionalpack',
-    'thirdpartycosmetics',
-    'hydraulic',
-    'geyserconnect',
-].map((id) => {
-    const metadata = useDocById("other/" + id)
-    return {
+    {
         type: 'link',
-        label: metadata.title,
-        href: id,
-        docId: 'other/' + id
-    }
-})} />
+        label: 'Guild Information',
+        href: '/docs/guild',
+    },
+    {
+        type: 'link',
+        label: 'Panel Information',
+        href: '/docs/panel',
+    },
+]} />
