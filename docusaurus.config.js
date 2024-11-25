@@ -7,44 +7,57 @@ const config = {
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  organizationName: "24san", // GitHub org/user name for 24san.
-  projectName: "24san.github.io", // Repo name for 24san website.
+  organizationName: "24san",
+  projectName: "24san.github.io",
   deploymentBranch: "gh-pages",
   trailingSlash: false,
 
-presets: [
-  [
-    "classic",
-    /** @type {import('@docusaurus/preset-classic').Options} */
-    ({
+  presets: [
+    [
+      "classic",
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
         docs: {
-          path: './', // プロジェクトのrootから参照
-          routeBasePath: '/', // ルートパスで表示
-          include: ['Wiki/*.md', 'docs/**/*.md'], // Wikiディレクトリ内のMarkdownを含める
-          sidebarPath: require.resolve('./sidebars.js'),
+          path: "docs", // メインドキュメント用
+          routeBasePath: "/", // ルートパスで表示
+          sidebarPath: require.resolve("./sidebars.js"),
         },
-      blog: {
-        showReadingTime: true,
-        editUrl: "https://github.com/24san/24san.github.io/edit/main/",
-      },
-      theme: {
-        customCss: require.resolve("./src/css/custom.css"),
-      },
-    }),
+        blog: {
+          showReadingTime: true,
+          editUrl: "https://github.com/24san/24san.github.io/edit/main/",
+        },
+        theme: {
+          customCss: require.resolve("./src/css/custom.css"),
+        },
+      }),
+    ],
   ],
-  [
-    "classic",
-    /** Wiki セクションを追加 */
-    {
-      docs: {
-        path: "wiki", // Wiki 用のパスを指定
-        routeBasePath: "wiki", // `/wiki` にアクセス
+
+  plugins: [
+    // Wiki用の個別プラグイン
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "wiki", // ユニークIDを指定
+        path: "Wiki", // Wiki用ディレクトリ
+        routeBasePath: "wiki", // `/wiki` ルートで表示
         sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://github.com/24san/24san.github.io/edit/main/wiki/",
+        editUrl: "https://github.com/24san/24san.github.io/edit/main/Wiki/",
       },
+    ],
+
+    // Tailwind CSSプラグイン
+    async function myPlugin(context, options) {
+      return {
+        name: "docusaurus-tailwindcss",
+        configurePostCss(postcssOptions) {
+          postcssOptions.plugins.push(require("tailwindcss"));
+          postcssOptions.plugins.push(require("autoprefixer"));
+          return postcssOptions;
+        },
+      };
     },
   ],
-],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -72,7 +85,6 @@ presets: [
         defaultMode: "light",
       },
 
-      // ナビゲーションバー設定
       navbar: {
         hideOnScroll: true,
         title: "24san",
@@ -91,11 +103,7 @@ presets: [
               { to: "/wiki/panel", label: "パネル" },
             ],
           },
-          {
-            to: "/news",
-            label: "おしらせ",
-            position: "left",
-          },
+          { to: "/news", label: "おしらせ", position: "left" },
           {
             type: "doc",
             docId: "introduction/what-is-24san",
@@ -114,9 +122,8 @@ presets: [
         ],
       },
 
-      // フッター設定
       footer: {
-        style: "dark", // フッターのスタイル（ダークモード）
+        style: "dark",
         logo: {
           alt: "24san Logo",
           src: "img/logo_docs.svg",
@@ -183,7 +190,6 @@ presets: [
         copyright: `Copyright © ${new Date().getFullYear()} 24san Server. All rights reserved.`,
       },
 
-      // アナウンスメントバー
       announcementBar: {
         id: "support_us",
         content:
@@ -193,26 +199,12 @@ presets: [
         isCloseable: true,
       },
 
-      // 検索機能
       algolia: {
         appId: "AIFFXGFZ5Y",
         apiKey: "5794bb50b04fbc1f2d432e887c8c4788",
         indexName: "24san",
       },
     }),
-
-  plugins: [
-    async function myPlugin(context, options) {
-      return {
-        name: "docusaurus-tailwindcss",
-        configurePostCss(postcssOptions) {
-          postcssOptions.plugins.push(require("tailwindcss"));
-          postcssOptions.plugins.push(require("autoprefixer"));
-          return postcssOptions;
-        },
-      };
-    },
-  ],
 };
 
 module.exports = config;
