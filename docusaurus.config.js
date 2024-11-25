@@ -17,12 +17,12 @@ presets: [
     "classic",
     /** @type {import('@docusaurus/preset-classic').Options} */
     ({
-      docs: {
-        path: "docs", // デフォルトの docs パス
-        routeBasePath: "docs", // `/docs` にアクセス
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://github.com/24san/24san.github.io/edit/main/",
-      },
+        docs: {
+          path: './', // プロジェクトのrootから参照
+          routeBasePath: '/', // ルートパスで表示
+          include: ['Wiki/*.md', 'docs/**/*.md'], // Wikiディレクトリ内のMarkdownを含める
+          sidebarPath: require.resolve('./sidebars.js'),
+        },
       blog: {
         showReadingTime: true,
         editUrl: "https://github.com/24san/24san.github.io/edit/main/",
