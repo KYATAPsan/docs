@@ -4,11 +4,11 @@ const config = {
   tagline: "24sanサーバーに参加しよう！",
   url: "https://24san.github.io",
   baseUrl: "/",
-  onBrokenLinks: "ignore", // 壊れたリンクを無視
-  onBrokenMarkdownLinks: "ignore", // 壊れたMarkdownリンクを無視
+  onBrokenLinks: "warn", // ここを変更
+  onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  organizationName: "24san",
-  projectName: "24san.github.io",
+  organizationName: "24san", // GitHub org/user name for 24san.
+  projectName: "24san.github.io", // Repo name for 24san website.
   deploymentBranch: "gh-pages",
   trailingSlash: false,
 
@@ -18,9 +18,8 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          path: "docs", // メインドキュメント用
-          routeBasePath: "/", // ルートパスで表示
           sidebarPath: require.resolve("./sidebars.js"),
+          editUrl: "https://github.com/24san/24san.github.io/edit/main/",
         },
         blog: {
           showReadingTime: true,
@@ -33,59 +32,63 @@ const config = {
     ],
   ],
 
-  plugins: [
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "wiki", // ユニークID
-        path: "Wiki", // Wiki用ディレクトリ
-        routeBasePath: "wiki", // `/wiki`で表示
-        sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://github.com/24san/24san.github.io/edit/main/Wiki/",
+  themeConfig:
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    ({
+      navbar: {
+        hideOnScroll: true,
+        title: "24san",
+        logo: {
+          alt: "24san Logo",
+          src: "https://github.com/KYATAPsan/docs/blob/main/static/img/Back_KYATAP.png?raw=true",
+        },
+        items: [
+          {
+            type: "dropdown",
+            label: "Wiki",
+            position: "left",
+            items: [
+              { to: "/wiki/list", label: "一覧" },
+              { to: "/wiki/guild", label: "ギルド" },
+              { to: "/wiki/panel", label: "パネル" },
+            ],
+          },
+          {
+            to: "/news",
+            label: "おしらせ",
+            position: "left",
+          },
+          {
+            type: "doc",
+            docId: "introduction/what-is-24san",
+            position: "right",
+            label: "Documentation",
+          },
+          { to: "/blog", label: "Blog", position: "right" },
+          {
+            href: "https://discord.com/invite/QthB6rPBf7",
+            html: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="main-grid-item-icon" fill="none">
+            <path d="..." fill="currentColor" />
+            </svg>`,
+            position: "right",
+            className: "header-icon-link",
+          },
+        ],
       },
-    ],
-  ],
+    }),
 
-  themeConfig: {
-    navbar: {
-      title: "24san",
-      logo: {
-        alt: "24san Logo",
-        src: "img/logo.png",
-      },
-      items: [
-        {
-          type: "dropdown",
-          label: "Wiki",
-          position: "left",
-          items: [
-            { to: "/wiki/list", label: "一覧" },
-            { to: "/wiki/guild", label: "ギルド" },
-            { to: "/wiki/panel", label: "パネル" },
-          ],
+  plugins: [
+    async function myPlugin(context, options) {
+      return {
+        name: "docusaurus-tailwindcss",
+        configurePostCss(postcssOptions) {
+          postcssOptions.plugins.push(require("tailwindcss"));
+          postcssOptions.plugins.push(require("autoprefixer"));
+          return postcssOptions;
         },
-        { to: "/blog", label: "Blog", position: "right" },
-        {
-          href: "https://discord.com/invite/QthB6rPBf7",
-          label: "Discord",
-          position: "right",
-        },
-      ],
+      };
     },
-    footer: {
-      style: "dark",
-      links: [
-        {
-          title: "Wiki",
-          items: [
-            { label: "一覧", to: "/wiki/list" },
-            { label: "ギルド", to: "/wiki/guild" },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} 24san Server.`,
-    },
-  },
+  ],
 };
 
 module.exports = config;
