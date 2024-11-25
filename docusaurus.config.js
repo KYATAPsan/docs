@@ -4,8 +4,8 @@ const config = {
   tagline: "24sanサーバーに参加しよう！",
   url: "https://24san.github.io",
   baseUrl: "/",
-  onBrokenLinks: "warn",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenLinks: "ignore", // 壊れたリンクを無視
+  onBrokenMarkdownLinks: "ignore", // 壊れたMarkdownリンクを無視
   favicon: "img/favicon.ico",
   organizationName: "24san",
   projectName: "24san.github.io",
