@@ -46,7 +46,7 @@ export default function LayoutWrapper(props) {
               }
             })();
             ChannelIO('boot', {
-              "pluginKey": "あなたのプラグインキー"
+              "pluginKey": "40c0d46f-84ba-460b-9686-82ebbc71e8dc"
             });
           `
         }} />
