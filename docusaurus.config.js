@@ -199,20 +199,6 @@ const config = {
       };
     },
   ],
-  scripts: [
-    {
-      src: 'https://cdn.channel.io/plugin/ch-plugin-web.js',
-      async: true,
-    },
-    {
-      // 起動スクリプト
-      content: `
-        ChannelIO('boot', {
-          "pluginKey": "40c0d46f-84ba-460b-9686-82ebbc71e8dc"
-        });
-      `,
-    },
-  ],
 };
 
 module.exports = config;
