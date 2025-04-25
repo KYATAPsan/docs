@@ -4,7 +4,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react'; // useEffect を追加！
 import styles from './index.module.css';
 
 function copyToClipboard(text, setNotification) {
@@ -50,7 +50,6 @@ function HomepageHeader() {
       <div className="container">
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
-        {/* ボタン部分 */}
         <div className={styles.buttons}>
           <Link className="button button--secondary button--lg" to="/docs/intro">
             サーバーを見る ➜
@@ -63,7 +62,6 @@ function HomepageHeader() {
             サーバーの仕様を確認する
           </Link>
         </div>
-        {/* サーバーアドレスカード */}
         <div className={styles.serverAddresses}>
           <ServerAddressCard
             icon="path/to/wifi-icon.png"
@@ -84,7 +82,6 @@ function HomepageHeader() {
             setNotification={setNotificationVisible}
           />
         </div>
-        {/* 通知部分 */}
         <Notification isVisible={notificationVisible} />
       </div>
     </header>
@@ -93,6 +90,51 @@ function HomepageHeader() {
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
+
+  // ✅ チャンネルトークを追加
+  useEffect(() => {
+    if (window.ChannelIO) return;
+
+    (function () {
+      var w = window;
+      if (w.ChannelIO) {
+        return w.console.error("ChannelIO script included twice.");
+      }
+      var ch = function () {
+        ch.c(arguments);
+      };
+      ch.q = [];
+      ch.c = function (args) {
+        ch.q.push(args);
+      };
+      w.ChannelIO = ch;
+      function l() {
+        if (w.ChannelIOInitialized) {
+          return;
+        }
+        w.ChannelIOInitialized = true;
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://cdn.channel.io/plugin/ch-plugin-web.js";
+        var x = document.getElementsByTagName("script")[0];
+        if (x.parentNode) {
+          x.parentNode.insertBefore(s, x);
+        }
+      }
+      if (document.readyState === "complete") {
+        l();
+      } else {
+        w.addEventListener("DOMContentLoaded", l);
+        w.addEventListener("load", l);
+      }
+    })();
+
+    window.ChannelIO('boot', {
+      pluginKey: "40c0d46f-84ba-460b-9686-82ebbc71e8dc"
+    });
+  }, []);
+
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
