@@ -1,8 +1,8 @@
 import React from 'react';
-import Layout from '@theme-original/Layout';
+import OriginalLayout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 
-export default function LayoutWrapper(props) {
+export default function Layout(props) {
   return (
     <>
       <Head>
@@ -46,7 +46,7 @@ export default function LayoutWrapper(props) {
           }}
         />
       </Head>
-      <Layout {...props} />
+      <OriginalLayout {...props} />
     </>
   );
 }
