@@ -78,7 +78,7 @@ const config = {
             ],
           },
           {
-            to: "/news",
+            to: "/blog",
             label: "おしらせ",
             position: "left",
           },
