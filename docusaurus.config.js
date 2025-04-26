@@ -72,7 +72,7 @@ const config = {
             label: "Wiki",
             position: "left",
             items: [
-              { to: "/wiki/list", label: "一覧" },
+              { to: "docs/wiki/list", label: "一覧" },
               { to: "/wiki/guild", label: "ギルド" },
               { to: "/wiki/panel", label: "パネル" },
             ],
