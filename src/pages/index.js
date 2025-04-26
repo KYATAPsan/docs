@@ -129,17 +129,12 @@ function HomepageHeader() {
               marginBottom: '16px',
             }}
           >
-            <div style={{ paddingRight: '32px' }}>
-              {/* 👆 こっち！ServerAddressCardの外にpaddingをつける */}
-              <ServerAddressCard
-                icon="https://github.com/KYATAPsan/docs/blob/main/src/pages/637316942794178006.png?raw=true"
-                label="フレンド機能"
-                address="pp24san"
-                setNotification={setNotificationVisible}
-              />
-            </div>
-            
-            {/* アイコンはそのまま */}
+            <ServerAddressCard
+              icon="https://github.com/KYATAPsan/docs/blob/main/src/pages/637316942794178006.png?raw=true"
+              label="フレンド機能"
+              address="pp24san"
+              setNotification={setNotificationVisible}
+            />
             <img
               src="https://raw.githubusercontent.com/KYATAPsan/docs/910630e01b33ea2f51ec2b4af281781c6fee4ff7/src/pages/copy.svg"
               alt="コピー"
