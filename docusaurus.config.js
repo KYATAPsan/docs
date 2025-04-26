@@ -122,17 +122,17 @@ links: [
     title: "コミュニティ",
     items: [
       {
-        label: 'Discord <img src="/img/external-link.svg" alt="外部リンク" style="width:12px; margin-left:4px;" />',
+        label: 'Discord ',
         href: "https://discord.com/invite/QthB6rPBf7",
         target: "_blank",
       },
       {
-        label: 'Twitter <img src="/img/external-link.svg" alt="外部リンク" style="width:12px; margin-left:4px;" />',
+        label: 'Twitter ',
         href: "https://twitter.com/24san_KYATAP",
         target: "_blank",
       },
       {
-        label: 'YouTube <img src="/img/external-link.svg" alt="外部リンク" style="width:12px; margin-left:4px;" />',
+        label: 'YouTube ',
         href: "https://www.youtube.com/@KYATAP",
         target: "_blank",
       },
@@ -146,7 +146,7 @@ links: [
         to: "/docs/introduction/what-is-24san",
       },
       {
-        label: 'サーバールール <img src="/img/external-link.svg" alt="外部リンク" style="width:12px; margin-left:4px;" />',
+        label: 'サーバールール ',
         href: "https://discord.com/invite/QthB6rPBf7",
         target: "_blank",
       },
