@@ -62,26 +62,22 @@ function HomepageHeader() {
             サーバーの仕様を確認する
           </Link>
         </div>
-        <div className={styles.serverAddresses}>
-          <ServerAddressCard
-            icon="/img/wifi-icon.png"
-            label="JAVA版"
-            address="24san.org"
-            setNotification={setNotificationVisible}
-          />
-          <ServerAddressCard
-            icon="/img/wifi-icon.png"
-            label="統合版アドレス"
-            address="24san.org"
-            setNotification={setNotificationVisible}
-          />
-          <ServerAddressCard
-            icon="/img/port-icon.png"
-            label="統合版ポート"
-            address="19132"
-            setNotification={setNotificationVisible}
-          />
-        </div>
+          <div className={styles.serverAddresses}>
+            <ServerAddressCard
+              icon="/img/wifi-icon.png"
+              label="JAVA版"
+              address="24san.org"
+              setNotification={setNotificationVisible}
+            />
+            <a href="https://24san.org" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+              <ServerAddressCard
+                icon="/img/wifi-icon.png"
+                label="統合版アドレス"
+                address="24san.org"
+                setNotification={setNotificationVisible}
+              />
+            </a>
+          </div>
         <Notification isVisible={notificationVisible} />
       </div>
     </header>
