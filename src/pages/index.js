@@ -63,20 +63,64 @@ function HomepageHeader() {
           </Link>
         </div>
           <div className={styles.serverAddresses}>
+            {/* JAVA版 */}
             <ServerAddressCard
               icon="https://github.com/KYATAPsan/docs/blob/main/src/pages/637316942794178006.png?raw=true"
               label="JAVA版"
               address="24san.org"
               setNotification={setNotificationVisible}
             />
-            <a href="minecraft://?addExternalServer= 24san Server|24san.org:19132" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-              <ServerAddressCard
-                icon="https://github.com/KYATAPsan/docs/blob/main/src/pages/637316942794178006.png?raw=true"
-                label="統合版アドレス"
-                address="24san.org"
-                setNotification={setNotificationVisible}
-              />
+          
+            {/* 統合版アドレス（外部リンクアイコン付） */}
+            <a href="minecraft://?addExternalServer=24san Server|24san.org:19132" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+              <div style={{ position: 'relative' }}>
+                <ServerAddressCard
+                  icon="https://github.com/KYATAPsan/docs/blob/main/src/pages/637316942794178006.png?raw=true"
+                  label="統合版アドレス"
+                  address="24san.org:19132"
+                  setNotification={setNotificationVisible}
+                />
+                {/* 外部リンクマーク */}
+                <img
+                  src="/img/external-link.svg"
+                  alt="外部リンク"
+                  style={{
+                    position: 'absolute',
+                    top: '8px',
+                    right: '8px',
+                    width: '16px',
+                    height: '16px',
+                  }}
+                />
+              </div>
             </a>
+          
+            {/* フレンド機能（クリックでコピー） */}
+            <div
+              onClick={() => {
+                navigator.clipboard.writeText('pp24san');
+                setNotificationVisible(true);
+              }}
+              style={{
+                cursor: 'pointer',
+                backgroundColor: '#f5f5f5',
+                border: '1px solid #ccc',
+                borderRadius: '8px',
+                padding: '16px',
+                textAlign: 'center',
+                marginTop: '16px',
+                position: 'relative',
+              }}
+            >
+              <img
+                src="https://github.com/KYATAPsan/docs/blob/main/src/pages/637316942794178006.png?raw=true"
+                alt="Friend Icon"
+                style={{ width: '48px', height: '48px', marginBottom: '8px' }}
+              />
+              <div style={{ fontWeight: 'bold', fontSize: '18px' }}>フレンド機能</div>
+              <div style={{ fontSize: '16px', color: '#333' }}>pp24san</div>
+              <div style={{ fontSize: '12px', color: '#999' }}>クリックでコピー</div>
+            </div>
           </div>
         <Notification isVisible={notificationVisible} />
       </div>
