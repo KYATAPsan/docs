@@ -122,17 +122,17 @@ links: [
     title: "コミュニティ",
     items: [
       {
-        label: 'Discord ',
+        label: 'Discord',
         href: "https://discord.com/invite/QthB6rPBf7",
         target: "_blank",
       },
       {
-        label: 'Twitter ',
+        label: 'Twitter',
         href: "https://twitter.com/24san_KYATAP",
         target: "_blank",
       },
       {
-        label: 'YouTube ',
+        label: 'YouTube',
         href: "https://www.youtube.com/@KYATAP",
         target: "_blank",
       },
@@ -146,7 +146,7 @@ links: [
         to: "/docs/introduction/what-is-24san",
       },
       {
-        label: 'サーバールール ',
+        label: 'サーバールール',
         href: "https://discord.com/invite/QthB6rPBf7",
         target: "_blank",
       },
