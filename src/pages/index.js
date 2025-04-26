@@ -132,7 +132,7 @@ function HomepageHeader() {
             <ServerAddressCard
               icon="https://github.com/KYATAPsan/docs/blob/main/src/pages/637316942794178006.png?raw=true"
               label="フレンド機能"
-              address="pp24san"
+              address="pp24san     "
               setNotification={setNotificationVisible}
             />
             <img
