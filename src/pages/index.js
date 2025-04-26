@@ -63,16 +63,32 @@ function HomepageHeader() {
           </Link>
         </div>
         <div className={styles.serverAddresses}>
-          {/* JAVA版 */}
-          <div style={{ position: 'relative', cursor: 'default', marginBottom: '16px' }}>
+          {/* JAVA版（コピーアイコン付き） */}
+          <div
+            style={{ position: 'relative', cursor: 'pointer', marginBottom: '16px' }}
+            onClick={() => {
+              navigator.clipboard.writeText('24san.org');
+              setNotificationVisible(true); // コピーしたら通知
+            }}
+          >
             <ServerAddressCard
               icon="https://github.com/KYATAPsan/docs/blob/main/src/pages/637316942794178006.png?raw=true"
               label="JAVA版"
               address="24san.org"
               setNotification={setNotificationVisible}
             />
+            <img
+              src="/img/copy.svg"
+              alt="コピー"
+              style={{
+                position: 'absolute',
+                top: '8px',
+                right: '8px',
+                width: '24px',
+                height: '24px',
+              }}
+            />
           </div>
-        
           {/* 統合版（外部リンクマーク付き） */}
           <a
             href="minecraft://?addExternalServer=24san Server|24san.org:19132"
@@ -123,6 +139,7 @@ function HomepageHeader() {
               src="https://raw.githubusercontent.com/KYATAPsan/docs/910630e01b33ea2f51ec2b4af281781c6fee4ff7/src/pages/copy.svg"
               alt="コピー"
               style={{
+                paddingRight: '32px',
                 position: 'absolute',
                 top: '8px',
                 right: '8px',
