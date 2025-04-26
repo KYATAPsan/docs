@@ -64,14 +64,14 @@ function HomepageHeader() {
         </div>
           <div className={styles.serverAddresses}>
             <ServerAddressCard
-              icon="/637316942794178006.png"
+              icon="637316942794178006.png"
               label="JAVA版"
               address="24san.org"
               setNotification={setNotificationVisible}
             />
             <a href="minecraft://?addExternalServer= 24san Server|24san.org:19132" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
               <ServerAddressCard
-                icon="/637316942794178006.png"
+                icon="637316942794178006.png"
                 label="統合版アドレス"
                 address="24san.org"
                 setNotification={setNotificationVisible}
