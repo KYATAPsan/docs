@@ -64,14 +64,14 @@ function HomepageHeader() {
         </div>
           <div className={styles.serverAddresses}>
             <ServerAddressCard
-              icon="https://static.wikia.nocookie.net/minecraft_ja_gamepedia/images/b/ba/Java_Edition_13.png/revision/latest/scale-to-width-down/1000?cb=20230406091814"
+              icon="/637316942794178006.png"
               label="JAVA版"
               address="24san.org"
               setNotification={setNotificationVisible}
             />
             <a href="minecraft://?addExternalServer= 24san Server|24san.org:19132" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
               <ServerAddressCard
-                icon="https://static.wikia.nocookie.net/minecraft_ja_gamepedia/images/e/e7/Minecraft_logo_2.png/revision/latest/scale-to-width-down/1000?cb=20230218013203"
+                icon="/637316942794178006.png"
                 label="統合版アドレス"
                 address="24san.org"
                 setNotification={setNotificationVisible}
