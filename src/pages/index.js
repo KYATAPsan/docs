@@ -88,7 +88,7 @@ function HomepageHeader() {
                 setNotification={setNotificationVisible}
               />
               <img
-                src="/img/external-link.svg"
+                src="https://raw.githubusercontent.com/KYATAPsan/docs/910630e01b33ea2f51ec2b4af281781c6fee4ff7/src/pages/external-link.svg"
                 alt="外部リンク"
                 style={{
                   position: 'absolute',
@@ -120,7 +120,7 @@ function HomepageHeader() {
               setNotification={setNotificationVisible}
             />
             <img
-              src="/img/copy.svg"
+              src="https://raw.githubusercontent.com/KYATAPsan/docs/910630e01b33ea2f51ec2b4af281781c6fee4ff7/src/pages/copy.svg"
               alt="コピー"
               style={{
                 position: 'absolute',
