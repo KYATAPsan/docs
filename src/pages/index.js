@@ -82,7 +82,7 @@ function HomepageHeader() {
                 />
                 {/* 外部リンクマーク */}
                 <img
-                  src="/img/external-link.svg"
+                  src="https://raw.githubusercontent.com/KYATAPsan/docs/98fb8d23f74fddc0ad839ff9131d0eddca4f4ec2/src/pages/external-link.svg"
                   alt="外部リンク"
                   style={{
                     position: 'absolute',
@@ -101,16 +101,13 @@ function HomepageHeader() {
                 navigator.clipboard.writeText('pp24san');
                 setNotificationVisible(true);
               }}
-              style={{
-                cursor: 'pointer',
-                backgroundColor: '#f5f5f5',
-                border: '1px solid #ccc',
-                borderRadius: '8px',
-                padding: '16px',
-                textAlign: 'center',
-                marginTop: '16px',
-                position: 'relative',
-              }}
+                  style={{
+                    position: 'absolute',
+                    top: '8px',
+                    right: '8px',
+                    width: '16px',
+                    height: '16px',
+                  }}
             >
               <img
                 src="https://github.com/KYATAPsan/docs/blob/main/src/pages/637316942794178006.png?raw=true"
