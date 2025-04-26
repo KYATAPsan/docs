@@ -122,16 +122,31 @@ const config = {
             title: "コミュニティ",
             items: [
               {
-                label: "Discord",
-                to: "https://discord.com/invite/QthB6rPBf7",
+                label: (
+                  <>
+                    Discord <img src="/img/external-link.svg" alt="外部リンク" style={{width: "12px", marginLeft: "4px"}} />
+                  </>
+                ),
+                href: "https://discord.com/invite/QthB6rPBf7",
+                target: "_blank",
               },
               {
-                label: "Twitter",
-                to: "https://twitter.com/24san_KYATAP",
+                label: (
+                  <>
+                    Twitter <img src="/img/external-link.svg" alt="外部リンク" style={{width: "12px", marginLeft: "4px"}} />
+                  </>
+                ),
+                href: "https://twitter.com/24san_KYATAP",
+                target: "_blank",
               },
               {
-                label: "YouTube",
-                to: "https://www.youtube.com/@KYATAP",
+                label: (
+                  <>
+                    YouTube <img src="/img/external-link.svg" alt="外部リンク" style={{width: "12px", marginLeft: "4px"}} />
+                  </>
+                ),
+                href: "https://www.youtube.com/@KYATAP",
+                target: "_blank",
               },
             ],
           },
@@ -143,8 +158,13 @@ const config = {
                 to: "/docs/introduction/what-is-24san",
               },
               {
-                label: "サーバールール",
-                to: "https://discord.com/invite/QthB6rPBf7",
+                label: (
+                  <>
+                    サーバールール <img src="/img/external-link.svg" alt="外部リンク" style={{width: "12px", marginLeft: "4px"}} />
+                  </>
+                ),
+                href: "https://discord.com/invite/QthB6rPBf7",
+                target: "_blank",
               },
             ],
           },
