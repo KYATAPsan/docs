@@ -69,7 +69,7 @@ function HomepageHeader() {
               address="24san.org"
               setNotification={setNotificationVisible}
             />
-            <a href="https://24san.org" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+            <a href="minecraft://?addExternalServer= 24san Server|24san.org:19132" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
               <ServerAddressCard
                 icon="/img/wifi-icon.png"
                 label="統合版アドレス"
