@@ -108,67 +108,51 @@ const config = {
           src: "img/logo_docs.svg",
           href: "/",
         },
-        links: [
-          {
-            title: "Documentation",
-            items: [
-              {
-                label: "ドキュメント",
-                to: "/docs/introduction/what-is-24san",
-              },
-            ],
-          },
-          {
-            title: "コミュニティ",
-            items: [
-              {
-                label: (
-                  <>
-                    Discord <img src="/img/external-link.svg" alt="外部リンク" style={{width: "12px", marginLeft: "4px"}} />
-                  </>
-                ),
-                href: "https://discord.com/invite/QthB6rPBf7",
-                target: "_blank",
-              },
-              {
-                label: (
-                  <>
-                    Twitter <img src="/img/external-link.svg" alt="外部リンク" style={{width: "12px", marginLeft: "4px"}} />
-                  </>
-                ),
-                href: "https://twitter.com/24san_KYATAP",
-                target: "_blank",
-              },
-              {
-                label: (
-                  <>
-                    YouTube <img src="/img/external-link.svg" alt="外部リンク" style={{width: "12px", marginLeft: "4px"}} />
-                  </>
-                ),
-                href: "https://www.youtube.com/@KYATAP",
-                target: "_blank",
-              },
-            ],
-          },
-          {
-            title: "サービス",
-            items: [
-              {
-                label: "コマンドの使い方",
-                to: "/docs/introduction/what-is-24san",
-              },
-              {
-                label: (
-                  <>
-                    サーバールール <img src="/img/external-link.svg" alt="外部リンク" style={{width: "12px", marginLeft: "4px"}} />
-                  </>
-                ),
-                href: "https://discord.com/invite/QthB6rPBf7",
-                target: "_blank",
-              },
-            ],
-          },
-        ],
+links: [
+  {
+    title: "Documentation",
+    items: [
+      {
+        label: "ドキュメント",
+        to: "/docs/introduction/what-is-24san",
+      },
+    ],
+  },
+  {
+    title: "コミュニティ",
+    items: [
+      {
+        label: 'Discord <img src="/img/external-link.svg" alt="外部リンク" style="width:12px; margin-left:4px;" />',
+        href: "https://discord.com/invite/QthB6rPBf7",
+        target: "_blank",
+      },
+      {
+        label: 'Twitter <img src="/img/external-link.svg" alt="外部リンク" style="width:12px; margin-left:4px;" />',
+        href: "https://twitter.com/24san_KYATAP",
+        target: "_blank",
+      },
+      {
+        label: 'YouTube <img src="/img/external-link.svg" alt="外部リンク" style="width:12px; margin-left:4px;" />',
+        href: "https://www.youtube.com/@KYATAP",
+        target: "_blank",
+      },
+    ],
+  },
+  {
+    title: "サービス",
+    items: [
+      {
+        label: "コマンドの使い方",
+        to: "/docs/introduction/what-is-24san",
+      },
+      {
+        label: 'サーバールール <img src="/img/external-link.svg" alt="外部リンク" style="width:12px; margin-left:4px;" />',
+        href: "https://discord.com/invite/QthB6rPBf7",
+        target: "_blank",
+      },
+    ],
+  },
+],
 copyright: `Copyright © ${new Date().getFullYear()} 24san Server. All rights reserved.<br/>
 当サイトはMojangAB および Microsoft とは一切関係がありません。`
 
