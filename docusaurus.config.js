@@ -143,25 +143,8 @@ const config = {
                 to: "/docs/introduction/what-is-24san",
               },
               {
-                label: "お問い合わせ",
-                to: "https://discord.com/invite/QthB6rPBf7",
-              },
-              {
                 label: "サーバールール",
                 to: "https://discord.com/invite/QthB6rPBf7",
-              },
-            ],
-          },
-          {
-            title: "その他",
-            items: [
-              {
-                label: "お知らせ",
-                to: "/blog",
-              },
-              {
-                label: "チャンネル登録お願いします。",
-                to: "https://www.youtube.com/@KYATAP",
               },
             ],
           },
