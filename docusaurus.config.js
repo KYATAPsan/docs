@@ -166,8 +166,9 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} 24san Server. All rights reserved.
-        当サイトはMojangAB および Microsoft とは一切関係がありません。`
+copyright: `Copyright © ${new Date().getFullYear()} 24san Server. All rights reserved.<br/>
+当サイトはMojangAB および Microsoft とは一切関係がありません。`
+
       },
 
       // アナウンスメントバー
