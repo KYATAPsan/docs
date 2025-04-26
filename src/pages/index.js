@@ -78,7 +78,7 @@ function HomepageHeader() {
               setNotification={setNotificationVisible}
             />
             <img
-              src="/img/copy.svg"
+              src="https://raw.githubusercontent.com/KYATAPsan/docs/910630e01b33ea2f51ec2b4af281781c6fee4ff7/src/pages/copy.svg"
               alt="コピー"
               style={{
                 position: 'absolute',
@@ -129,17 +129,21 @@ function HomepageHeader() {
               marginBottom: '16px',
             }}
           >
-            <ServerAddressCard
-              icon="https://github.com/KYATAPsan/docs/blob/main/src/pages/637316942794178006.png?raw=true"
-              label="フレンド機能"
-              address="pp24san"
-              setNotification={setNotificationVisible}
-            />
+            <div style={{ paddingRight: '32px' }}>
+              {/* 👆 こっち！ServerAddressCardの外にpaddingをつける */}
+              <ServerAddressCard
+                icon="https://github.com/KYATAPsan/docs/blob/main/src/pages/637316942794178006.png?raw=true"
+                label="フレンド機能"
+                address="pp24san"
+                setNotification={setNotificationVisible}
+              />
+            </div>
+            
+            {/* アイコンはそのまま */}
             <img
               src="https://raw.githubusercontent.com/KYATAPsan/docs/910630e01b33ea2f51ec2b4af281781c6fee4ff7/src/pages/copy.svg"
               alt="コピー"
               style={{
-                paddingRight: '32px',
                 position: 'absolute',
                 top: '8px',
                 right: '8px',
