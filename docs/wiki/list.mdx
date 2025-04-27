@@ -3,26 +3,56 @@ title: Wiki一覧
 description: '24sanサーバーの仕様や参加方法などをまとめたWiki一覧です。'
 ---
 
-import { useDocById } from '@docusaurus/plugin-content-docs/client';
-import DocCardList from '@theme/DocCardList';
+import Link from '@docusaurus/Link';
 
 # Wiki一覧
 
-<DocCardList items={[
-  'wiki/how-to-join',
-  'wiki/server-rules',
-  'wiki/guild/create',
-  'wiki/guild/join',
-  'wiki/panel/bedrock',
-  'wiki/panel/java',
-  'wiki/other/shop',
-  'wiki/other/elevator',
-].map((id) => {
-  const metadata = useDocById(id);
-  return {
-    type: 'link',
-    label: metadata.title,
-    href: metadata.permalink,
-    docId: id,
-  };
-})} />
+<div className="card-list">
+  <Link className="card margin-bottom--lg" to="/docs/wiki/how-to-join">
+    <div className="card__body">
+      <h3>参加方法</h3>
+    </div>
+  </Link>
+
+  <Link className="card margin-bottom--lg" to="/docs/wiki/server-rules">
+    <div className="card__body">
+      <h3>サーバールール</h3>
+    </div>
+  </Link>
+
+  <Link className="card margin-bottom--lg" to="/docs/wiki/guild/create">
+    <div className="card__body">
+      <h3>ギルドの作り方</h3>
+    </div>
+  </Link>
+
+  <Link className="card margin-bottom--lg" to="/docs/wiki/guild/join">
+    <div className="card__body">
+      <h3>ギルドへの参加方法</h3>
+    </div>
+  </Link>
+
+  <Link className="card margin-bottom--lg" to="/docs/wiki/panel/bedrock">
+    <div className="card__body">
+      <h3>統合版パネルの使い方</h3>
+    </div>
+  </Link>
+
+  <Link className="card margin-bottom--lg" to="/docs/wiki/panel/java">
+    <div className="card__body">
+      <h3>JAVA版パネルの使い方</h3>
+    </div>
+  </Link>
+
+  <Link className="card margin-bottom--lg" to="/docs/wiki/other/shop">
+    <div className="card__body">
+      <h3>ショップの作り方</h3>
+    </div>
+  </Link>
+
+  <Link className="card margin-bottom--lg" to="/docs/wiki/other/elevator">
+    <div className="card__body">
+      <h3>エレベーターの作り方</h3>
+    </div>
+  </Link>
+</div>
