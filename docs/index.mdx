@@ -7,94 +7,128 @@ import Link from '@docusaurus/Link';
 
 # ドキュメント一覧
 
-## 参加・ルール
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .card-hover {
+    display: block;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    transition: border-color 0.3s;
+    text-decoration: none;
+  }
+  .card-hover:hover {
+    border-color: #3498db;
+  }
+  .card__body h2 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+  .card__body p {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  .doc-section-title {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    font-weight: bold;
+  }
+</style>
 
-<div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginBottom: '32px' }}>
-  <Link className="card card-hover" style={{ flex: '1', border: '2px solid #ccc', borderRadius: '8px', padding: '16px', transition: '0.3s' }} to="/docs/how-to-join">
+<h2 className="doc-section-title">参加・ルール</h2>
+
+<div className="grid-container">
+  <Link className="card-hover" to="/docs/how-to-join">
     <div className="card__body">
-      <h2 style={{ fontSize: '1.5rem', marginBottom: '8px' }}>参加方法</h2>
-      <p style={{ fontSize: '0.9rem', color: '#666' }}>サーバーへの参加方法を解説します。</p>
+      <h2>参加方法</h2>
+      <p>サーバーへの参加方法を解説します。</p>
     </div>
   </Link>
 
-  <Link className="card card-hover" style={{ flex: '1', border: '2px solid #ccc', borderRadius: '8px', padding: '16px', transition: '0.3s' }} to="/docs/server-rules">
+  <Link className="card-hover" to="/docs/server-rules">
     <div className="card__body">
-      <h2 style={{ fontSize: '1.5rem', marginBottom: '8px' }}>サーバールール</h2>
-      <p style={{ fontSize: '0.9rem', color: '#666' }}>24sanサーバーのルールをまとめています。</p>
-    </div>
-  </Link>
-  <Link className="card card-hover" style={{ flex: '1', border: '2px solid #ccc', borderRadius: '8px', padding: '16px', transition: '0.3s' }} to="/docs/server-rules">
-    <div className="card__body">
-      <h2 style={{ fontSize: '1.5rem', marginBottom: '8px' }}>利用規約</h2>
-      <p style={{ fontSize: '0.9rem', color: '#666' }}>24sanサーバーの利用規約をまとめています。</p>
-    </div>
-  </Link>
-  <Link className="card card-hover" style={{ flex: '1', border: '2px solid #ccc', borderRadius: '8px', padding: '16px', transition: '0.3s' }} to="/docs/server-rules">
-    <div className="card__body">
-      <h2 style={{ fontSize: '1.5rem', marginBottom: '8px' }}>許可/拒否 されたMod一覧</h2>
-      <p style={{ fontSize: '0.9rem', color: '#666' }}>当サーバーで許可もしくは拒否されたmodを...</p>
-    </div>
-  </Link>
-</div>
-
-## ギルドの使い方
-
-<div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginBottom: '32px' }}>
-  <Link className="card card-hover" style={{ flex: '1', border: '2px solid #ccc', borderRadius: '8px', padding: '16px', transition: '0.3s' }} to="/docs/guild-create">
-    <div className="card__body">
-      <h2 style={{ fontSize: '1.5rem', marginBottom: '8px' }}>作成方法</h2>
-      <p style={{ fontSize: '0.9rem', color: '#666' }}>ギルドを新しく作成する方法です。</p>
+      <h2>サーバールール</h2>
+      <p>24sanサーバーのルールをまとめています。</p>
     </div>
   </Link>
 
-  <Link className="card card-hover" style={{ flex: '1', border: '2px solid #ccc', borderRadius: '8px', padding: '16px', transition: '0.3s' }} to="/docs/guild-create">
+  <Link className="card-hover" to="/docs/server-rules">
     <div className="card__body">
-      <h2 style={{ fontSize: '1.5rem', marginBottom: '8px' }}>設定方法</h2>
-      <p style={{ fontSize: '0.9rem', color: '#666' }}>ギルドの設定方法を説明します。</p>
+      <h2>利用規約</h2>
+      <p>24sanサーバーの利用規約をまとめています。</p>
     </div>
   </Link>
 
-
-  <Link className="card card-hover" style={{ flex: '1', border: '2px solid #ccc', borderRadius: '8px', padding: '16px', transition: '0.3s' }} to="/docs/guild-join">
+  <Link className="card-hover" to="/docs/server-rules">
     <div className="card__body">
-      <h2 style={{ fontSize: '1.5rem', marginBottom: '8px' }}>参加方法</h2>
-      <p style={{ fontSize: '0.9rem', color: '#666' }}>既存のギルドへの参加方法を説明します。</p>
-    </div>
-  </Link>
-</div>
-
-## パネルの使い方
-
-<div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginBottom: '32px' }}>
-  <Link className="card card-hover" style={{ flex: '1', border: '2px solid #ccc', borderRadius: '8px', padding: '16px', transition: '0.3s' }} to="/docs/panel-bedrock">
-    <div className="card__body">
-      <h2 style={{ fontSize: '1.5rem', marginBottom: '8px' }}>統合版パネル</h2>
-      <p style={{ fontSize: '0.9rem', color: '#666' }}>統合版プレイヤー向けパネルの使い方。</p>
-    </div>
-  </Link>
-
-  <Link className="card card-hover" style={{ flex: '1', border: '2px solid #ccc', borderRadius: '8px', padding: '16px', transition: '0.3s' }} to="/docs/panel-java">
-    <div className="card__body">
-      <h2 style={{ fontSize: '1.5rem', marginBottom: '8px' }}>JAVA版パネル</h2>
-      <p style={{ fontSize: '0.9rem', color: '#666' }}>Java版プレイヤー向けパネルの使い方。</p>
+      <h2>許可/拒否されたMod一覧</h2>
+      <p>当サーバーで許可もしくは拒否されたmodを紹介します。</p>
     </div>
   </Link>
 </div>
 
-## その他の仕様
+<h2 className="doc-section-title">ギルドの使い方</h2>
 
-<div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginBottom: '32px' }}>
-  <Link className="card card-hover" style={{ flex: '1', border: '2px solid #ccc', borderRadius: '8px', padding: '16px', transition: '0.3s' }} to="/docs/shop">
+<div className="grid-container">
+  <Link className="card-hover" to="/docs/guild-create">
     <div className="card__body">
-      <h2 style={{ fontSize: '1.5rem', marginBottom: '8px' }}>ショップの作り方</h2>
-      <p style={{ fontSize: '0.9rem', color: '#666' }}>ショップシステムの設置方法を紹介します。</p>
+      <h2>作成方法</h2>
+      <p>ギルドを新しく作成する方法です。</p>
     </div>
   </Link>
 
-  <Link className="card card-hover" style={{ flex: '1', border: '2px solid #ccc', borderRadius: '8px', padding: '16px', transition: '0.3s' }} to="/docs/elevator">
+  <Link className="card-hover" to="/docs/guild-create">
     <div className="card__body">
-      <h2 style={{ fontSize: '1.5rem', marginBottom: '8px' }}>エレベーターの作り方</h2>
-      <p style={{ fontSize: '0.9rem', color: '#666' }}>エレベーター設置の手順を詳しく解説。</p>
+      <h2>設定方法</h2>
+      <p>ギルドの設定方法を説明します。</p>
+    </div>
+  </Link>
+
+  <Link className="card-hover" to="/docs/guild-join">
+    <div className="card__body">
+      <h2>参加方法</h2>
+      <p>既存のギルドへの参加方法を説明します。</p>
+    </div>
+  </Link>
+</div>
+
+<h2 className="doc-section-title">パネルの使い方</h2>
+
+<div className="grid-container">
+  <Link className="card-hover" to="/docs/panel-bedrock">
+    <div className="card__body">
+      <h2>統合版パネル</h2>
+      <p>統合版プレイヤー向けパネルの使い方。</p>
+    </div>
+  </Link>
+
+  <Link className="card-hover" to="/docs/panel-java">
+    <div className="card__body">
+      <h2>JAVA版パネル</h2>
+      <p>Java版プレイヤー向けパネルの使い方。</p>
+    </div>
+  </Link>
+</div>
+
+<h2 className="doc-section-title">その他の仕様</h2>
+
+<div className="grid-container">
+  <Link className="card-hover" to="/docs/shop">
+    <div className="card__body">
+      <h2>ショップの作り方</h2>
+      <p>ショップシステムの設置方法を紹介します。</p>
+    </div>
+  </Link>
+
+  <Link className="card-hover" to="/docs/elevator">
+    <div className="card__body">
+      <h2>エレベーターの作り方</h2>
+      <p>エレベーター設置の手順を詳しく解説。</p>
     </div>
   </Link>
 </div>
