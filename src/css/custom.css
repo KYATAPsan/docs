@@ -100,6 +100,10 @@
   font-size: 0.9rem;
   color: #666;
 }
+.card-hover:hover h2,
+.card-hover:hover p {
+  color: inherit; /* ホバーしても文字色を変えない */
+}
 
 .doc-section-title {
   font-size: 2rem;
