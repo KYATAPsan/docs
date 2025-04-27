@@ -105,9 +105,16 @@
   color: inherit !important; /* 枠以外（文字など）は絶対変えない */
 }
 
+.card-hover:hover {
+  border-color: #3498db; /* 枠だけ青く光る */
+  color: inherit !important; /* 文字色変わらない */
+  text-decoration: none !important; /* 🔵 下線も絶対消す */
+}
+
 .card-hover:hover h2,
 .card-hover:hover p {
   color: inherit !important;
+  text-decoration: none !important;
 }
 
 .doc-section-title {
