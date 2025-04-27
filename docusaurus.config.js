@@ -67,38 +67,17 @@ const config = {
           src: "https://github.com/KYATAPsan/docs/blob/main/static/img/Back_KYATAP.png?raw=true",
         },
         items: [
-        {
-          type: "dropdown",
-          label: "ドキュメント",
-          position: "left",
-          items: [
-            {
-              label: "サーバールール",
-              to: "/docs/server-rules",
-            },
-            {
-              label: "ギルド",
-              items: [
-                { to: "/docs/guild-create", label: "作成方法" },
-                { to: "/docs/guild-join", label: "参加方法" },
-              ],
-            },
-            {
-              label: "パネル",
-              items: [
-                { to: "/docs/panel-bedrock", label: "統合版パネル" },
-                { to: "/docs/panel-java", label: "JAVA版パネル" },
-              ],
-            },
-            {
-              label: "その他",
-              items: [
-                { to: "/docs/shop", label: "ショップの作り方" },
-                { to: "/docs/elevator", label: "エレベーターの作り方" },
-              ],
-            },
-          ],
-        },
+          {
+            type: "dropdown",
+            label: "ドキュメント",
+            position: "left",
+            items: [
+              { to: '/docs/server-rules', label: 'サーバールール' },
+              { to: '/docs/guild', label: 'ギルド' },
+              { to: '/docs/panel', label: 'パネル' },
+              { to: '/docs/other', label: 'その他' },
+            ],
+          },
           {
             to: "/blog",
             label: "おしらせ",
