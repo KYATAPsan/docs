@@ -155,7 +155,7 @@ links: [
     ],
   },
 ],
-copyright: `Copyright © ${new Date().getFullYear()} 24san Server. All rights reserved.<br/>
+copyright: `Copyright © 2024 24san. Built with Docusaurus.<br/>
 当サイトはMojangAB および Microsoft とは一切関係がありません。`
 
       },
