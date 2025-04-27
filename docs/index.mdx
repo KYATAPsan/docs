@@ -4,43 +4,11 @@ description: '24sanサーバーの仕様や参加方法などをまとめたド�
 ---
 
 import Link from '@docusaurus/Link';
+import '../../src/css/custom.css'; // カスタムCSSを読み込む
 
 # ドキュメント一覧
 
-<style>
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 16px;
-    margin-bottom: 32px;
-  }
-  .card-hover {
-    display: block;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    padding: 16px;
-    transition: border-color 0.3s;
-    text-decoration: none;
-  }
-  .card-hover:hover {
-    border-color: #3498db;
-  }
-  .card__body h2 {
-    font-size: 1.5rem;
-    margin-bottom: 8px;
-  }
-  .card__body p {
-    font-size: 0.9rem;
-    color: #666;
-  }
-  .doc-section-title {
-    font-size: 2rem;
-    margin-bottom: 16px;
-    font-weight: bold;
-  }
-</style>
-
-<h2 className="doc-section-title">参加・ルール</h2>
+## 参加・ルール
 
 <div className="grid-container">
   <Link className="card-hover" to="/docs/how-to-join">
@@ -72,7 +40,7 @@ import Link from '@docusaurus/Link';
   </Link>
 </div>
 
-<h2 className="doc-section-title">ギルドの使い方</h2>
+## ギルドの使い方
 
 <div className="grid-container">
   <Link className="card-hover" to="/docs/guild-create">
@@ -97,7 +65,7 @@ import Link from '@docusaurus/Link';
   </Link>
 </div>
 
-<h2 className="doc-section-title">パネルの使い方</h2>
+## パネルの使い方
 
 <div className="grid-container">
   <Link className="card-hover" to="/docs/panel-bedrock">
@@ -115,7 +83,7 @@ import Link from '@docusaurus/Link';
   </Link>
 </div>
 
-<h2 className="doc-section-title">その他の仕様</h2>
+## その他の仕様
 
 <div className="grid-container">
   <Link className="card-hover" to="/docs/shop">
