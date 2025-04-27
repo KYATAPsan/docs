@@ -71,6 +71,7 @@ const config = {
             type: "dropdown",
             label: "ドキュメント",
             position: "left",
+            to: '/docs', // ドキュメントを押したら /docs に飛ぶ
             items: [
               { to: '/docs/server-rules', label: 'サーバールール' },
               { to: '/docs/guild', label: 'ギルド' },
