@@ -75,12 +75,13 @@
   border: 2px solid #ccc;
   border-radius: 8px;
   padding: 16px;
-  transition: border-color 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s; /* ← box-shadowもtransition対象に追加！ */
   text-decoration: none;
 }
 
 .card-hover:hover {
   border-color: #3498db;
+  box-shadow: 0 0 8px #3498db; /* ← ホバー時に枠を青く光らせる！ */
 }
 
 .card__body h2 {
