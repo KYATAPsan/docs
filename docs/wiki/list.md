@@ -1,25 +1,28 @@
+---
+title: Wiki一覧
+description: '24sanサーバーの仕様や参加方法などをまとめたWiki一覧です。'
+---
+
+import { useDocById } from '@docusaurus/plugin-content-docs/client';
+import DocCardList from '@theme/DocCardList';
+
 # Wiki一覧
 
-## 参加方法
-- [参加方法](/docs/wiki/how-to-join)
-
-## サーバールール
-- [サーバールール](/docs/wiki/server-rules)
-
----
-
-### ギルドの使い方
-- [ギルド作成方法](/docs/wiki/guild/create)
-- [ギルド参加方法](/docs/wiki/guild/join)
-
----
-
-### パネルの使い方
-- [統合版パネル](/docs/wiki/panel/bedrock)
-- [JAVA版パネル](/docs/wiki/panel/java)
-
----
-
-### その他の仕様
-- [ショップの作り方](/docs/wiki/other/shop)
-- [エレベーターの作り方](/docs/wiki/other/elevator)
+<DocCardList items={[
+  'wiki/how-to-join',
+  'wiki/server-rules',
+  'wiki/guild/create',
+  'wiki/guild/join',
+  'wiki/panel/bedrock',
+  'wiki/panel/java',
+  'wiki/other/shop',
+  'wiki/other/elevator',
+].map((id) => {
+  const metadata = useDocById(id);
+  return {
+    type: 'link',
+    label: metadata.title,
+    href: metadata.permalink,
+    docId: id,
+  };
+})} />
