@@ -65,15 +65,17 @@
 /* 通常のカードスタイル */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* PCでは2列 */
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   margin-bottom: 32px;
 }
 
+/* スマホ用 */
 @media (max-width: 768px) {
   .grid-container {
     grid-template-columns: 1fr; /* スマホサイズでは1列 */
   }
+}
 
 .card-hover {
   display: block;
