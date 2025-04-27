@@ -63,26 +63,39 @@
 
 /*04/27追加分*/
 /* 通常のカードスタイル */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
 .card-hover {
+  display: block;
   border: 2px solid #ccc;
   border-radius: 8px;
   padding: 16px;
-  transition: 0.3s;
-  text-decoration: none !important;
-  color: inherit !important; /* 通常時の文字色も上書きして維持 */
+  transition: border-color 0.3s;
+  text-decoration: none;
 }
 
-/* ホバーしたとき：枠の色だけ光らせる */
 .card-hover:hover {
-  border-color: #00bfff;
-  box-shadow: 0 0 10px #00bfff;
-  background-color: transparent;
-  text-decoration: none !important;
-  color: inherit !important; /* hover時も文字色を維持 */
+  border-color: #3498db;
 }
 
-/* カード内部の文字もホバーで色変わらないようにする */
-.card-hover h2,
-.card-hover p {
-  color: inherit !important;
+.card__body h2 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
 }
+
+.card__body p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.doc-section-title {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
