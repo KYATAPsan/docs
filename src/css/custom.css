@@ -57,3 +57,32 @@
 .imgFeaturePreview {
   max-width: 1000px;
 }
+
+
+
+
+/*04/27追加分*/
+/* 通常のカードスタイル */
+.card-hover {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  transition: 0.3s;
+  text-decoration: none !important;
+  color: inherit !important; /* 通常時の文字色も上書きして維持 */
+}
+
+/* ホバーしたとき：枠の色だけ光らせる */
+.card-hover:hover {
+  border-color: #00bfff;
+  box-shadow: 0 0 10px #00bfff;
+  background-color: transparent;
+  text-decoration: none !important;
+  color: inherit !important; /* hover時も文字色を維持 */
+}
+
+/* カード内部の文字もホバーで色変わらないようにする */
+.card-hover h2,
+.card-hover p {
+  color: inherit !important;
+}
