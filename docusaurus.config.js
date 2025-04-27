@@ -88,9 +88,9 @@ const config = {
             type: "doc",
             docId: "introduction/what-is-24san",
             position: "right",
-            label: "Documentation",
+            label: "サーバーへのアクセス方法",
           },
-          { to: "/blog", label: "Blog", position: "right" },
+          //{ to: "/blog", label: "Blog", position: "right" },
           {
             href: "https://discord.com/invite/QthB6rPBf7",
             html: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="main-grid-item-icon" fill="none">
