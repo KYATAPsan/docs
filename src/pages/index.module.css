@@ -1,68 +1,106 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
+:root {
+  --ifm-background-image-url: url('/src/css/light_top_back.png');
+}
+
+[data-theme='dark'] {
+  --ifm-background-image-url: url('/src/css/dark_top_back.png') !important;
+}
 
 .heroBanner {
-  padding: 4rem 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: calc(100vh - 60px);
   text-align: center;
   position: relative;
   overflow: hidden;
-}
+  color: var(--ifm-font-color-base);
+  background-color: var(--ifm-background-color);
+  background-image: var(--ifm-background-image-url);
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
+  @media screen and (max-width: 996px) {
     padding: 2rem;
   }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.heroContent {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 100%;
 }
-.heroBanner {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* 全体を中央揃え */
+
+.heroImage {
+  -webkit-filter: drop-shadow(12px 12px 7px rgba(0, 100, 100, 0.5));
+  filter: drop-shadow(12px 12px 7px rgba(0, 100, 100, 0.5));
+}
+
+.heroImageBackgroundBlur {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 80vh;
+  filter: blur(1.5rem);
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.textSection {
+  color: #fff;
+
+  @media screen and (max-width: 410px) {
+    h1 {
+      font-size: var(--ifm-h1-font-size);
+    }
+  }
 }
 
 .buttons {
   margin-top: 1.5rem;
   margin-bottom: 2rem;
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 10px; /* ボタン間のスペース */
+  gap: 10px;
+
+  @media screen and (max-width: 996px) {
+    padding: 2rem;
+  }
 }
 
 .serverAddresses {
   margin-top: 2rem;
   display: flex;
-  flex-direction: column; /* 完全に縦並び */
+  flex-direction: column;
   gap: 1rem;
-  align-items: center; /* カードを横方向に中央揃え */
+  align-items: center;
 }
 
 .card {
   display: flex;
   align-items: center;
-  background-color: #374151; /* ダークグレー */
+  justify-content: space-between;
+  background-color: #374151;
   border-radius: 8px;
   padding: 1rem;
   color: #ffffff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: transform 0.2s, background-color 0.3s;
-  width: 300px; /* カードの固定幅 */
-  max-width: 100%; /* 小さい画面で画面幅に収まる */
-  justify-content: space-between; /* アイコンとテキストを分ける */
+  width: 300px;
+  max-width: 100%;
   text-align: left;
-}
 
-.card:hover {
-  background-color: #4b5563; /* ホバー時の背景色 */
-  transform: scale(1.02); /* ホバー時の軽いズーム */
+  &:hover {
+    background-color: #4b5563;
+    transform: scale(1.02);
+  }
 }
 
 .iconContainer {
@@ -75,8 +113,8 @@
 }
 
 .label {
-  font-size: 0.875rem; /* Smaller text for the label */
-  color: #9ca3af; /* Gray text */
+  font-size: 0.875rem;
+  color: #9ca3af;
 }
 
 .address {
@@ -97,9 +135,9 @@
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
-}
 
-.notification.visible {
-  opacity: 1;
-  transform: translateY(0);
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
