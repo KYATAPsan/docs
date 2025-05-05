@@ -16,8 +16,8 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className={styles.heroContent}>
-        <img src={HeroImage} alt="Geyser Logo" className={styles.heroImage} />
-        <img src={HeroImage} alt="Geyser Logo" className={styles.heroImageBackgroundBlur} />
+        <img src={HeroImage} alt="24san Logo" className={styles.heroImage} />
+        <img src={HeroImage} alt="24san Logo" className={styles.heroImageBackgroundBlur} />
         <div className={styles.textSection}>
           <Heading as="h1" className="hero__title">
             <Translate id="pages.main.title">Revolutionize Your Minecraft Server</Translate>
@@ -36,10 +36,52 @@ function HomepageHeader() {
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
 
+  useEffect(() => {
+    const w = window;
+    if (w.ChannelIO) {
+      console.error('ChannelIO script included twice.');
+      return;
+    }
+
+    const ch = function () {
+      ch.c(arguments);
+    };
+    ch.q = [];
+    ch.c = function (args) {
+      ch.q.push(args);
+    };
+    w.ChannelIO = ch;
+
+    function loadScript() {
+      if (w.ChannelIOInitialized) return;
+      w.ChannelIOInitialized = true;
+      const s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js';
+      const x = document.getElementsByTagName('script')[0];
+      if (x.parentNode) {
+        x.parentNode.insertBefore(s, x);
+      }
+    }
+
+    if (document.readyState === 'complete') {
+      loadScript();
+    } else {
+      w.addEventListener('DOMContentLoaded', loadScript);
+      w.addEventListener('load', loadScript);
+    }
+
+    // boot ChannelIO
+    w.ChannelIO('boot', {
+      pluginKey: '40c0d46f-84ba-460b-9686-82ebbc71e8dc',
+    });
+  }, []);
+
   return (
     <Layout
-      title="Geyser"
-      description="Enable clients from Minecraft Bedrock Edition to join your Minecraft Java server."
+      title="24san"
+      description="24san minecraft server."
     >
       <HomepageHeader />
       <main>
