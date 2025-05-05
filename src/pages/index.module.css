@@ -1,3 +1,11 @@
+/**
+ * Portions of this file are modified from GeyserMC
+ * https://github.com/GeyserMC
+ *
+ * Licensed under the Apache License, Version 2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ */
+
 :root {
   --ifm-background-image-url: url('/src/css/light_top_back.png');
 }
