@@ -21,6 +21,10 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/24san/24san.github.io/edit/main/",
         },
+        wiki: {
+          sidebarPath: require.resolve("./sidebars.js"),
+          editUrl: "https://github.com/24san/24san.github.io/edit/main/",
+        },
         blog: {
           showReadingTime: true,
           editUrl: "https://github.com/24san/24san.github.io/edit/main/",
