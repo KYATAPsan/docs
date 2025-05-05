@@ -20,11 +20,15 @@ function HomepageHeader() {
         <img src={HeroImage} alt="24san Logo" className={styles.heroImageBackgroundBlur} />
         <div className={styles.textSection}>
           <Heading as="h1" className="hero__title">
-            <Translate id="pages.main.title">Revolutionize Your Minecraft Server</Translate>
+              <strong>
+                <Translate id="pages.main.title">
+                  すべてのプレイヤーがつながる、ひとつの世界
+                </Translate>
+              </strong>
           </Heading>
           <p className="hero__subtitle">
             <Translate id="pages.main.subtitle">
-              Enable clients from Minecraft Bedrock Edition to join your Minecraft Java server
+              Java版も統合版も、24sanサーバーで一緒に遊ぼう
             </Translate>
           </p>
         </div>
