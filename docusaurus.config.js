@@ -73,10 +73,11 @@ const config = {
             position: "left",
             to: '/docs', // ドキュメントを押したら /docs に飛ぶ
             items: [
-              { to: '/docs/server-rules', label: 'サーバールール' },
-              { to: '/docs/guild', label: 'ギルド' },
-              { to: '/docs/panel', label: 'パネル' },
-              { to: '/docs/other', label: 'その他' },
+              { to: '/docs', label: '目次' },
+              { to: '/docs#ルール', label: 'ルール' },
+              { to: '/docs#参加方法', label: '参加方法' },
+              { to: '/docs#ギルドの使い方', label: 'ギルドの使い方' },
+              { to: '/docs#その他の仕様', label: 'その他の仕様' },
             ],
           },
           {
