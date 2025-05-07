@@ -41,6 +41,7 @@
   left: 50%;
   transform: translate(-50%, 0%);
   width: 100%;
+  z-index: 1; /* textSection より下 */
 }
 
 .heroImage {
@@ -66,16 +67,11 @@
 
 .textSection {
   color: #fff;
+  position: relative;
+  z-index: 2; /* heroContent より上に表示 */
 
-  position: absolute;
-  top: 80%; /* 画面の高さの30%の位置。中央より上に配置 */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-
-  /* メディアクエリ（モバイル用） */
   @media screen and (max-width: 410px) {
-    .textSection h1 {
+    h1 {
       font-size: var(--ifm-h1-font-size);
     }
   }
