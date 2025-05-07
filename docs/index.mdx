@@ -9,112 +9,101 @@ import '/src/css/custom.css'; // カスタムCSSを読み込む
 
 # ドキュメント一覧
 
-## ルール
+<h2>📜 規約関連</h2>
+<DocCardList items={[
+  {
+    type: 'link',
+    label: '利用規約',
+    href: '/docs/rules/terms_of_use',
+    description: '24sanサーバーの利用規約をまとめています。',
+  },
+  {
+    type: 'link',
+    label: '許可/拒否されたMod一覧',
+    href: '/docs/rules/allowed_mods',
+    description: '当サーバーで許可もしくは拒否されたmodを紹介します。',
+  },
+  {
+    type: 'link',
+    label: 'プライバシーポリシー',
+    href: '/docs/rules/privacy_policy',
+    description: '24sanサーバーのプライバシーポリシーをまとめています。',
+  },
+]} />
 
-<div className="grid-container">
-  <Link className="card-hover" to="/docs/rules/terms_of_use">
-    <div className="card__body">
-      <h2>利用規約</h2>
-      <p>24sanサーバーの利用規約をまとめています。</p>
-    </div>
-  </Link>
+<h2>🎮 参加方法</h2>
+<DocCardList items={[
+  {
+    type: 'link',
+    label: 'JAVA版の参加方法',
+    href: '/docs/join/join_java',
+    description: 'JAVA版の参加方法を紹介します。',
+  },
+  {
+    type: 'link',
+    label: '統合版の参加方法',
+    href: '/docs/join/join_bedrock',
+    description: '統合版・switch版の参加方法を紹介します。',
+  },
+  {
+    type: 'link',
+    label: 'Microsoftアカウントの作成方法',
+    href: '/docs/join/create_account',
+    description: 'Microsoftアカウントの作成方法を紹介します。',
+  },
+]} />
 
-  <Link className="card-hover" to="/docs/rules/allowed_mods">
-    <div className="card__body">
-      <h2>許可/拒否されたMod一覧</h2>
-      <p>当サーバーで許可もしくは拒否されたmodを紹介します。</p>
-    </div>
-  </Link>
+<h2>🏰 ギルドの使い方</h2>
+<DocCardList items={[
+  {
+    type: 'link',
+    label: 'ギルドの作成方法',
+    href: '/docs/guild-create',
+    description: 'ギルドを新しく作成する方法です。',
+  },
+  {
+    type: 'link',
+    label: 'ギルドの設定方法',
+    href: '/docs/guild-create', // 必要に応じて変更
+    description: 'ギルドの設定方法を説明します。',
+  },
+  {
+    type: 'link',
+    label: 'ギルドの参加方法',
+    href: '/docs/guild-join',
+    description: '既存のギルドへの参加方法を説明します。',
+  },
+]} />
 
-  <Link className="card-hover" to="/docs/rules/privacy_policy">
-    <div className="card__body">
-      <h2>プライバシーポリシー</h2>
-      <p>24sanサーバーのプライバシーポリシーをまとめています</p>
-    </div>
-  </Link>
-</div>
+<h2>🧭 パネルの使い方</h2>
+<DocCardList items={[
+  {
+    type: 'link',
+    label: '統合版パネル',
+    href: '/docs/panel-bedrock',
+    description: '統合版プレイヤー向けパネルの使い方。',
+  },
+  {
+    type: 'link',
+    label: 'JAVA版パネル',
+    href: '/docs/panel-java',
+    description: 'Java版プレイヤー向けパネルの使い方。',
+  },
+]} />
 
-## 参加方法
-<div className="grid-container">
-  <Link className="card-hover" to="/docs/join/join_java">
-    <div className="card__body">
-      <h2>JAVA版の参加方法</h2>
-      <p>JAVA版の参加方法を紹介します</p>
-    </div>
-  </Link>
+<h2>🛠 その他の仕様</h2>
+<DocCardList items={[
+  {
+    type: 'link',
+    label: 'ショップの作り方',
+    href: '/docs/shop',
+    description: 'ショップシステムの設置方法を紹介します。',
+  },
+  {
+    type: 'link',
+    label: 'エレベーターの作り方',
+    href: '/docs/elevator',
+    description: 'エレベーター設置の手順を詳しく解説。',
+  },
+]} />
 
-  <Link className="card-hover" to="/docs/join/join_bedrock">
-    <div className="card__body">
-      <h2>統合版の参加方法</h2>
-      <p>統合版・switch版の参加方法を紹介します。</p>
-    </div>
-  </Link>
-
-  <Link className="card-hover" to="/docs/join/create_account">
-    <div className="card__body">
-      <h2>Microsoftアカウントの作成方法</h2>
-      <p>当サーバーで許可もしくは拒否されたmodを紹介します。</p>
-    </div>
-  </Link>
- </div>
-
-## ギルドの使い方
-
-<div className="grid-container">
-  <Link className="card-hover" to="/docs/guild-create">
-    <div className="card__body">
-      <h2>作成方法</h2>
-      <p>ギルドを新しく作成する方法です。</p>
-    </div>
-  </Link>
-
-  <Link className="card-hover" to="/docs/guild-create">
-    <div className="card__body">
-      <h2>設定方法</h2>
-      <p>ギルドの設定方法を説明します。</p>
-    </div>
-  </Link>
-
-  <Link className="card-hover" to="/docs/guild-join">
-    <div className="card__body">
-      <h2>参加方法</h2>
-      <p>既存のギルドへの参加方法を説明します。</p>
-    </div>
-  </Link>
-</div>
-
-## パネルの使い方
-
-<div className="grid-container">
-  <Link className="card-hover" to="/docs/panel-bedrock">
-    <div className="card__body">
-      <h2>統合版パネル</h2>
-      <p>統合版プレイヤー向けパネルの使い方。</p>
-    </div>
-  </Link>
-
-  <Link className="card-hover" to="/docs/panel-java">
-    <div className="card__body">
-      <h2>JAVA版パネル</h2>
-      <p>Java版プレイヤー向けパネルの使い方。</p>
-    </div>
-  </Link>
-</div>
-
-## その他の仕様
-
-<div className="grid-container">
-  <Link className="card-hover" to="/docs/shop">
-    <div className="card__body">
-      <h2>ショップの作り方</h2>
-      <p>ショップシステムの設置方法を紹介します。</p>
-    </div>
-  </Link>
-
-  <Link className="card-hover" to="/docs/elevator">
-    <div className="card__body">
-      <h2>エレベーターの作り方</h2>
-      <p>エレベーター設置の手順を詳しく解説。</p>
-    </div>
-  </Link>
-</div>
