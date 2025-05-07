@@ -74,10 +74,10 @@ const config = {
             to: '/docs', // ドキュメントを押したら /docs に飛ぶ
             items: [
               { to: '/docs', label: '目次' },
-              { to: '/docs#ルール', label: 'ルール' },
-              { to: '/docs#参加方法', label: '参加方法' },
-              { to: '/docs#ギルドの使い方', label: 'ギルドの使い方' },
-              { to: '/docs#その他の仕様', label: 'その他の仕様' },
+              { to: '/docs/category/ルール等', label: 'ルール' },
+              { to: '/docs/category/参加方法', label: '参加方法' },
+              { to: '/docs/category/ギルドの使い方', label: 'ギルドの使い方' },
+              { to: '/docs/category/その他の仕様', label: 'その他の仕様' },
             ],
           },
           {
