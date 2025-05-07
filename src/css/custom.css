@@ -14,7 +14,7 @@
   --ifm-code-font-size: 95%;
   
   /* ライトテーマ用の背景画像 */
-  --ifm-background-image: url('light_top_back.png');
+  --ifm-background-image: url('light_top_back.webp');
   
   /* ハイライトコードラインの背景 */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
@@ -22,7 +22,7 @@
 
 [data-theme='dark'] {
   --ifm-color-primary: #39b9f1;
-  --ifm-background-image: url('dark_top_back.png');
+  --ifm-background-image: url('dark_top_back.webp');
   --ifm-color-primary-dark: #38b1e4;
   --ifm-color-primary-darker: #32a4d5;
   --ifm-color-primary-darkest: #3ca0cb;
