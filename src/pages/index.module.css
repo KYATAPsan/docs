@@ -66,9 +66,12 @@
 }
 
 .textSection {
+  position: absolute;
+  top: 10%; /* 画面の上から10%の位置に表示 */
+  left: 50%;
+  transform: translateX(-50%);
   color: #fff;
-  position: relative;
-  z-index: 2; /* heroContent より上に表示 */
+  z-index: 2;
 
   @media screen and (max-width: 410px) {
     h1 {
