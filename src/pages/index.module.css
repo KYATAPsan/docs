@@ -68,7 +68,7 @@
   color: #fff;
 
   position: absolute;
-  top: 30%; /* 画面の高さの30%の位置。中央より上に配置 */
+  top: 15%; /* 画面の高さの30%の位置。中央より上に配置 */
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
