@@ -18,114 +18,144 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs queryString="panel" className="tabs-java-panels">
-  <TabItem value="main" label="メインパネル" default>
 
-## 🧭 メインパネル
+<TabItem value="main" label="メインパネル" default>
+<div>
 
-すべてのパネルの起点となるパネルです。  
-以下の機能にアクセスできます：
+<h2>🧭 メインパネル</h2>
+<p>すべてのパネルの起点となるパネルです。以下の機能にアクセスできます：</p>
+<ul>
+  <li>ギルド管理</li>
+  <li>テレポート機能</li>
+  <li>ポイントショップ</li>
+  <li>通報システム</li>
+  <li>PvP / PvE 設定切り替え</li>
+</ul>
+<p><strong>📌 開き方：</strong><br />
+コンパスを右クリック または <code>/cp main</code> を実行</p>
 
-- ギルド管理
-- テレポート機能
-- ポイントショップ
-- 通報システム
-- PvP / PvE 設定切り替え
+</div>
+</TabItem>
 
-📌 **開き方：**  
-- コンパスを右クリック  
-- または `/cp main` コマンドを実行
-  </div>
-  </TabItem>
-  <TabItem value="guild" label="ギルドパネル">
+<TabItem value="guild" label="ギルドパネル">
+<div>
 
-## 🛡️ ギルドパネル
+<h2>🛡️ ギルドパネル</h2>
+<p>ギルドの作成・参加・管理ができるパネルです。</p>
+<ul>
+  <li>ギルドの作成（名前・カラー・公開設定）</li>
+  <li>ギルドメンバーの確認</li>
+  <li>ギルドへの参加 / 脱退</li>
+</ul>
+<p><strong>📌 開き方：</strong><br />
+メインパネル → ギルドパネル</p>
 
-ギルドの作成・参加・管理ができるパネルです。
+</div>
+</TabItem>
 
-- ギルドの作成（名前・カラー・公開設定）
-- ギルドメンバーの確認
-- ギルドへの参加 / 脱退
+<TabItem value="teleport" label="テレポートパネル">
+<div>
 
-📌 **開き方：**  
-メインパネル → ギルドパネル
+<h2>🧭 テレポートパネル</h2>
+<p>プレイヤーの移動をサポートするパネルです。</p>
+<ul>
+  <li>スポーン地点へ移動</li>
+  <li>ギルド本拠地へ移動</li>
+  <li>ワープポイントへの移動（許可された地点のみ）</li>
+</ul>
+<p><strong>📌 開き方：</strong><br />
+メインパネル → テレポートパネル</p>
 
-  </TabItem>
-  <TabItem value="teleport" label="テレポートパネル">
+</div>
+</TabItem>
 
-## 🧭 テレポートパネル
+<TabItem value="shop" label="ショップパネル">
+<div>
 
-プレイヤーの移動をサポートするパネルです。
+<h2>🛒 ショップパネル</h2>
+<p>ポイントを使用してアイテムやサービスを購入できます。</p>
+<ul>
+  <li>アイテム購入（ツール・装備など）</li>
+  <li>特別なサービス（ワープ券・称号など）</li>
+</ul>
+<p><strong>📌 開き方：</strong><br />
+メインパネル → ショップパネル</p>
+<p>💰 所持ポイントは <code>%pointshop%</code> で確認できます。</p>
 
-- スポーン地点へ移動
-- ギルド本拠地へ移動
-- ワープポイントへの移動（許可された地点のみ）
+</div>
+</TabItem>
 
-📌 **開き方：**  
-メインパネル → テレポートパネル
+<TabItem value="report" label="通報パネル">
+<div>
 
-  </TabItem>
-  <TabItem value="shop" label="ショップパネル">
+<h2>🚨 通報パネル</h2>
+<p>荒らしや不具合などを簡単に報告できるパネルです。</p>
+<ul>
+  <li>荒らし / バグ報告フォーム</li>
+  <li>報告した内容の履歴確認</li>
+  <li>通報に対する返信確認</li>
+</ul>
+<p><strong>📌 開き方：</strong><br />
+メインパネル → 通報パネル<br />
+💬 または <code>/rpt create</code> コマンドでも通報可能です。</p>
 
-## 🛒 ショップパネル
+</div>
+</TabItem>
 
-ポイントを使用してアイテムやサービスを購入できます。
+<TabItem value="versu" label="PvP-PvEパネル">
+<div>
 
-- アイテム購入（ツール・装備など）
-- 特別なサービス（ワープ券・称号など）
+<h2>⚔️ PvP / PvE 切り替えパネル</h2>
+<p>プレイヤーごとに戦闘設定を切り替えられます。</p>
 
-📌 **開き方：**  
-メインパネル → ショップパネル  
-💰 所持ポイントは `%pointshop%` で確認できます。
+<table>
+  <thead>
+    <tr><th>設定</th><th>効果</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>PvP ON</td><td>他プレイヤーと戦闘可能</td></tr>
+    <tr><td>PvP OFF</td><td>他プレイヤーから攻撃されず、攻撃もできない</td></tr>
+    <tr><td>PvE ON</td><td>Mobとの戦闘可能</td></tr>
+    <tr><td>PvE OFF</td><td>Mobの攻撃を受けず、攻撃も不可（爆発も無効化）</td></tr>
+  </tbody>
+</table>
 
-  </TabItem>
-  <TabItem value="report" label="通報パネル">
+<p><strong>📌 開き方：</strong><br />
+メインパネル → PvP / PvE 切り替えパネル<br />
+または <code>/pv</code> コマンドを使用</p>
 
-## 🚨 通報パネル
-
-荒らしや不具合などを簡単に報告できるパネルです。
-
-- 荒らし / バグ報告フォーム
-- 報告した内容の履歴確認
-- 通報に対する返信確認
-
-📌 **開き方：**  
-メインパネル → 通報パネル  
-💬 または `/rpt create` コマンドでも通報可能です。
-
-  </TabItem>
-  <TabItem value="versu" label="PvP-PvEパネル">
-
-## ⚔️ PvP / PvE 切り替えパネル
-
-プレイヤーごとに戦闘設定を切り替えられます。
-
-| 設定 | 効果 |
-|------|------|
-| PvP ON | 他プレイヤーと戦闘可能 |
-| PvP OFF | 他プレイヤーから攻撃されず、攻撃もできない |
-| PvE ON | Mobとの戦闘可能 |
-| PvE OFF | Mobの攻撃を受けず、攻撃も不可（爆発も無効化） |
-
-📌 **開き方：**  
-メインパネル → PvP / PvE 切り替え  
-または `/pv` コマンドを使用。
-
-:::caution
+<Admonition type="caution" title="注意">
 PvEをOFFにすると、Mob戦闘だけでなく、TNTやベッド爆発も無効になります。
-:::
+</Admonition>
 
-  </TabItem>
+</div>
+</TabItem>
+
 </Tabs>
 
 ---
 
 ## よくある質問
 
-| 質問 | 回答 |
-|------|------|
-| パネルが開かない | コンパスを持って右クリックするか、`/cp main` を実行してください。 |
-| 特定のパネルが使えない | 対応していないワールドか、権限が不足している可能性があります。 |
-| 通報の返信はどこで見れる？ | ログイン時やパネル内に表示されます。 |
+<table>
+  <thead>
+    <tr><th>質問</th><th>回答</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>パネルが開かない</td>
+      <td>コンパスを持って右クリック、または <code>/cp main</code> を実行してください。</td>
+    </tr>
+    <tr>
+      <td>特定のパネルが使えない</td>
+      <td>権限不足または対応していないワールドの可能性があります。</td>
+    </tr>
+    <tr>
+      <td>通報の返信はどこで見れる？</td>
+      <td>ログイン時または通報パネル内で表示されます。</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
