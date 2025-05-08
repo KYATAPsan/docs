@@ -85,12 +85,6 @@ const config = {
             label: "おしらせ",
             position: "left",
           },
-          {
-            type: "doc",
-            docId: "introduction/what-is-24san",
-            position: "right",
-            label: "サーバーへのアクセス方法",
-          },
           //{ to: "/blog", label: "Blog", position: "right" },
           {
             href: "https://discord.com/invite/QthB6rPBf7",
@@ -117,7 +111,7 @@ links: [
     items: [
       {
         label: "ドキュメント",
-        to: "/docs/introduction/what-is-24san",
+        to: "/docs",
       },
     ],
   },
@@ -146,7 +140,7 @@ links: [
     items: [
       {
         label: "コマンドの使い方",
-        to: "/docs/introduction/what-is-24san",
+        to: "/docs",
       },
       {
         label: 'サーバールール',
