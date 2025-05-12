@@ -3,30 +3,110 @@ title: ボランティア応募
 description: ボランティアスタッフの応募はこちらから
 ---
 
-# ボランティアに応募する
+import React, { useState } from 'react';
 
-以下のフォームにご記入ください。
+export default function ApplyPage() {
+  const allQuestions = [
+    { question: "MinecraftはMicrosoftが開発した？", answer: false },
+    { question: "エンダードラゴンはネザーにいる？", answer: false },
+    { question: "TNTは爆発するブロックである？", answer: true },
+    { question: "ゾンビは昼間も燃えない？", answer: false },
+    { question: "クリーパーは爆発する？", answer: true },
+    { question: "ネザーポータルは黒曜石で作る？", answer: true },
+    { question: "村人は水の中で生活する？", answer: false },
+    { question: "スティーブは女性キャラ？", answer: false },
+    { question: "金リンゴには効果がある？", answer: true },
+    { question: "ピグリンは金装備に反応する？", answer: true },
+    { question: "クリエイティブモードでは落下ダメージを受ける？", answer: false },
+    { question: "スケルトンは剣で攻撃してくる？", answer: false },
+  ];
 
-<form
-  name="volunteer-apply"
-  method="POST"
-  data-netlify="true"
-  netlify-honeypot="bot-field"
->
-  <input type="hidden" name="form-name" value="volunteer-apply" />
-  <p hidden>
-    <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-  </p>
-  <p>
-    <label>お名前: <input type="text" name="name" required /></label>
-  </p>
-  <p>
-    <label>メールアドレス: <input type="email" name="email" required /></label>
-  </p>
-  <p>
-    <label>応募理由: <textarea name="message" required></textarea></label>
-  </p>
-  <p>
-    <button type="submit">送信</button>
-  </p>
-</form>
+  const [usedIndices, setUsedIndices] = useState([]);
+  const [currentQ, setCurrentQ] = useState(null);
+  const [answers, setAnswers] = useState([]);
+  const [score, setScore] = useState(0);
+  const [quizEnded, setQuizEnded] = useState(false);
+
+  const getRandomQuestion = () => {
+    const remaining = allQuestions
+      .map((q, i) => i)
+      .filter((i) => !usedIndices.includes(i));
+    if (remaining.length === 0) return null;
+    const nextIndex = remaining[Math.floor(Math.random() * remaining.length)];
+    setUsedIndices([...usedIndices, nextIndex]);
+    setCurrentQ(allQuestions[nextIndex]);
+  };
+
+  const handleAnswer = (isTrue) => {
+    const isCorrect = isTrue === currentQ.answer;
+    setAnswers([...answers, isCorrect]);
+    if (isCorrect) setScore(score + 1);
+
+    if (answers.length + 1 === 10) {
+      setQuizEnded(true);
+      return;
+    }
+
+    getRandomQuestion();
+  };
+
+  const startQuiz = () => {
+    setUsedIndices([]);
+    setAnswers([]);
+    setScore(0);
+    setQuizEnded(false);
+    getRandomQuestion();
+  };
+
+  const resetQuiz = () => {
+    startQuiz();
+  };
+
+  return (
+    <div>
+      <h1>ボランティア応募</h1>
+
+      {!currentQ && !quizEnded && (
+        <div>
+          <p>応募するには、○×問題に挑戦し、10問中7問以上の正解が必要です。</p>
+          <button onClick={startQuiz}>問題に挑戦する</button>
+        </div>
+      )}
+
+      {currentQ && !quizEnded && (
+        <div>
+          <h2>問題 {answers.length + 1} / 10</h2>
+          <p>{currentQ.question}</p>
+          <button onClick={() => handleAnswer(true)}>○（はい）</button>
+          <button onClick={() => handleAnswer(false)}>×（いいえ）</button>
+        </div>
+      )}
+
+      {quizEnded && (
+        <div>
+          <h2>結果: {score} / 10 正解</h2>
+          {score >= 7 ? (
+            <div>
+              <p>おめでとうございます！応募資格があります。</p>
+              <form name="volunteer-apply" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="volunteer-apply" />
+                <p hidden>
+                  <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                </p>
+                <p><label>お名前: <input type="text" name="name" required /></label></p>
+                <p><label>メールアドレス: <input type="email" name="email" required /></label></p>
+                <p><label>応募理由: <textarea name="message" required></textarea></label></p>
+                <p><button type="submit">送信</button></p>
+              </form>
+            </div>
+          ) : (
+            <div>
+              <p>残念ですが、再挑戦してください。</p>
+              <button onClick={resetQuiz}>もう一度挑戦する</button>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
