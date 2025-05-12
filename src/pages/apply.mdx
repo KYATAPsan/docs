@@ -3,7 +3,96 @@ title: ボランティア応募
 description: ボランティアスタッフの応募はこちらから
 ---
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+
+<style>
+  .quiz-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #1e1e1e;
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    font-family: sans-serif;
+  }
+
+  .quiz-container h1, .quiz-container h2, .quiz-container p {
+    text-align: center;
+  }
+
+  .quiz-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .quiz-button {
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .quiz-button-true {
+    background-color: #4caf50;
+    color: white;
+  }
+
+  .quiz-button-true:hover {
+    background-color: #45a049;
+  }
+
+  .quiz-button-false {
+    background-color: #f44336;
+    color: white;
+  }
+
+  .quiz-button-false:hover {
+    background-color: #e53935;
+  }
+
+  .quiz-button-start, .quiz-button-retry {
+    background-color: #2196f3;
+    color: white;
+    margin: 1rem auto;
+    display: block;
+  }
+
+  .quiz-button-start:hover, .quiz-button-retry:hover {
+    background-color: #1976d2;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  input, textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+
+  button[type="submit"] {
+    padding: 0.8rem;
+    background-color: #673ab7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #5e35b1;
+  }
+</style>
 
 export default function ApplyPage() {
   const allQuestions = [
@@ -62,48 +151,49 @@ export default function ApplyPage() {
     startQuiz();
   };
 
+  useEffect(() => {
+    if (!currentQ && !quizEnded && answers.length === 0) {
+      startQuiz();
+    }
+  }, []);
+
   return (
-    <div>
+    <div className="quiz-container">
       <h1>ボランティア応募</h1>
 
-      {!currentQ && !quizEnded && (
-        <div>
-          <p>応募するには、○×問題に挑戦し、10問中7問以上の正解が必要です。</p>
-          <button onClick={startQuiz}>問題に挑戦する</button>
-        </div>
-      )}
-
-      {currentQ && !quizEnded && (
-        <div>
+      {!quizEnded && currentQ && (
+        <>
           <h2>問題 {answers.length + 1} / 10</h2>
           <p>{currentQ.question}</p>
-          <button onClick={() => handleAnswer(true)}>○（はい）</button>
-          <button onClick={() => handleAnswer(false)}>×（いいえ）</button>
-        </div>
+          <div className="quiz-buttons">
+            <button className="quiz-button quiz-button-true" onClick={() => handleAnswer(true)}>○（はい）</button>
+            <button className="quiz-button quiz-button-false" onClick={() => handleAnswer(false)}>×（いいえ）</button>
+          </div>
+        </>
       )}
 
       {quizEnded && (
         <div>
           <h2>結果: {score} / 10 正解</h2>
           {score >= 7 ? (
-            <div>
+            <>
               <p>おめでとうございます！応募資格があります。</p>
               <form name="volunteer-apply" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                 <input type="hidden" name="form-name" value="volunteer-apply" />
                 <p hidden>
                   <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
                 </p>
-                <p><label>お名前: <input type="text" name="name" required /></label></p>
-                <p><label>メールアドレス: <input type="email" name="email" required /></label></p>
-                <p><label>応募理由: <textarea name="message" required></textarea></label></p>
-                <p><button type="submit">送信</button></p>
+                <input type="text" name="name" placeholder="お名前" required />
+                <input type="email" name="email" placeholder="メールアドレス" required />
+                <textarea name="message" placeholder="応募理由" required></textarea>
+                <button type="submit">送信</button>
               </form>
-            </div>
+            </>
           ) : (
-            <div>
+            <>
               <p>残念ですが、再挑戦してください。</p>
-              <button onClick={resetQuiz}>もう一度挑戦する</button>
-            </div>
+              <button className="quiz-button quiz-button-retry" onClick={resetQuiz}>もう一度挑戦する</button>
+            </>
           )}
         </div>
       )}
