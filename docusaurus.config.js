@@ -85,6 +85,11 @@ const config = {
             label: "おしらせ",
             position: "left",
           },
+          {
+            to: "/apply",
+            label: "応募",
+            position: "left",
+          },
           //{ to: "/blog", label: "Blog", position: "right" },
           {
             href: "https://discord.com/invite/QthB6rPBf7",
