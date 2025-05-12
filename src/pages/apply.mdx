@@ -1,0 +1,32 @@
+---
+title: ボランティア応募
+description: ボランティアスタッフの応募はこちらから
+---
+
+# ボランティアに応募する
+
+以下のフォームにご記入ください。
+
+<form
+  name="volunteer-apply"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+>
+  <input type="hidden" name="form-name" value="volunteer-apply" />
+  <p hidden>
+    <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+  </p>
+  <p>
+    <label>お名前: <input type="text" name="name" required /></label>
+  </p>
+  <p>
+    <label>メールアドレス: <input type="email" name="email" required /></label>
+  </p>
+  <p>
+    <label>応募理由: <textarea name="message" required></textarea></label>
+  </p>
+  <p>
+    <button type="submit">送信</button>
+  </p>
+</form>
