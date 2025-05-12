@@ -133,6 +133,7 @@ links: [
         href: "https://www.youtube.com/@KYATAP",
         target: "_blank",
       },
+      
     ],
   },
   {
@@ -146,6 +147,10 @@ links: [
         label: 'サーバールール',
         href: "https://discord.com/invite/QthB6rPBf7",
         target: "_blank",
+      },
+      {
+        label: 'Apply',
+        to: '/apply',
       },
     ],
   },
