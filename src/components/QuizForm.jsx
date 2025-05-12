@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/quiz.css';
+import '../css/quiz.css';
 
 const allQuestions = [
   { question: "MinecraftはMicrosoftが開発した？", answer: false },
