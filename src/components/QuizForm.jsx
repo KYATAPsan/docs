@@ -5,7 +5,7 @@ const allQuestions = [
   {
     question: "MinecraftはMicrosoftが開発した？",
     answer: false,
-    explanation: "Mojangが開発し、その後Microsoftに買収されました。",
+    explanation: "Mojangが開発し、のちにMicrosoftに買収されました。",
   },
   {
     question: "エンダードラゴンはネザーにいる？",
@@ -20,23 +20,23 @@ const allQuestions = [
   {
     question: "スティーブは女性キャラ？",
     answer: false,
-    explanation: "スティーブは男性、アレックスが女性です。",
+    explanation: "スティーブは男性、アレックスが女性キャラです。",
   },
   {
     question: "クリーパーは爆発する？",
     answer: true,
-    explanation: "クリーパーは近づくと自爆してダメージを与えます。",
+    explanation: "クリーパーは近づくと自爆して攻撃してきます。",
   },
-  // 他の問題も同様に追加可能
 ];
 
-export default function QuizForm({ mode = 'exam' }) {
+export default function QuizForm() {
+  const [mode, setMode] = useState(null); // 'practice' または 'exam'
   const [usedIndices, setUsedIndices] = useState([]);
   const [currentQ, setCurrentQ] = useState(null);
   const [answers, setAnswers] = useState([]);
   const [score, setScore] = useState(0);
   const [quizEnded, setQuizEnded] = useState(false);
-  const [feedback, setFeedback] = useState(null); // 正誤と解説
+  const [feedback, setFeedback] = useState(null);
 
   const getRandomQuestion = () => {
     const remaining = allQuestions.map((_, i) => i).filter(i => !usedIndices.includes(i));
@@ -60,11 +60,11 @@ export default function QuizForm({ mode = 'exam' }) {
         explanation,
       });
     } else {
-      nextOrFinish(isCorrect);
+      nextOrFinish();
     }
   };
 
-  const nextOrFinish = (wasCorrect) => {
+  const nextOrFinish = () => {
     if (answers.length + 1 === 10) {
       setQuizEnded(true);
     } else {
@@ -80,37 +80,52 @@ export default function QuizForm({ mode = 'exam' }) {
     }
   };
 
-  const startQuiz = () => {
+  const startQuiz = (selectedMode) => {
+    setMode(selectedMode);
     setUsedIndices([]);
     setAnswers([]);
     setScore(0);
     setQuizEnded(false);
     setFeedback(null);
-    getRandomQuestion();
+    setTimeout(() => getRandomQuestion(), 0); // 初期化後に1問目をロード
   };
 
   const resetQuiz = () => {
-    startQuiz();
+    startQuiz(mode);
   };
 
   useEffect(() => {
-    if (!currentQ && !quizEnded && answers.length === 0) {
-      startQuiz();
+    if (!currentQ && !quizEnded && answers.length === 0 && mode) {
+      getRandomQuestion();
     }
-  }, []);
+  }, [mode]);
 
   return (
     <div className="quiz-container">
-      <h1>{mode === 'practice' ? '練習モード' : 'ボランティア応募'}</h1>
-
-      {!quizEnded && currentQ && (
+      {!mode && (
         <>
-          <h2>問題 {answers.length + 1} / 10</h2>
+          <h1>モードを選択してください</h1>
+          <div className="quiz-buttons">
+            <button className="quiz-button quiz-button-true" onClick={() => startQuiz('practice')}>
+              練習モード
+            </button>
+            <button className="quiz-button quiz-button-false" onClick={() => startQuiz('exam')}>
+              本番モード
+            </button>
+          </div>
+        </>
+      )}
+
+      {mode && !quizEnded && currentQ && (
+        <>
+          <h2>{mode === 'practice' ? '練習モード' : '本番モード'}</h2>
+          <h3>問題 {answers.length + 1} / 10</h3>
           <p>{currentQ.question}</p>
           <div className="quiz-buttons">
             <button className="quiz-button quiz-button-true" onClick={() => handleAnswer(true)}>○（はい）</button>
             <button className="quiz-button quiz-button-false" onClick={() => handleAnswer(false)}>×（いいえ）</button>
           </div>
+
           {mode === 'practice' && feedback && (
             <div style={{ marginTop: '1rem' }}>
               <p>{feedback.correct ? "✅ 正解！" : "❌ 不正解"}</p>
@@ -149,4 +164,5 @@ export default function QuizForm({ mode = 'exam' }) {
     </div>
   );
 }
+
 
