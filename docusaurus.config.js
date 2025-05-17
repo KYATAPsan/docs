@@ -19,7 +19,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/24san/24san.github.io/edit/main/",
+          editUrl: "https://github.com/KYATAPsan/docs",
         },
         blog: {
           showReadingTime: true,
