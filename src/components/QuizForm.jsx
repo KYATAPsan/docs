@@ -5,152 +5,152 @@ import '@site/src/css/quiz.css';
 questions = [
     {
         "question": "Minecraft公式のEULAに違反しても24sanでは処罰されない？",
-        "answer": False,
+        "answer": false,
         "explanation": "EULA違反は処罰対象です。"
     },
     {
         "question": "不正クライアントの使用は禁止されていますか？",
-        "answer": True,
+        "answer": true,
         "explanation": "不正なクライアント・チートは利用規約で禁止されています。"
     },
     {
         "question": "サーバーにDDoS攻撃をしても許される？",
-        "answer": False,
+        "answer": false,
         "explanation": "DDoS攻撃は重大な違反です。"
     },
     {
         "question": "暴言や差別的な発言は24sanで許可されていますか？",
-        "answer": False,
+        "answer": false,
         "explanation": "暴言・差別発言は利用規約で禁止されています。"
     },
     {
         "question": "荒らしへの処罰は運営の判断によって行われますか？",
-        "answer": True,
+        "answer": true,
         "explanation": "処罰の判断は運営により行われます。"
     },
     {
         "question": "利用者間のトラブルにサーバー運営は責任を負いませんか？",
-        "answer": True,
+        "answer": true,
         "explanation": "トラブルの責任は負いませんと明記されています。"
     },
     {
-        "question": "データ損失が発生した場合、運営は全額補償する？",
-        "answer": False,
-        "explanation": "過去12ヶ月の支払い金額が上限です。"
+        "question": "データ損失が発生した場合、運営は補償する？",
+        "answer": false,
+        "explanation": "ログ・バックアップの存在する分から修正をします。"
     },
     {
         "question": "r:#global を使ってロールバックしても良い？",
-        "answer": False,
+        "answer": false,
         "explanation": "広域ロールバックは禁止されています。"
     },
     {
         "question": "チャットログは保存されることがありますか？",
-        "answer": True,
+        "answer": true,
         "explanation": "チャットログやIPなどの記録は保管されます。"
     },
     {
         "question": "利用規約は予告なしに変更されることがありますか？",
-        "answer": True,
+        "answer": true,
         "explanation": "利用規約は予告なく変更される場合があります。"
     },
     {
         "question": "ボランティアはCoreProtectのロールバックについて理解していなければならない？",
-        "answer": True,
+        "answer": true,
         "explanation": "応募資格に含まれています。"
     },
     {
         "question": "ボランティア権限は個人的な目的で自由に使える？",
-        "answer": False,
+        "answer": false,
         "explanation": "私的利用は禁止です。"
     },
     {
         "question": "荒らしに対する処罰はボランティアが独断で行う？",
-        "answer": False,
+        "answer": false,
         "explanation": "処罰は運営判断で行われます。"
     },
     {
         "question": "通報のない状況でも勝手に対応してよい？",
-        "answer": False,
+        "answer": false,
         "explanation": "通報のない対応は禁止されています。"
     },
     {
         "question": "r:#world のようなロールバックは許可されている？",
-        "answer": False,
+        "answer": false,
         "explanation": "広域ロールバックは禁止です。"
     },
     {
         "question": "通報後は必ず返信コマンドを使う必要がある？",
-        "answer": True,
+        "answer": true,
         "explanation": "必ず返信を行う必要があります。"
     },
     {
         "question": "ログの内容を他の人に話してもよい？",
-        "answer": False,
+        "answer": false,
         "explanation": "ログ情報の外部共有は禁止です。"
     },
     {
         "question": "ギルドに加入したら運営に報告しなければならない？",
-        "answer": True,
+        "answer": true,
         "explanation": "ギルドの加入・移動は報告義務があります。"
     },
     {
         "question": "長期間ログインしなくてもボランティア権限は残る？",
-        "answer": False,
+        "answer": false,
         "explanation": "ログインがない場合、権限が解除されることがあります。"
     },
     {
         "question": "エンダードラゴンに関するロールバックは禁止？",
-        "answer": True,
+        "answer": true,
         "explanation": "エンド関係のロールバックは禁止です。"
     },
     {
         "question": "ボランティア規約は変更されることがある？",
-        "answer": True,
+        "answer": true,
         "explanation": "運営判断により変更される場合があります。"
     },
     {
         "question": "特定プレイヤーのみに対応を続けても問題ない？",
-        "answer": False,
+        "answer": false,
         "explanation": "偏った対応は規約違反です。"
     },
     {
         "question": "日本語が話せなくてもボランティアになれる？",
-        "answer": False,
+        "answer": false,
         "explanation": "日本語話者である必要があります。"
     },
     {
         "question": "CoreProtectの使用範囲はできるだけ広くとる？",
-        "answer": False,
+        "answer": false,
         "explanation": "最小範囲での操作が求められます。"
     },
     {
         "question": "ギルド作成時には報告の必要はない？",
-        "answer": False,
+        "answer": false,
         "explanation": "ギルド作成も報告義務があります。"
     },
     {
         "question": "ボランティア応募は規約に同意したものとみなされる？",
-        "answer": True,
+        "answer": true,
         "explanation": "応募時点で規約に同意したと見なされます。"
     },
     {
         "question": "運営が必要と判断した場合、予告なくサーバーが終了する可能性がある？",
-        "answer": True,
+        "answer": true,
         "explanation": "予告なくサーバー終了することがあります。"
     },
     {
         "question": "ログイン履歴は取得されることがある？",
-        "answer": True,
+        "answer": true,
         "explanation": "プレイヤーデータとして取得されます。"
     },
     {
         "question": "ギルド招待に応じたら必ず加入しなければならない？",
-        "answer": False,
+        "answer": false,
         "explanation": "拒否することも可能です。"
     },
     {
         "question": "利用規約を読んでいなかった場合は規約違反にならない？",
-        "answer": False,
+        "answer": false,
         "explanation": "接続＝同意とみなされます。"
     }
 ];
