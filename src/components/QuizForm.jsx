@@ -27,89 +27,75 @@ const allQuestions = [
     answer: true,
     explanation: "クリーパーは近づくと自爆して攻撃してきます。",
   },
+  {
+    question: "ビーコンは空に向かって光を放つ？",
+    answer: true,
+    explanation: "ビーコンは空に向かってビームを放ちます。",
+  },
+  {
+    question: "サバイバルモードでは飛行できる？",
+    answer: false,
+    explanation: "飛行できるのはクリエイティブモードまたはエリトラ使用時のみです。",
+  },
+  {
+    question: "村人は夜になるとベッドで眠る？",
+    answer: true,
+    explanation: "村人は夜になるとベッドで眠ります。",
+  },
+  {
+    question: "砂利は重力の影響を受けない？",
+    answer: false,
+    explanation: "砂利は重力で落下します。",
+  },
+  {
+    question: "ネザーには水を設置できる？",
+    answer: false,
+    explanation: "ネザーでは水は蒸発して設置できません。",
+  }
 ];
 
 export default function QuizForm() {
-  const [step, setStep] = useState('intro'); // intro | mode | quiz | result
-  const [mode, setMode] = useState(null); // 'practice' or 'exam'
-  const [usedIndices, setUsedIndices] = useState([]);
-  const [currentQ, setCurrentQ] = useState(null);
-  const [answers, setAnswers] = useState([]);
+  const [step, setStep] = useState('intro'); // intro | quiz | result
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
-  const [quizEnded, setQuizEnded] = useState(false);
   const [feedback, setFeedback] = useState(null);
+  const [showForm, setShowForm] = useState(false);
 
-  const getRandomQuestion = () => {
-    const remaining = allQuestions.map((_, i) => i).filter(i => !usedIndices.includes(i));
-    if (remaining.length === 0) return null;
-    const nextIndex = remaining[Math.floor(Math.random() * remaining.length)];
-    setUsedIndices(prev => [...prev, nextIndex]);
-    setCurrentQ(allQuestions[nextIndex]);
-    setFeedback(null);
-  };
+  const currentQ = allQuestions[currentIndex];
 
   const handleAnswer = (isTrue) => {
     const isCorrect = isTrue === currentQ.answer;
-    const explanation = currentQ.explanation;
 
-    if (isCorrect) setScore(prev => prev + 1);
-    setAnswers(prev => [...prev, isCorrect]);
-
-    if (mode === 'practice') {
+    if (isCorrect) {
+      const newScore = score + 1;
+      if (newScore === 10) {
+        setShowForm(true);
+        setStep('result');
+      } else {
+        setScore(newScore);
+        setCurrentIndex(currentIndex + 1);
+      }
+    } else {
       setFeedback({
-        correct: isCorrect,
-        explanation,
+        correct: false,
+        explanation: currentQ.explanation,
       });
-    } else {
-      nextOrFinish();
     }
-  };
-
-  const nextOrFinish = () => {
-    if (answers.length + 1 === 10) {
-      setQuizEnded(true);
-      setStep('result');
-    } else {
-      getRandomQuestion();
-    }
-  };
-
-  const handleNext = () => {
-    if (answers.length + 1 === 10) {
-      setQuizEnded(true);
-      setStep('result');
-    } else {
-      getRandomQuestion();
-    }
-  };
-
-  const startQuiz = (selectedMode) => {
-    setMode(selectedMode);
-    setUsedIndices([]);
-    setAnswers([]);
-    setScore(0);
-    setQuizEnded(false);
-    setFeedback(null);
-    setStep('quiz');
-    setTimeout(() => getRandomQuestion(), 0);
   };
 
   const resetQuiz = () => {
-    setMode(null);
     setStep('intro');
-    setUsedIndices([]);
-    setAnswers([]);
     setScore(0);
-    setQuizEnded(false);
+    setCurrentIndex(0);
     setFeedback(null);
-    setCurrentQ(null);
+    setShowForm(false);
   };
 
   useEffect(() => {
-    if (step === 'quiz' && !currentQ && !quizEnded && answers.length === 0) {
-      getRandomQuestion();
+    if (step === 'quiz') {
+      setFeedback(null);
     }
-  }, [step]);
+  }, [currentIndex, step]);
 
   return (
     <div className="quiz-container">
@@ -117,74 +103,51 @@ export default function QuizForm() {
         <>
           <h1>ボランティア応募 クイズ</h1>
           <p>
-            このクイズは、ボランティア応募の前に Minecraft に関する理解度を確認するためのものです。
-            本番モードでは7問以上正解することで応募フォームが表示されます。
-            練習モードでは何度でも試せます。
+            以下のクイズに全問正解すると、応募フォームが表示されます。  
+            1問でも間違えると最初からやり直しになります。
           </p>
-          <button className="quiz-button quiz-button-start" onClick={() => setStep('mode')}>
-            スタート
+          <button className="quiz-button quiz-button-start" onClick={() => setStep('quiz')}>
+            開始する
           </button>
-        </>
-      )}
-
-      {step === 'mode' && (
-        <>
-          <h2>モードを選択してください</h2>
-          <div className="quiz-buttons">
-            <button className="quiz-button quiz-button-true" onClick={() => startQuiz('practice')}>
-              練習モード
-            </button>
-            <button className="quiz-button quiz-button-false" onClick={() => startQuiz('exam')}>
-              本番モード
-            </button>
-          </div>
         </>
       )}
 
       {step === 'quiz' && currentQ && (
         <>
-          <h2>{mode === 'practice' ? '練習モード' : '本番モード'}</h2>
-          <h3>問題 {answers.length + 1} / 10</h3>
+          <h2>問題 {currentIndex + 1} / 10</h2>
           <p>{currentQ.question}</p>
           <div className="quiz-buttons">
             <button className="quiz-button quiz-button-true" onClick={() => handleAnswer(true)}>○（はい）</button>
             <button className="quiz-button quiz-button-false" onClick={() => handleAnswer(false)}>×（いいえ）</button>
           </div>
 
-          {mode === 'practice' && feedback && (
+          {feedback && (
             <div style={{ marginTop: '1rem' }}>
-              <p>{feedback.correct ? "✅ 正解！" : "❌ 不正解"}</p>
+              <p>❌ 不正解</p>
               <p><strong>解説:</strong> {feedback.explanation}</p>
-              <button className="quiz-button quiz-button-retry" onClick={handleNext}>次の問題へ</button>
+              <button className="quiz-button quiz-button-retry" onClick={resetQuiz}>
+                最初からやり直す
+              </button>
             </div>
           )}
         </>
       )}
 
-      {step === 'result' && (
+      {step === 'result' && showForm && (
         <div>
-          <h2>結果: {score} / 10 正解</h2>
-          {mode === 'exam' && score >= 7 ? (
-            <>
-              <p>おめでとうございます！応募フォームが表示されます。</p>
-              <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLScLR3V01K8OHplxfdCGH-NbmgR1yCBfFFUi_C_5OJtjwJ7hLw/viewform?embedded=true"
-                width="100%"
-                height="2085"
-                frameBorder="0"
-                marginHeight="0"
-                marginWidth="0"
-                title="応募フォーム"
-              >
-                読み込んでいます…
-              </iframe>
-            </>
-          ) : (
-            <>
-              <p>{mode === 'exam' ? "残念ですが、再挑戦してください。" : "練習が完了しました。"}</p>
-              <button className="quiz-button quiz-button-retry" onClick={resetQuiz}>もう一度挑戦する</button>
-            </>
-          )}
+          <h2>✅ 全問正解！</h2>
+          <p>おめでとうございます。以下のフォームから応募を進めてください。</p>
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLScLR3V01K8OHplxfdCGH-NbmgR1yCBfFFUi_C_5OJtjwJ7hLw/viewform?embedded=true"
+            width="100%"
+            height="2085"
+            frameBorder="0"
+            marginHeight="0"
+            marginWidth="0"
+            title="応募フォーム"
+          >
+            読み込んでいます…
+          </iframe>
         </div>
       )}
     </div>
