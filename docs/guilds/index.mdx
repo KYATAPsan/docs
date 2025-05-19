@@ -4,8 +4,9 @@ title: ギルド機能まとめ
 sidebar_label: ギルド
 description: ギルドの基本操作・コマンド・各機能の使い方をまとめたページです。
 ---
+
 import Link from '@docusaurus/Link';
-import '/src/css/custom.css'; // カスタムCSSを読み込む
+import '/src/css/custom.css';
 import DocCardList from '@theme/DocCardList';
 
 最終更新: 2025年05月04日
@@ -19,7 +20,12 @@ import DocCardList from '@theme/DocCardList';
 
 ## 📘 主要コマンド一覧
 
-- `/guild` は `/g` に省略できます
+:::info
+
+`/guild` は `/g` に省略できます。  
+どちらでも同じように使用可能です。
+
+:::
 
 | コマンド | 説明 |
 |---------|------|
@@ -27,28 +33,33 @@ import DocCardList from '@theme/DocCardList';
 | `/guild join ギルド名` | ギルドに参加します（公開ギルドのみ） |
 | `/guild leave` | 現在のギルドから脱退します |
 | `/guild warp 0-9` | ギルド拠点へテレポートします |
-| `/guild enderchest` | 所属ギルドの情報を表示します |
-| `/guild accept ギルド名` | 招待を受け入れる |
-| `/guild deny ギルド名` | 招待を拒否する |
+| `/guild enderchest` | ギルド共有エンダーチェストを開きます |
+| `/guild accept ギルド名` | 招待を受け入れます |
+| `/guild deny ギルド名` | 招待を拒否します |
+
+---
 
 ## 📘 ギルドオーナー向けコマンド一覧
 
-- `/guild` は `/g` に省略できます
+:::tip
+
+以下のコマンドは、**ギルドオーナーのみ実行可能**です。  
+通常メンバーは使用できません。
+
+:::
 
 | コマンド | 説明 |
 |---------|------|
 | `/guild create ギルド名` | ギルドを作成します |
 | `/guild name 新ギルド名` | ギルド名を変更します |
 | `/guild color カラーコード6桁` | ギルドカラーを変更します |
-| `/guild setwarp 0-9 ワープ名` | ギルドに参加します（公開ギルドのみ） |
-| `/guild disband` | 現在のギルドを削除します |
+| `/guild setwarp 0-9 ワープ名` | ギルドワープを設定します |
+| `/guild disband` | ギルドを解散します |
 | `/guild setowner プレイヤー名` | ギルドオーナーを変更します |
-| `/guild invite プレイヤー名` | ギルド拠点へテレポートします |
-| `/guild kick プレイヤー名` | ギルドから対象プレイヤーをkickします |
-| `/guild ban プレイヤー名` | ギルドから対象プレイヤーをbanします |
-| `/guild unban プレイヤー名` | ギルドから対象プレイヤーをban解除します |
-
-
+| `/guild invite プレイヤー名` | プレイヤーを招待します |
+| `/guild kick プレイヤー名` | メンバーをキックします |
+| `/guild ban プレイヤー名` | メンバーをBANします |
+| `/guild unban プレイヤー名` | BANを解除します |
 
 ---
 
@@ -66,7 +77,7 @@ import DocCardList from '@theme/DocCardList';
   {
     type: 'link',
     label: 'ギルドカラー',
-    href: '/docs/guilds/color', // 必要に応じて変更
+    href: '/docs/guilds/color',
     description: 'ギルドのカラーコード一覧',
   },
 ]} />
@@ -75,8 +86,12 @@ import DocCardList from '@theme/DocCardList';
 
 ## 💡 備考
 
-- ギルド名やカラーコードには一部使用できない文字があります。
-- ギルドの公開設定は作成時にのみ設定可能で、あとから変更できません。
+:::info
+
+- ギルド名やカラーコードには一部使用できない文字があります（記号や全角など）  
+- ギルドの公開・非公開設定は、作成時にのみ選択可能で、あとから変更できません
+
+:::
 
 ---
 
@@ -84,4 +99,3 @@ import DocCardList from '@theme/DocCardList';
 
 - [Javaパネルの使い方](/panel/java-panels)
 - [利用規約](/docs/rules/terms_of_use)
-
