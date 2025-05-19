@@ -116,10 +116,13 @@ export default function QuizForm() {
         <>
           <h2>問題 {currentIndex + 1} / 10</h2>
           <p>{currentQ.question}</p>
-          <div className="quiz-buttons">
-            <button className="quiz-button quiz-button-true" onClick={() => handleAnswer(true)}>○（はい）</button>
-            <button className="quiz-button quiz-button-false" onClick={() => handleAnswer(false)}>×（いいえ）</button>
-          </div>
+
+          {!feedback && (
+            <div className="quiz-buttons">
+              <button className="quiz-button quiz-button-true" onClick={() => handleAnswer(true)}>○（はい）</button>
+              <button className="quiz-button quiz-button-false" onClick={() => handleAnswer(false)}>×（いいえ）</button>
+            </div>
+          )}
 
           {feedback && (
             <div style={{ marginTop: '1rem' }}>
