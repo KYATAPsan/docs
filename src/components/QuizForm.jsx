@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '@site/src/css/quiz.css';
 
-const questions = [
+const allQuestions = [
     {
         "question": "Minecraft公式のEULAに違反しても24sanでは処罰されない？",
         "answer": false,
