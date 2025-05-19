@@ -128,7 +128,11 @@ export default function QuizForm() {
             <div style={{ marginTop: '1rem' }}>
               <p>❌ 不正解</p>
               <p><strong>解説:</strong> {feedback.explanation}</p>
-              <button className="quiz-button quiz-button-retry" onClick={resetQuiz}>
+              <button
+                className="quiz-button quiz-button-retry"
+                onClick={resetQuiz}
+                style={{ marginTop: '1.5rem' }}
+              >
                 最初からやり直す
               </button>
             </div>
