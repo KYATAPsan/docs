@@ -56,12 +56,23 @@ const allQuestions = [
 
 export default function QuizForm() {
   const [step, setStep] = useState('intro'); // intro | quiz | result
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [feedback, setFeedback] = useState(null);
   const [showForm, setShowForm] = useState(false);
+  const [usedIndices, setUsedIndices] = useState([]);
+  const [currentQ, setCurrentQ] = useState(null);
 
-  const currentQ = allQuestions[currentIndex];
+  const getRandomQuestion = () => {
+    const remainingIndices = allQuestions
+      .map((_, index) => index)
+      .filter(index => !usedIndices.includes(index));
+
+    if (remainingIndices.length === 0) return null;
+
+    const randomIndex = remainingIndices[Math.floor(Math.random() * remainingIndices.length)];
+    setUsedIndices(prev => [...prev, randomIndex]);
+    setCurrentQ(allQuestions[randomIndex]);
+  };
 
   const handleAnswer = (isTrue) => {
     const isCorrect = isTrue === currentQ.answer;
@@ -73,7 +84,7 @@ export default function QuizForm() {
         setStep('result');
       } else {
         setScore(newScore);
-        setCurrentIndex(currentIndex + 1);
+        getRandomQuestion();
       }
     } else {
       setFeedback({
@@ -86,16 +97,17 @@ export default function QuizForm() {
   const resetQuiz = () => {
     setStep('intro');
     setScore(0);
-    setCurrentIndex(0);
+    setUsedIndices([]);
     setFeedback(null);
     setShowForm(false);
+    setCurrentQ(null);
   };
 
   useEffect(() => {
-    if (step === 'quiz') {
-      setFeedback(null);
+    if (step === 'quiz' && !currentQ) {
+      getRandomQuestion();
     }
-  }, [currentIndex, step]);
+  }, [step, currentQ]);
 
   return (
     <div className="quiz-container">
@@ -114,7 +126,7 @@ export default function QuizForm() {
 
       {step === 'quiz' && currentQ && (
         <>
-          <h2>問題 {currentIndex + 1} / 10</h2>
+          <h2>問題 {score + 1} / 10</h2>
           <p>{currentQ.question}</p>
 
           {!feedback && (
