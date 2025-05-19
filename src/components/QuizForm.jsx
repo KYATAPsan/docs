@@ -1,58 +1,160 @@
 import React, { useState, useEffect } from 'react';
 import '@site/src/css/quiz.css';
 
-const allQuestions = [
-  {
-    question: "MinecraftはMicrosoftが開発した？",
-    answer: false,
-    explanation: "Mojangが開発し、のちにMicrosoftに買収されました。",
-  },
-  {
-    question: "エンダードラゴンはネザーにいる？",
-    answer: false,
-    explanation: "エンダードラゴンはエンドに出現します。",
-  },
-  {
-    question: "TNTは爆発するブロックである？",
-    answer: true,
-    explanation: "TNTは火やレッドストーンで起爆します。",
-  },
-  {
-    question: "スティーブは女性キャラ？",
-    answer: false,
-    explanation: "スティーブは男性、アレックスが女性キャラです。",
-  },
-  {
-    question: "クリーパーは爆発する？",
-    answer: true,
-    explanation: "クリーパーは近づくと自爆して攻撃してきます。",
-  },
-  {
-    question: "ビーコンは空に向かって光を放つ？",
-    answer: true,
-    explanation: "ビーコンは空に向かってビームを放ちます。",
-  },
-  {
-    question: "サバイバルモードでは飛行できる？",
-    answer: false,
-    explanation: "飛行できるのはクリエイティブモードまたはエリトラ使用時のみです。",
-  },
-  {
-    question: "村人は夜になるとベッドで眠る？",
-    answer: true,
-    explanation: "村人は夜になるとベッドで眠ります。",
-  },
-  {
-    question: "砂利は重力の影響を受けない？",
-    answer: false,
-    explanation: "砂利は重力で落下します。",
-  },
-  {
-    question: "ネザーには水を設置できる？",
-    answer: false,
-    explanation: "ネザーでは水は蒸発して設置できません。",
-  }
+# 30問（規約ベース）のOX問題を用意
+questions = [
+    {
+        "question": "Minecraft公式のEULAに違反しても24sanでは処罰されない？",
+        "answer": False,
+        "explanation": "EULA違反は処罰対象です。"
+    },
+    {
+        "question": "不正クライアントの使用は禁止されていますか？",
+        "answer": True,
+        "explanation": "不正なクライアント・チートは利用規約で禁止されています。"
+    },
+    {
+        "question": "サーバーにDDoS攻撃をしても許される？",
+        "answer": False,
+        "explanation": "DDoS攻撃は重大な違反です。"
+    },
+    {
+        "question": "暴言や差別的な発言は24sanで許可されていますか？",
+        "answer": False,
+        "explanation": "暴言・差別発言は利用規約で禁止されています。"
+    },
+    {
+        "question": "荒らしへの処罰は運営の判断によって行われますか？",
+        "answer": True,
+        "explanation": "処罰の判断は運営により行われます。"
+    },
+    {
+        "question": "利用者間のトラブルにサーバー運営は責任を負いませんか？",
+        "answer": True,
+        "explanation": "トラブルの責任は負いませんと明記されています。"
+    },
+    {
+        "question": "データ損失が発生した場合、運営は全額補償する？",
+        "answer": False,
+        "explanation": "過去12ヶ月の支払い金額が上限です。"
+    },
+    {
+        "question": "r:#global を使ってロールバックしても良い？",
+        "answer": False,
+        "explanation": "広域ロールバックは禁止されています。"
+    },
+    {
+        "question": "チャットログは保存されることがありますか？",
+        "answer": True,
+        "explanation": "チャットログやIPなどの記録は保管されます。"
+    },
+    {
+        "question": "利用規約は予告なしに変更されることがありますか？",
+        "answer": True,
+        "explanation": "利用規約は予告なく変更される場合があります。"
+    },
+    {
+        "question": "ボランティアはCoreProtectのロールバックについて理解していなければならない？",
+        "answer": True,
+        "explanation": "応募資格に含まれています。"
+    },
+    {
+        "question": "ボランティア権限は個人的な目的で自由に使える？",
+        "answer": False,
+        "explanation": "私的利用は禁止です。"
+    },
+    {
+        "question": "荒らしに対する処罰はボランティアが独断で行う？",
+        "answer": False,
+        "explanation": "処罰は運営判断で行われます。"
+    },
+    {
+        "question": "通報のない状況でも勝手に対応してよい？",
+        "answer": False,
+        "explanation": "通報のない対応は禁止されています。"
+    },
+    {
+        "question": "r:#world のようなロールバックは許可されている？",
+        "answer": False,
+        "explanation": "広域ロールバックは禁止です。"
+    },
+    {
+        "question": "通報後は必ず返信コマンドを使う必要がある？",
+        "answer": True,
+        "explanation": "必ず返信を行う必要があります。"
+    },
+    {
+        "question": "ログの内容を他の人に話してもよい？",
+        "answer": False,
+        "explanation": "ログ情報の外部共有は禁止です。"
+    },
+    {
+        "question": "ギルドに加入したら運営に報告しなければならない？",
+        "answer": True,
+        "explanation": "ギルドの加入・移動は報告義務があります。"
+    },
+    {
+        "question": "長期間ログインしなくてもボランティア権限は残る？",
+        "answer": False,
+        "explanation": "ログインがない場合、権限が解除されることがあります。"
+    },
+    {
+        "question": "エンダードラゴンに関するロールバックは禁止？",
+        "answer": True,
+        "explanation": "エンド関係のロールバックは禁止です。"
+    },
+    {
+        "question": "ボランティア規約は変更されることがある？",
+        "answer": True,
+        "explanation": "運営判断により変更される場合があります。"
+    },
+    {
+        "question": "特定プレイヤーのみに対応を続けても問題ない？",
+        "answer": False,
+        "explanation": "偏った対応は規約違反です。"
+    },
+    {
+        "question": "日本語が話せなくてもボランティアになれる？",
+        "answer": False,
+        "explanation": "日本語話者である必要があります。"
+    },
+    {
+        "question": "CoreProtectの使用範囲はできるだけ広くとる？",
+        "answer": False,
+        "explanation": "最小範囲での操作が求められます。"
+    },
+    {
+        "question": "ギルド作成時には報告の必要はない？",
+        "answer": False,
+        "explanation": "ギルド作成も報告義務があります。"
+    },
+    {
+        "question": "ボランティア応募は規約に同意したものとみなされる？",
+        "answer": True,
+        "explanation": "応募時点で規約に同意したと見なされます。"
+    },
+    {
+        "question": "運営が必要と判断した場合、予告なくサーバーが終了する可能性がある？",
+        "answer": True,
+        "explanation": "予告なくサーバー終了することがあります。"
+    },
+    {
+        "question": "ログイン履歴は取得されることがある？",
+        "answer": True,
+        "explanation": "プレイヤーデータとして取得されます。"
+    },
+    {
+        "question": "ギルド招待に応じたら必ず加入しなければならない？",
+        "answer": False,
+        "explanation": "拒否することも可能です。"
+    },
+    {
+        "question": "利用規約を読んでいなかった場合は規約違反にならない？",
+        "answer": False,
+        "explanation": "接続＝同意とみなされます。"
+    }
 ];
+
 
 export default function QuizForm() {
   const [step, setStep] = useState('intro'); // intro | quiz | result
