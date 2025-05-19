@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '@site/src/css/quiz.css';
 
-# 30問（規約ベース）のOX問題を用意
+//# 30問（規約ベース）のOX問題を用意
 questions = [
     {
         "question": "Minecraft公式のEULAに違反しても24sanでは処罰されない？",
