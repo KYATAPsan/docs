@@ -5,13 +5,32 @@ sidebar_position: 1
 ---
 
 import Link from '@docusaurus/Link';
-import '/src/css/custom.css'; // カスタムCSSを読み込む
+import '/src/css/custom.css';
 import DocCardList from '@theme/DocCardList';
 
+# 📚 ドキュメント一覧
 
-# ドキュメント一覧
+:::info
+ここでは、24sanサーバーに関するルール・参加方法・パネルの使い方など、さまざまなガイドを一覧形式で確認できます。  
+各カテゴリをクリックすると、詳細なドキュメントにアクセスできます。
+:::
 
-<h2>📜 規約関連</h2>
+---
+
+## 🔖 <Link to="#rules">規約関連</Link>  
+## 🎮 <Link to="#join">参加方法</Link>  
+## 🏰 <Link to="#guild">ギルドの使い方</Link>  
+## 🧭 <Link to="#panel">パネルの使い方</Link>  
+## 🛠 <Link to="#others">その他の仕様</Link>  
+
+---
+
+## 🔖 <span id="rules">📜 規約関連</span>
+
+:::caution
+ゲームプレイを始める前に、**利用規約・プライバシーポリシー**などは必ず確認しましょう。
+:::
+
 <DocCardList items={[
   {
     type: 'link',
@@ -39,7 +58,14 @@ import DocCardList from '@theme/DocCardList';
   },
 ]} />
 
-<h2>🎮 参加方法</h2>
+---
+
+## 🎮 <span id="join">🎮 参加方法</span>
+
+:::tip
+初めて参加される方は、自分の環境に合った方法を選んでください。
+:::
+
 <DocCardList items={[
   {
     type: 'link',
@@ -57,11 +83,18 @@ import DocCardList from '@theme/DocCardList';
     type: 'link',
     label: 'Microsoftアカウントの作成・ログイン',
     href: '/docs/join/microsoft-accoun',
-    description: 'Minecraft統合版でサーバーに参加するために必要なMicrosoftアカウントの作成方法とログイン手順です。',
+    description: 'Minecraft統合版でサーバーに参加するための手順です。',
   },
 ]} />
 
-<h2>🏰 ギルドの使い方</h2>
+---
+
+## 🏰 <span id="guild">🏰 ギルドの使い方</span>
+
+:::info
+ギルドを作成して仲間と一緒にプレイできます。
+:::
+
 <DocCardList items={[
   {
     type: 'link',
@@ -72,8 +105,8 @@ import DocCardList from '@theme/DocCardList';
   {
     type: 'link',
     label: 'ギルドの設定方法',
-    href: '/docs/guild-create', // 必要に応じて変更
-    description: 'ギルドの設定方法を説明します。',
+    href: '/docs/guild-create',
+    description: 'ギルド名・カラー・公開設定の方法を紹介します。',
   },
   {
     type: 'link',
@@ -83,7 +116,14 @@ import DocCardList from '@theme/DocCardList';
   },
 ]} />
 
-<h2>🧭 パネルの使い方</h2>
+---
+
+## 🧭 <span id="panel">🧭 パネルの使い方</span>
+
+:::info
+パネルを使えば、コマンド入力なしでさまざまな操作が可能になります。
+:::
+
 <DocCardList items={[
   {
     type: 'link',
@@ -99,19 +139,33 @@ import DocCardList from '@theme/DocCardList';
   },
 ]} />
 
-<h2>🛠 その他の仕様</h2>
+---
+
+## 🛠 <span id="others">🛠 その他の仕様</span>
+
+:::note
+よく使われるシステムや便利な機能の解説です。
+:::
+
 <DocCardList items={[
   {
     type: 'link',
     label: 'ショップの作り方',
     href: '/docs/shop',
-    description: 'ショップシステムの設置方法を紹介します。',
+    description: 'ポイントショップなどの設置方法。',
   },
   {
     type: 'link',
     label: 'エレベーターの作り方',
     href: '/docs/elevator',
-    description: 'エレベーター設置の手順を詳しく解説。',
+    description: '簡単に移動できるエレベーターの導入手順。',
   },
 ]} />
 
+---
+
+## 🧭 お困りの方へ
+
+:::info
+不明点がある場合は [公式Discordサーバー](https://discord.gg/24san-orgsaba-873417465806352415) にて運営までお問い合わせください。
+:::
