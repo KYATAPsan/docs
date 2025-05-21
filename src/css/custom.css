@@ -122,4 +122,14 @@
   margin-bottom: 16px;
   font-weight: bold;
 }
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-top: 3rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 2px solid var(--ifm-color-primary);
+  padding-bottom: 0.3rem;
+  line-height: 1.3;
+}
+
 
