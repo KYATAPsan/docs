@@ -11,24 +11,26 @@ import DocCardList from '@theme/DocCardList';
 # 📚 ドキュメント一覧
 
 :::info
-ここでは、24sanサーバーに関するルール・参加方法・パネルの使い方など、さまざまなガイドを一覧形式で確認できます。  
-各カテゴリをクリックすると、詳細なドキュメントにアクセスできます。
+ここでは、24sanサーバーに関するルール・参加方法・機能解説をわかりやすくまとめています。  
+各項目をクリックして、詳細なガイドに進めます。
 :::
 
 ---
 
-## 🔖 <Link to="#rules">規約関連</Link>  
-## 🎮 <Link to="#join">参加方法</Link>  
-## 🏰 <Link to="#guild">ギルドの使い方</Link>  
-## 🧭 <Link to="#panel">パネルの使い方</Link>  
-## 🛠 <Link to="#others">その他の仕様</Link>  
+## 🔗 目次リンク
+
+- [📜 規約関連](#rules)
+- [🎮 参加方法](#join)
+- [🏰 ギルドの使い方](#guild)
+- [🧭 パネルの使い方](#panel)
+- [🛠 その他の仕様](#others)
 
 ---
 
-## 🔖 <span id="rules">📜 規約関連</span>
+<h1 id="rules" className="section-title">📜 規約関連</h1>
 
 :::caution
-ゲームプレイを始める前に、**利用規約・プライバシーポリシー**などは必ず確認しましょう。
+ゲームプレイの前に、必ずルールを確認してください。違反時は処罰対象になります。
 :::
 
 <DocCardList items={[
@@ -36,92 +38,92 @@ import DocCardList from '@theme/DocCardList';
     type: 'link',
     label: '利用規約',
     href: '/docs/rules/terms_of_use',
-    description: '24sanサーバーの利用規約をまとめています。',
+    description: 'プレイヤーが守るべき基本ルールをまとめています。',
   },
   {
     type: 'link',
     label: '許可/拒否されたMod一覧',
     href: '/docs/rules/allowed_mods',
-    description: '当サーバーで許可もしくは拒否されたmodを紹介します。',
+    description: '使用可能なMOD・禁止MODのリストを掲載しています。',
   },
   {
     type: 'link',
     label: 'プライバシーポリシー',
     href: '/docs/rules/privacy_policy',
-    description: '24sanサーバーのプライバシーポリシーをまとめています。',
+    description: '取得されるデータとその管理方針について説明します。',
   },
   {
     type: 'link',
     label: 'ボランティア応募規約',
     href: '/docs/rules/volunteer-policy',
-    description: '24sanサーバーのボランティアのルールをまとめます。',
-  },
+    description: '通報対応等のボランティア行動ルールを記載しています。',
+  }
 ]} />
 
 ---
 
-## 🎮 <span id="join">🎮 参加方法</span>
+<h1 id="join" className="section-title">🎮 参加方法</h1>
 
 :::tip
-初めて参加される方は、自分の環境に合った方法を選んでください。
+初めて参加する方は、Java版・統合版それぞれの手順を確認してください。
 :::
 
 <DocCardList items={[
   {
     type: 'link',
-    label: 'JAVA版の参加方法',
+    label: 'Java版の参加方法',
     href: '/docs/join/join_java',
-    description: 'JAVA版の参加方法を紹介します。',
+    description: 'PC版Minecraftでの接続手順を紹介します。',
   },
   {
     type: 'link',
     label: '統合版の参加方法',
     href: '/docs/join/join_bedrock',
-    description: '統合版・switch版の参加方法を紹介します。',
+    description: 'Switch・スマホ・PS4/5などでの接続方法を紹介します。',
   },
   {
     type: 'link',
     label: 'Microsoftアカウントの作成・ログイン',
     href: '/docs/join/microsoft-accoun',
-    description: 'Minecraft統合版でサーバーに参加するための手順です。',
-  },
+    description: '統合版に必須のアカウント作成・ログイン手順を説明します。',
+  }
 ]} />
 
 ---
 
-## 🏰 <span id="guild">🏰 ギルドの使い方</span>
+<h1 id="guild" className="section-title">🏰 ギルドの使い方</h1>
 
 :::info
-ギルドを作成して仲間と一緒にプレイできます。
+ギルドを使えば仲間と協力して活動できます。作成・参加方法をチェック！
 :::
 
 <DocCardList items={[
   {
     type: 'link',
     label: 'ギルドの作成方法',
-    href: '/docs/guild-create',
-    description: 'ギルドを新しく作成する方法です。',
+    href: '/docs/guilds/create',
+    description: 'ギルドを新しく作る手順を紹介します。',
   },
   {
     type: 'link',
-    label: 'ギルドの設定方法',
-    href: '/docs/guild-create',
-    description: 'ギルド名・カラー・公開設定の方法を紹介します。',
+    label: 'ギルドカラーの設定',
+    href: '/docs/guilds/color',
+    description: 'カラーコードを指定してギルドの色を変更する方法。',
   },
   {
     type: 'link',
-    label: 'ギルドの参加方法',
-    href: '/docs/guild-join',
-    description: '既存のギルドへの参加方法を説明します。',
-  },
+    label: 'ギルド機能まとめ',
+    href: '/docs/guilds/index',
+    description: 'コマンド一覧や基本仕様などの総合ガイドです。',
+  }
 ]} />
 
 ---
 
-## 🧭 <span id="panel">🧭 パネルの使い方</span>
+<h1 id="panel" className="section-title">🧭 パネルの使い方</h1>
 
 :::info
-パネルを使えば、コマンド入力なしでさまざまな操作が可能になります。
+パネルを使うと、コマンドを覚えていなくても簡単に操作できます。
 :::
 
 <DocCardList items={[
@@ -129,22 +131,22 @@ import DocCardList from '@theme/DocCardList';
     type: 'link',
     label: '統合版パネル',
     href: '/docs/panel-bedrock',
-    description: '統合版プレイヤー向けパネルの使い方。',
+    description: '統合版で使えるGUIパネルについて解説します。',
   },
   {
     type: 'link',
-    label: 'JAVA版パネル',
+    label: 'Java版パネル',
     href: '/docs/panel/java-panels',
-    description: 'Java版プレイヤー向けパネルの使い方。',
-  },
+    description: 'Java版向けの各種GUIパネルの使い方を紹介します。',
+  }
 ]} />
 
 ---
 
-## 🛠 <span id="others">🛠 その他の仕様</span>
+<h1 id="others" className="section-title">🛠 その他の仕様</h1>
 
 :::note
-よく使われるシステムや便利な機能の解説です。
+サーバー内でよく使われる装置や便利な機能も紹介しています。
 :::
 
 <DocCardList items={[
@@ -152,20 +154,20 @@ import DocCardList from '@theme/DocCardList';
     type: 'link',
     label: 'ショップの作り方',
     href: '/docs/shop',
-    description: 'ポイントショップなどの設置方法。',
+    description: 'プレイヤー間取引やポイントショップの設置方法。',
   },
   {
     type: 'link',
     label: 'エレベーターの作り方',
     href: '/docs/elevator',
-    description: '簡単に移動できるエレベーターの導入手順。',
-  },
+    description: '建築内で使える便利な移動装置の導入手順。',
+  }
 ]} />
 
 ---
 
-## 🧭 お困りの方へ
+## ❓ よくある質問・お問い合わせ
 
 :::info
-不明点がある場合は [公式Discordサーバー](https://discord.gg/24san-orgsaba-873417465806352415) にて運営までお問い合わせください。
+質問がある場合は [公式Discord](https://discord.gg/24san-orgsaba-873417465806352415) にてお気軽にご連絡ください。
 :::
