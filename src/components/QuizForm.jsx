@@ -13,7 +13,7 @@ const allQuestions = [
         "explanation": "不正なクライアント・チートは利用規約で禁止されています。"
     },
     {
-        "question": "サーバーにDDoS攻撃をしても許される？",
+        "question": "サーバーはDDoSされているのでDDoS攻撃をしても許される？",
         "answer": false,
         "explanation": "DDoS攻撃は重大な違反です。"
     },
@@ -63,7 +63,7 @@ const allQuestions = [
         "explanation": "私的利用は禁止です。"
     },
     {
-        "question": "荒らしに対する処罰はボランティアが独断で行う？",
+        "question": "自分の対応した荒らしへの処罰は自分で行う？",
         "answer": false,
         "explanation": "処罰は運営判断で行われます。"
     },
@@ -88,14 +88,14 @@ const allQuestions = [
         "explanation": "ログ情報の外部共有は禁止です。"
     },
     {
-        "question": "ギルドに加入したら運営に報告しなければならない？",
+        "question": "ボランティアはギルドに加入したら運営に報告しなければならない？",
         "answer": true,
         "explanation": "ギルドの加入・移動は報告義務があります。"
     },
     {
-        "question": "長期間ログインしなくてもボランティア権限は残る？",
+        "question": "毎日ログインしているが対応は一切していない状態で権限は残る？",
         "answer": false,
-        "explanation": "ログインがない場合、権限が解除されることがあります。"
+        "explanation": "権限が解除されることがあります。"
     },
     {
         "question": "エンダードラゴンに関するロールバックは禁止？",
@@ -111,6 +111,11 @@ const allQuestions = [
         "question": "特定プレイヤーのみに対応を続けても問題ない？",
         "answer": false,
         "explanation": "偏った対応は規約違反です。"
+    },
+    {
+        "question": "チート行為は試す目的であってもBANされてしまう",
+        "answer": true,
+        "explanation": "チート行為は一切禁止です。"
     },
     {
         "question": "日本語が話せなくてもボランティアになれる？",
@@ -148,9 +153,9 @@ const allQuestions = [
         "explanation": "拒否することも可能です。"
     },
     {
-        "question": "利用規約を読んでいなかった場合は規約違反にならない？",
+        "question": "再募集があった場合、既に受かっていれば応募しなくても権限は引き継ぎになる?",
         "answer": false,
-        "explanation": "接続＝同意とみなされます。"
+        "explanation": "再応募の際に応募がなければ解除になります。"
     }
 ];
 
