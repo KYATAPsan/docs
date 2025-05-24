@@ -257,17 +257,11 @@ export default function QuizForm() {
         <div>
           <h2>✅ 全問正解！</h2>
           <p>おめでとうございます。以下のフォームから応募を進めてください。</p>
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLScLR3V01K8OHplxfdCGH-NbmgR1yCBfFFUi_C_5OJtjwJ7hLw/viewform?embedded=true"
-            width="100%"
-            height="2085"
-            frameBorder="0"
-            marginHeight="0"
-            marginWidth="0"
-            title="応募フォーム"
-          >
-            読み込んでいます…
-          </iframe>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdon095XRPgR9GFNPOGslJUqIMGLJ9bbfs9vGR8d_fANnzVkQ/viewform?embedded=true" 
+                width="640" 
+                height="2334" 
+                frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…
+            </iframe>
         </div>
       )}
     </div>
