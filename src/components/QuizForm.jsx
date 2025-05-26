@@ -339,6 +339,27 @@ export default function QuizForm() {
               <input type="checkbox" name="entry.1115509067" value={activity} className="form_radio" />
               <span className="radio_span">{activity}</span>
             </label>
+        <div>
+    <h2>現在の座標: x: 151 y: 76 z: 153</h2>
+    <p>
+      .Arasi_Aの行動を <code>r:#world</code>、<code>r:#global</code> を使用せずに<br />
+      範囲指定してロールバックするコマンドを入力してください。<br />
+      ※できるだけ少ない範囲が好ましいです。
+    </p>
+    <img
+      src="応募フォーム質問用.png"
+      alt="CoreProtectログ"
+      style={{ maxWidth: "100%", height: "auto" }}
+    />
+
+    <div className="form_block --textfield">
+      <div className="form_label">回答</div>
+      <textarea
+        className="form_field --textfield"
+        name="entry.1881462553"
+      ></textarea>
+    </div>
+  </div>
           ))}
         </div>
       </div>
