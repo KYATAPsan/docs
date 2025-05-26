@@ -82,3 +82,94 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #5e35b1;
 }
+/* フォーム全体 */
+.contact_form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ラベル全体のブロック */
+.form_block {
+  margin-bottom: 1.5rem;
+}
+
+/* テキストフィールドやテキストエリア */
+.form_field {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  margin-top: 0.4rem;
+}
+
+/* テキストエリア用の追加クラス */
+.form_field.--textfield {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* ラベルテキスト */
+.form_label {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* 必須ラベル */
+.form-required {
+  color: red;
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* ラジオ・チェックボックス全体 */
+.form_radio-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* ラジオ・チェックラベル */
+.label_radio {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ラジオ・チェックボックス自体 */
+.form_radio {
+  transform: scale(1.2);
+  accent-color: #0080ff;
+}
+
+/* ラジオ・チェックのテキスト部分 */
+.radio_span {
+  font-size: 0.95rem;
+}
+
+/* 送信ボタン */
+.quiz-button-submit {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #0080ff;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.quiz-button-submit:hover {
+  background-color: #005ec2;
+}
