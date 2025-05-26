@@ -335,11 +335,11 @@ export default function QuizForm() {
         <div className="form_label">現在24sanサーバーで何をしているか<span className="form-required">必須</span></div>
         <div className="form_radio-wrapper">
           {["建築", "採掘", "PvP", "ショップ管理", "ギルド運営", "トラップ作成・トラップ管理"].map((activity, idx) => (
-            <label className="label_radio" key={idx}>
-              <input type="checkbox" name="entry.1115509067" value={activity} className="form_radio" />
-              <span className="radio_span">{activity}</span>
-            </label>
-        </div>
+  <label className="label_radio" key={idx}>
+    <input type="checkbox" name="entry.1115509067" value={activity} className="form_radio" />
+    <span className="radio_span">{activity}</span>
+  </label>
+))}
     <h2>現在の座標: x: 151 y: 76 z: 153</h2>
     <p>
       .Arasi_Aの行動を <code>r:#world</code>、<code>r:#global</code> を使用せずに<br />
