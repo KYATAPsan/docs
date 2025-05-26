@@ -96,6 +96,7 @@ body {
   font-size: 1.5rem;
   line-height: 1.8;
   color: #333;
+  background-color: #fff;
   font-weight: 400;
   padding: 2rem;
 }
@@ -120,6 +121,7 @@ body {
 ================================== */
 body {
   font-family: 'Noto Sans JP', sans-serif;
+  background-color: #f8f9fa;
   color: #333;
   padding: 20px;
 }
@@ -127,6 +129,7 @@ body {
 main.contact_main {
   max-width: 800px;
   margin: 0 auto;
+  background-color: #ffffff;
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -173,6 +176,7 @@ main.contact_main {
 .form_field:focus {
   outline: none;
   border-color: #007bff;
+  background-color: #fff;
 }
 
 .form_radio-wrapper {
@@ -200,6 +204,7 @@ textarea.form_field.--textfield {
 
 button.form-btn {
   padding: 14px 20px;
+  background-color: #007bff;
   color: #fff;
   border: none;
   font-size: 1.1em;
