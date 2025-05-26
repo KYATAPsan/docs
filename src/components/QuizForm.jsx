@@ -262,7 +262,189 @@ export default function QuizForm() {
         <div>
           <h2>✅ 全問正解！</h2>
           <p>おめでとうございます。以下のフォームから応募を進めてください。</p>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdon095XRPgR9GFNPOGslJUqIMGLJ9bbfs9vGR8d_fANnzVkQ/viewform?embedded=true" 
+            <iframe>
+                <html lang="ja">
+
+<head>
+  <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdon095XRPgR9GFNPOGslJUqIMGLJ9bbfs9vGR8d_fANnzVkQ/formResponse" class="contact_form"></form>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="google-site-verification" content="MNnaizlBskLqdrE3S7Lz9lFGxLtfp3UV4j3hwljkfZs" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ボランティア応募</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="contact_main">
+    <h1 class="contact_h1">応募フォーム</h1>
+    <form action="" class="contact_form">
+      <label class="form_block">
+        <div class="form_label">Discordアカウント名<span class="form-required">必須</span></div>
+        <input type="text" name="entry.2000993600" class="form_field" placeholder="(例)もふもふきゃ" required>
+      </label>
+      <label class="form_block">
+        <div class="form_label">Minecraftアカウント名<span class="form-required">必須</span></div>
+        <input type="text" name="entry.612750954" class="form_field" placeholder="(例)_KYATAP_san" required>
+      </label>
+      <label class="form_block">
+        <div class="form_label">所属しているギルド<span class="form-required">必須</span></div>
+        <div class="form_radio-wrapper">
+    <label class="label_radio">
+      <input type="radio" name="entry.735582548" value="現在ギルドには所属していない" checked class="form_radio">
+      <span class="radio_span">所属していない</span>
+    </label>
+    <label class="label_radio">
+      <input type="radio" name="entry.735582548" value="その他:" class="form_radio">
+      <span class="radio_span">所属している</span>
+    </label>
+      </label>
+      <div class="form_block --textfield">
+  <div class="form_label">補足（その他を選んだ人は必須です）</div>
+  <textarea class="form_field --textfield" id="other-text" name="entry.735582548.other_option_response" placeholder="(例)KYATAP guild"></textarea>
+</div>
+<div class="form_block">
+  <div class="form_label">24sanサーバーにどの機種でログインしているか教えてください<span class="form-required">必須</span></div>
+  <div class="form_radio-wrapper">
+    <label class="label_radio">
+      <input type="radio" name="entry.560957424" value="PC(JAVA)" checked class="form_radio">
+      <span class="radio_span">PC版(JAVA Edition)</span>
+    </label>
+    <label class="label_radio">
+      <input type="radio" name="entry.560957424" value="PC(統合)" class="form_radio">
+      <span class="radio_span">PC版(統合版)</span>
+    </label>
+    <label class="label_radio">
+      <input type="radio" name="entry.560957424" value="PS4 PS5" class="form_radio">
+      <span class="radio_span">PS4,PS5版</span>
+    </label>
+    <label class="label_radio">
+      <input type="radio" name="entry.560957424" value="switch" class="form_radio">
+      <span class="radio_span">Switch版</span>
+    </label>
+    <label class="label_radio">
+      <input type="radio" name="entry.560957424" value="スマホ" class="form_radio">
+      <span class="radio_span">スマホ版</span>
+    </label>
+  </div>
+</div>
+<div class="form_block">
+  <div class="form_label">どのくらいの頻度で対応が可能か教えてください<span class="form-required">必須</span></div>
+  <div class="form_radio-wrapper" id="frequency-options">
+    <label class="label_radio">
+      <input type="radio" name="entry.606469214" value="平日 & 休日 (平日昼間を含む)" checked class="form_radio">
+      <span class="radio_span">平日(昼間を含む)＆休日</span>
+    </label>
+    <label class="label_radio">
+      <input type="radio" name="entry.606469214" value="平日 & 休日 (平日夕方から)" class="form_radio">
+      <span class="radio_span">平日(夕方から)＆休日</span>
+    </label>
+    <label class="label_radio">
+      <input type="radio" name="entry.606469214" value="休日のみ" class="form_radio">
+      <span class="radio_span">休日のみ</span>
+    </label>
+    <label class="label_radio">
+      <input type="radio" name="entry.606469214" value="その他:" class="form_radio">
+      <span class="radio_span">その他</span>
+    </label>
+  </div>
+</div>
+<div class="form_block --textfield">
+  <div class="form_label">補足（その他を選んだ人は必須です）</div>
+  <textarea class="form_field --textfield" id="other-text" name="entry.606469214.other_option_response" placeholder="(例)平日の昼間のみ...など"></textarea>
+</div>
+ <div class="form_block">
+        <div class="form_label">現在24sanサーバーで何をしているか教えてください<span class="form-required">必須</span></div>
+        <div class="form_radio-wrapper">
+          <label class="label_radio">
+            <input type="checkbox" name="entry.1115509067" value="建築" checked class="form_radio">
+            <span class="radio_span">建築</span>
+          </label>
+          <label class="label_radio">
+            <input type="checkbox" name="entry.1115509067" value="採掘" class="form_radio">
+            <span class="radio_span">採掘</span>
+          </label>
+          <label class="label_radio">
+            <input type="checkbox" name="entry.1115509067" value="PvP" class="form_radio">
+            <span class="radio_span">PvP</span>
+          </label>
+          <label class="label_radio">
+            <input type="checkbox" name="entry.1115509067" value="ショップ管理" class="form_radio">
+            <span class="radio_span">ショップ管理</span>
+          </label>
+          <label class="label_radio">
+            <input type="checkbox" name="entry.1115509067" value="ギルド運営" class="form_radio">
+            <span class="radio_span">ギルド運営</span>
+          </label>
+          <label class="label_radio">
+            <input type="checkbox" name="entry.1115509067" value="トラップ作成・トラップ管理" class="form_radio">
+            <span class="radio_span">トラップ作成・トラップ管理</span>
+          </label>
+          <label class="label_radio">
+            <input type="checkbox" name="entry.1115509067" value="特になし" class="form_radio">
+            <span class="radio_span">特になし</span>
+          </label>
+          <label class="label_radio">
+            <input type="checkbox" name="entry.1115509067" value="その他:" class="form_radio">
+            <span class="radio_span">その他</span>
+          </label>
+        </div>
+      </div>
+</div>
+<div class="form_block --textfield">
+  <div class="form_label">補足（その他を選んだ人は必須です）</div>
+  <textarea class="form_field --textfield" id="other-text" name="entry.1115509067.other_option_response" placeholder="(例)平日の昼間のみ...など"></textarea>
+</div>
+
+~ロールバックについての質問~
+    <h2>現在の座標: x: 151 y: 76 z: 153</h2>
+    <p>
+        .Arasi_Aの行動を <code>r:#world</code>、<code>r:#global</code> を使用せずに<br>
+        範囲指定してロールバックするコマンドを入力してください。<br>
+        ※できるだけ少ない範囲が好ましいです。
+    </p>
+    <img src="応募フォーム質問用.png" alt="CoreProtectログ" style="max-width: 100%; height: auto;">
+     <div class="form_block --textfield">
+  <div class="form_label">回答</div>
+  <textarea class="form_field --textfield" id="other-text" name="entry.1881462553"></textarea>
+</div>
+      <button type="submit" class="form-btn">この内容で送信する</button>
+    </form>
+  </main>
+
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const radios = document.querySelectorAll('input[name="frequency"]');
+    const otherText = document.getElementById("other-text");
+
+    function updateRequiredState() {
+      const selected = document.querySelector('input[name="frequency"]:checked');
+      if (selected && selected.value === "その他") {
+        otherText.setAttribute("required", "required");
+      } else {
+        otherText.removeAttribute("required");
+      }
+    }
+
+//ページ読み込み時に初期状態確認
+    updateRequiredState();
+
+// ラジオボタンが変わったら実行
+    radios.forEach(radio => {
+      radio.addEventListener("change", updateRequiredState);
+    });
+  });
+</script>
+
+</html>
                 width="640" 
                 height="2334" 
                 frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…
