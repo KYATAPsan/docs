@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import '@site/src/css/quiz.css';
-import React, { useState } from "react";
 
 const allQuestions = [
     {
