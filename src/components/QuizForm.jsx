@@ -339,7 +339,7 @@ export default function QuizForm() {
               <input type="checkbox" name="entry.1115509067" value={activity} className="form_radio" />
               <span className="radio_span">{activity}</span>
             </label>
-        <div>
+        </div>
     <h2>現在の座標: x: 151 y: 76 z: 153</h2>
     <p>
       .Arasi_Aの行動を <code>r:#world</code>、<code>r:#global</code> を使用せずに<br />
