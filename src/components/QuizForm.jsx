@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '@site/src/css/quiz.css';
+import React, { useState } from "react";
 
 const allQuestions = [
     {
@@ -167,6 +168,8 @@ export default function QuizForm() {
   const [showForm, setShowForm] = useState(false);
   const [usedIndices, setUsedIndices] = useState([]);
   const [currentQ, setCurrentQ] = useState(null);
+　const [selectedFrequency, setSelectedFrequency] = useState("平日 & 休日 (平日昼間を含む)");
+　const [selectedGuildStatus, setSelectedGuildStatus] = useState("現在ギルドには所属していない");
 
   const getRandomQuestion = () => {
     const remainingIndices = allQuestions
@@ -208,6 +211,7 @@ export default function QuizForm() {
     setShowForm(false);
     setCurrentQ(null);
   };
+
 
   useEffect(() => {
     if (step === 'quiz' && !currentQ) {
@@ -262,7 +266,7 @@ export default function QuizForm() {
         <div>
           <h2>✅ 全問正解！</h2>
           <p>おめでとうございます。以下のフォームから応募を進めてください。</p>
-           <form
+          <form
             action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdon095XRPgR9GFNPOGslJUqIMGLJ9bbfs9vGR8d_fANnzVkQ/formResponse"
             method="POST"
             target="_self"
@@ -278,24 +282,40 @@ export default function QuizForm() {
               <input type="text" name="entry.612750954" className="form_field" placeholder="(例)_KYATAP_san" required />
             </label>
 
-            <label className="form_block">
+            <div className="form_block">
               <div className="form_label">所属しているギルド<span className="form-required">必須</span></div>
               <div className="form_radio-wrapper">
                 <label className="label_radio">
-                  <input type="radio" name="entry.735582548" value="現在ギルドには所属していない" defaultChecked className="form_radio" />
+                  <input
+                    type="radio"
+                    name="entry.735582548"
+                    value="現在ギルドには所属していない"
+                    checked={selectedGuildStatus === "現在ギルドには所属していない"}
+                    onChange={() => setSelectedGuildStatus("現在ギルドには所属していない")}
+                    className="form_radio"
+                  />
                   <span className="radio_span">所属していない</span>
                 </label>
                 <label className="label_radio">
-                  <input type="radio" name="entry.735582548" value="その他:" className="form_radio" />
-                  <span className="radio_span">所属している(補足欄に入っているギルド名の記入をお願いします)</span>
+                  <input
+                    type="radio"
+                    name="entry.735582548"
+                    value="その他:"
+                    checked={selectedGuildStatus === "その他:"}
+                    onChange={() => setSelectedGuildStatus("その他:")}
+                    className="form_radio"
+                  />
+                  <span className="radio_span">所属している(補足欄に記入をお願いします)</span>
                 </label>
               </div>
-            </label>
-
-            <div className="form_block --textfield">
-              <div className="form_label">補足（所属しているを選んだ人は必須です）</div>
-              <textarea className="form_field --textfield" name="entry.735582548.other_option_response" placeholder="(例)KYATAP guild" />
             </div>
+
+            {selectedGuildStatus === "その他:" && (
+              <div className="form_block --textfield">
+                <div className="form_label">補足（所属しているを選んだ人は必須です）</div>
+                <textarea className="form_field --textfield" name="entry.735582548.other_option_response" placeholder="(例)KYATAP guild" required />
+              </div>
+            )}
 
             <div className="form_block">
               <div className="form_label">どの機種でログインしているか<span className="form-required">必須</span></div>
@@ -319,17 +339,26 @@ export default function QuizForm() {
                   "その他:"
                 ].map((option, idx) => (
                   <label className="label_radio" key={idx}>
-                    <input type="radio" name="entry.606469214" value={option} defaultChecked={idx === 0} className="form_radio" />
+                    <input
+                      type="radio"
+                      name="entry.606469214"
+                      value={option}
+                      checked={selectedFrequency === option}
+                      onChange={() => setSelectedFrequency(option)}
+                      className="form_radio"
+                    />
                     <span className="radio_span">{option.replace(" (", "（").replace(")", "）")}</span>
                   </label>
                 ))}
               </div>
             </div>
 
-            <div className="form_block --textfield">
-              <div className="form_label">その他の詳細(その他を選んだ人は必須です）</div>
-              <textarea className="form_field --textfield" name="entry.606469214.other_option_response" placeholder="(例)平日の昼間のみ...など" />
-            </div>
+            {selectedFrequency === "その他:" && (
+              <div className="form_block --textfield">
+                <div className="form_label">その他の詳細(その他を選んだ人は必須です）</div>
+                <textarea className="form_field --textfield" name="entry.606469214.other_option_response" placeholder="(例)平日の昼間のみ...など" required />
+              </div>
+            )}
 
             <div className="form_block">
               <div className="form_label">現在24sanサーバーで何をしているか<span className="form-required">必須</span></div>
