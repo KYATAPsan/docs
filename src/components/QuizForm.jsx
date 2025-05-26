@@ -287,13 +287,13 @@ export default function QuizForm() {
                 </label>
                 <label className="label_radio">
                   <input type="radio" name="entry.735582548" value="その他:" className="form_radio" />
-                  <span className="radio_span">所属している</span>
+                  <span className="radio_span">所属している(補足欄に入っているギルド名の記入をお願いします)</span>
                 </label>
               </div>
             </label>
 
             <div className="form_block --textfield">
-              <div className="form_label">補足（その他を選んだ人は必須です）</div>
+              <div className="form_label">補足（所属しているを選んだ人は必須です）</div>
               <textarea className="form_field --textfield" name="entry.735582548.other_option_response" placeholder="(例)KYATAP guild" />
             </div>
 
@@ -327,7 +327,7 @@ export default function QuizForm() {
             </div>
 
             <div className="form_block --textfield">
-              <div className="form_label">補足（その他を選んだ人は必須です）</div>
+              <div className="form_label">その他の詳細(その他を選んだ人は必須です）</div>
               <textarea className="form_field --textfield" name="entry.606469214.other_option_response" placeholder="(例)平日の昼間のみ...など" />
             </div>
 
