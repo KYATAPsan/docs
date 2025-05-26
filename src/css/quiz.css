@@ -1,25 +1,3 @@
-@charset "UTF-8";
-
-/* ==============================
-   ベース設定
-============================== */
-html {
-  font-size: 62.5%; /* 1rem = 10px */
-}
-body {
-  font-family: "Noto Sans JP", "メイリオ", "Meiryo", "ＭＳ ゴシック",
-    "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", sans-serif;
-  font-size: 1.5rem;
-  line-height: 1.8;
-  color: #333;
-  background-color: #f8f9fa;
-  font-weight: 400;
-  padding: 2rem;
-}
-
-/* ==============================
-   クイズ用スタイル
-============================== */
 .quiz-container {
   max-width: 600px;
   margin: 2rem auto;
@@ -56,6 +34,7 @@ body {
   background-color: #4caf50;
   color: white;
 }
+
 .quiz-button-true:hover {
   background-color: #45a049;
 }
@@ -64,6 +43,7 @@ body {
   background-color: #f44336;
   color: white;
 }
+
 .quiz-button-false:hover {
   background-color: #e53935;
 }
@@ -72,108 +52,33 @@ body {
   background-color: #2196f3;
   color: white;
 }
+
 .quiz-button-retry:hover {
   background-color: #1976d2;
 }
 
-/* ==============================
-   問い合わせフォーム用スタイル
-============================== */
-main.contact_main {
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: #ffffff;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact_h1 {
-  font-size: 2.4rem;
-  font-weight: 700;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.contact_form {
+form {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 1rem;
 }
 
-.form_block {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.form_label {
-  font-weight: 600;
-  font-size: 1em;
-}
-
-.form-required {
-  color: red;
-  font-size: 0.9em;
-  margin-left: 8px;
-}
-
-.form_field {
-  padding: 10px 14px;
-  border: 1px solid #ccc;
+input, textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
   border-radius: 6px;
-  font-size: 1em;
-  background-color: #f9f9f9;
+  border: 1px solid #ccc;
 }
 
-.form_field:focus {
-  outline: none;
-  border-color: #007bff;
-  background-color: #fff;
-}
-
-.form_radio-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.label_radio {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-  font-size: 0.95em;
-}
-
-.radio_span {
-  font-size: 0.95em;
-}
-
-textarea.form_field.--textfield {
-  height: 100px;
-  resize: vertical;
-}
-
-button.form-btn {
-  padding: 14px 20px;
-  background-color: #007bff;
-  color: #fff;
+button[type="submit"] {
+  padding: 0.8rem;
+  background-color: #673ab7;
+  color: white;
   border: none;
-  font-size: 1.1em;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 20px;
 }
 
-button.form-btn:hover {
-  background-color: #0056b3;
-}
-
-img {
-  margin-top: 20px;
-  border-radius: 8px;
-  max-width: 100%;
-  height: auto;
+button[type="submit"]:hover {
+  background-color: #5e35b1;
 }
