@@ -23,6 +23,16 @@ const allQuestions = [
         "explanation": "自分で直してください。"
     },
     {
+        "question": "間違えて破壊してしまった場合は放置をすると処罰される可能性があるのか？",
+        "answer": true,
+        "explanation": "間違えて破壊した場合は速やかに修正をお願いします。"
+    },
+    {
+        "question": "ブロックの破壊は荒らし行為として処罰される恐れがあるがブロックの設置は処罰される恐れはない",
+        "answer": false,
+        "explanation": "道の真ん中や他人の迷惑になる場所へ放置した場合は処罰される恐れがあります。"
+    },
+    {
         "question": "必ず荒らし行為を行えばアドベンチャーになるのか?",
         "answer": false,
         "explanation": "裁量などにより適正な処罰を行います。"
@@ -103,7 +113,7 @@ const allQuestions = [
         "explanation": "ギルドの加入・移動は報告義務があります。"
     },
     {
-        "question": "毎日ログインしているが対応は一切していない状態で権限は残る？",
+        "question": "毎日ログインしているが対応は一切していない状態でボランティア権限は残る？",
         "answer": false,
         "explanation": "権限が解除されることがあります。"
     },
@@ -121,6 +131,11 @@ const allQuestions = [
         "question": "必ず上から順番に対応しなければならない?",
         "answer": true,
         "explanation": "上から通報の北順番通りに対応をお願いします。"
+    },
+    {
+        "question": "通報すれば修正されるので自分でロック看板などを設置する必要はない?",
+        "answer": false,
+        "explanation": "ご自身でも設置のほどをお願いします。"
     },
     {
         "question": "チート行為は試す目的であってもBANされてしまう",
@@ -158,7 +173,7 @@ const allQuestions = [
         "explanation": "拒否することも可能です。"
     },
     {
-        "question": "再募集があった場合、既に受かっていれば応募しなくても権限は引き継ぎになる?",
+        "question": "再募集があった場合、既に受かっていれば応募しなくてもボランティア権限は引き継ぎになる?",
         "answer": false,
         "explanation": "再応募の際に応募がなければ解除になります。"
     }
