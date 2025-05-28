@@ -8,14 +8,24 @@ const allQuestions = [
         "explanation": "EULA違反は処罰対象です。"
     },
     {
+        "question": "24san外のminecraftサーバーで処罰された場合24sanでも処罰されるのか?",
+        "answer": false,
+        "explanation": "24san外のサーバールールによる処罰が当サーバーに影響を及ぼすことはありません。"
+    },
+    {
         "question": "不正クライアントの使用は禁止されていますか？",
         "answer": true,
         "explanation": "不正なクライアント・チートは利用規約で禁止されています。"
     },
     {
-        "question": "サーバーはDDoSされているのでDDoS攻撃をしても許される？",
+        "question": "間違えて破壊してしまった場合は通報すれば治してくれるのか？",
         "answer": false,
-        "explanation": "DDoS攻撃は重大な違反です。"
+        "explanation": "自分で直してください。"
+    },
+    {
+        "question": "必ず荒らし行為を行えばアドベンチャーになるのか?",
+        "answer": false,
+        "explanation": "裁量などにより適正な処罰を行います。"
     },
     {
         "question": "暴言や差別的な発言は24sanで許可されていますか？",
@@ -23,9 +33,14 @@ const allQuestions = [
         "explanation": "暴言・差別発言は利用規約で禁止されています。"
     },
     {
-        "question": "荒らしへの処罰は運営の判断によって行われますか？",
+        "question": "ボランティア権限を所持した場合は周囲に理解を得るために所持したことを公表すべき？",
+        "answer": false,
+        "explanation": "権限の公表はご遠慮ください"
+    },
+    {
+        "question": "他人のおうちを間違えて壊してしまったが自分ですぐに修正すれば処罰されない",
         "answer": true,
-        "explanation": "処罰の判断は運営により行われます。"
+        "explanation": "間違えて破壊してしまったものは速やかに元に戻してください。"
     },
     {
         "question": "利用者間のトラブルにサーバー運営は責任を負いませんか？",
@@ -33,14 +48,9 @@ const allQuestions = [
         "explanation": "トラブルの責任は負いませんと明記されています。"
     },
     {
-        "question": "データ損失が発生した場合、運営は補償する？",
+        "question": "データ損失が発生した場合、運営は完全に補償する？",
         "answer": false,
-        "explanation": "ログ・バックアップの存在する分から修正をします。"
-    },
-    {
-        "question": "r:#global を使ってロールバックしても良い？",
-        "answer": false,
-        "explanation": "広域ロールバックは禁止されています。"
+        "explanation": "ログ・バックアップの存在する分のみ修正をします。"
     },
     {
         "question": "チャットログは保存されることがありますか？",
@@ -100,7 +110,7 @@ const allQuestions = [
     {
         "question": "エンダードラゴンに関するロールバックは禁止？",
         "answer": true,
-        "explanation": "エンド関係のロールバックは禁止です。"
+        "explanation": "エンドにものを建てる場合エンダードラゴンが存在していることは本人も了承済みのはずです。なので当内容のロールバックは禁止です。"
     },
     {
         "question": "ボランティア規約は変更されることがある？",
@@ -108,9 +118,9 @@ const allQuestions = [
         "explanation": "運営判断により変更される場合があります。"
     },
     {
-        "question": "特定プレイヤーのみに対応を続けても問題ない？",
-        "answer": false,
-        "explanation": "偏った対応は規約違反です。"
+        "question": "必ず上から順番に対応しなければならない?",
+        "answer": true,
+        "explanation": "上から通報の北順番通りに対応をお願いします。"
     },
     {
         "question": "チート行為は試す目的であってもBANされてしまう",
@@ -136,11 +146,6 @@ const allQuestions = [
         "question": "ボランティア応募は規約に同意したものとみなされる？",
         "answer": true,
         "explanation": "応募時点で規約に同意したと見なされます。"
-    },
-    {
-        "question": "運営が必要と判断した場合、予告なくサーバーが終了する可能性がある？",
-        "answer": true,
-        "explanation": "予告なくサーバー終了することがあります。"
     },
     {
         "question": "ログイン履歴は取得されることがある？",
