@@ -397,7 +397,7 @@ export default function QuizForm() {
               範囲指定してロールバックするコマンドを入力してください。<br />
               ※できるだけ少ない範囲が好ましいです。
             </p>
-            <img src="KYATAP_sanここに写真をお願いします" alt="CoreProtectログ" style={{ maxWidth: "100%", height: "auto" }} />
+            <img src="応募フォーム用写真.png" alt="CoreProtectログ" style={{ maxWidth: "100%", height: "auto" }} />
             
             <div className="form_block --textfield">
               <div className="form_label">回答</div>
