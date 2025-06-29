@@ -418,10 +418,10 @@ export default function QuizForm() {
             >
               <div style={{ fontWeight: 'bold', color: '#ffffff' }}>新しい通報</div>
               <div>Slynosub 005</div>
-              <div>world -82 49 -127</div>
-              <div>項目: チート行為 false, 破壊行為 <span style={{ color: '#ff6666' }}>true</span></div>
+              <div>world 100 37 -455 </div>
+              <div>項目: チート行為 false, 破壊行為 true</div>
               <div>窃盗行為 false, チャット系 false</div>
-              <div>内容: この中のわの色が壊れてます（ネザーラックや丸石、げんどがんのIDのひとをなおしてください）</div>
+              <div>内容:  石が破壊された。</div>
             </div>
             
             <img
