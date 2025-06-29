@@ -400,7 +400,7 @@ export default function QuizForm() {
             下の画像を確認して、CoreProtect関連の以下の通報に関する実行すべきコマンドを1〜5個程度入力してください。
             </p>
             
-            <hr>
+            <hr />
             
             <p>
             <strong>新しい通報</strong><br />
