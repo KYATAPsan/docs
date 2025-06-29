@@ -412,7 +412,7 @@ export default function QuizForm() {
             </p>
             
             <img
-              src="/image/c59fec6d-e7fb-4294-8585-411ed9fbfc48.png"
+              src="https://github.com/KYATAPsan/docs/blob/main/src/components/log.png?raw=true"
               alt="CoreProtectログ"
               style={{ maxWidth: '100%', height: 'auto', marginTop: '10px' }}
             />
@@ -423,7 +423,7 @@ export default function QuizForm() {
                 className="form_field --textfield"
                 name="entry.1881462553"
                 rows="6"
-                placeholder={`例:\n/co i\n/co rollback u:abc_1lb r:5 t:1h\n/co inspect off`}
+                placeholder={`/abcde\n/abcde\n/abcde`}
               />
             </div>
 
