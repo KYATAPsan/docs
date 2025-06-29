@@ -393,7 +393,7 @@ export default function QuizForm() {
 
             <h2>現在の座標: 100 37 -455</h2>
             
-            <p>
+            <p style={{ textAlign: 'left' }}>
               以下の通報に対応し、ロールバックを含む対応を行ったとします。<br />
               対応の際に実行したコマンドをすべて記載してください（1コマンドずつ改行してください）。<br />
               ※今回はテレポート・返信コマンドは不要です。<br />
@@ -402,28 +402,42 @@ export default function QuizForm() {
             
             <hr />
             
-            <p>
-              <strong>新しい通報</strong><br />
-              ユーザー: abc_1lb 008<br />
-              座標: world 100 37 -455<br />
-              項目: チート行為 false, 破壊行為 <span style={{ color: 'red' }}>true</span><br />
-              窃盗行為 false, チャット系 false<br />
-              内容: 石が破壊された。
-            </p>
+            {/* カード形式の通報ブロック */}
+            <div
+              style={{
+                border: '1px solid #ccc',
+                borderRadius: '12px',
+                padding: '16px',
+                marginTop: '20px',
+                backgroundColor: '#f9f9f9',
+                textAlign: 'left',
+                boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
+                lineHeight: '1.6',
+              }}
+            >
+              <p style={{ margin: 0 }}>
+                <strong>新しい通報</strong><br />
+                ユーザー: abc_1lb 008<br />
+                座標: world 100 37 -455<br />
+                項目: チート行為 false, 破壊行為 <span style={{ color: 'red' }}>true</span><br />
+                窃盗行為 false, チャット系 false<br />
+                内容: 石が破壊された。
+              </p>
+            </div>
             
             <img
               src="https://github.com/KYATAPsan/docs/blob/main/src/components/log.png?raw=true"
               alt="CoreProtectログ"
-              style={{ maxWidth: '100%', height: 'auto', marginTop: '10px' }}
+              style={{ maxWidth: '100%', height: 'auto', marginTop: '16px', borderRadius: '8px' }}
             />
             
-            <div className="form_block --textfield" style={{ marginTop: '20px' }}>
+            <div className="form_block --textfield" style={{ marginTop: '24px' }}>
               <label className="form_label">回答</label>
               <textarea
                 className="form_field --textfield"
                 name="entry.1881462553"
                 rows="6"
-                placeholder={`/abcde\n/abcde\n/abcde`}
+                placeholder={`/co i\n/co rollback u:abc_1lb r:5 t:1h\n/co inspect off`}
               />
             </div>
 
