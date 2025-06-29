@@ -391,13 +391,20 @@ export default function QuizForm() {
               </div>
             </div>
 
-            <h2>現在の座標: x: 151 y: 76 z: 153</h2>
+            <h2>現在の座標: 100 37 -455</h2>
             <p>
-              .Arasi_Aの行動を <code>r:#world</code>、<code>r:#global</code> を使用せずに<br />
-              範囲指定してロールバックするコマンドを入力してください。<br />
-              ※できるだけ少ない範囲が好ましいです。
+                以下の通報に対応し、ロールバックを含む対応を行ったとします。
+                対応の際に実行したコマンドをすべて記載してください（1コマンドずつ改行してください）。
+                ※今回はテレポート・返信コマンドは不要です。下の画像を確認してCoreProtect関連の以下の通報に関する実行すべきコマンドを1〜5個程度記入してください。  
+
+                新しい通報
+                abc_1lb 008
+                world 100 37 -455
+                項目: チート行為 false,破壊行為 true
+                窃盗行為 false,チャット系 false
+                内容: 石が破壊された。
             </p>
-            <img src="応募フォーム用写真.png" alt="CoreProtectログ" style={{ maxWidth: "100%", height: "auto" }} />
+            <img src="log.png" alt="CoreProtectログ" style={{ maxWidth: "100%", height: "auto" }} />
             
             <div className="form_block --textfield">
               <div className="form_label">回答</div>
