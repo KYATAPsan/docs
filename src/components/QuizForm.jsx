@@ -417,7 +417,7 @@ export default function QuizForm() {
               }}
             >
               <div style={{ fontWeight: 'bold', color: '#ffffff' }}>新しい通報</div>
-              <div>Slynosub 005</div>
+              <div>abc_1lb 005</div>
               <div>world 100 37 -455 </div>
               <div>項目: チート行為 false, 破壊行為 true</div>
               <div>窃盗行為 false, チャット系 false</div>
@@ -436,7 +436,7 @@ export default function QuizForm() {
                 className="form_field --textfield"
                 name="entry.1881462553"
                 rows="6"
-                placeholder={`/co i\n/co rollback u:abc_1lb r:5 t:1h\n/co inspect off`}
+                placeholder={`/abcde\n/abcde\n/abcde`}
               />
             </div>
 
