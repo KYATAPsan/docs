@@ -405,24 +405,23 @@ export default function QuizForm() {
             {/* カード形式の通報ブロック */}
             <div
               style={{
-                border: '1px solid #ccc',
-                borderRadius: '12px',
-                padding: '16px',
-                marginTop: '20px',
-                backgroundColor: '#f9f9f9',
-                textAlign: 'left',
-                boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
+                backgroundColor: '#1e1e1e',
+                color: '#f1f1f1',
+                padding: '12px 16px',
+                borderRadius: '8px',
+                fontFamily: 'monospace',
+                fontSize: '14px',
                 lineHeight: '1.6',
+                whiteSpace: 'pre-wrap',
+                boxShadow: '0 2px 6px rgba(0,0,0,0.3)',
               }}
             >
-              <p style={{ margin: 0 }}>
-                <strong>新しい通報</strong><br />
-                ユーザー: abc_1lb 008<br />
-                座標: world 100 37 -455<br />
-                項目: チート行為 false, 破壊行為 <span style={{ color: 'red' }}>true</span><br />
-                窃盗行為 false, チャット系 false<br />
-                内容: 石が破壊された。
-              </p>
+              <div style={{ fontWeight: 'bold', color: '#ffffff' }}>新しい通報</div>
+              <div>Slynosub 005</div>
+              <div>world -82 49 -127</div>
+              <div>項目: チート行為 false, 破壊行為 <span style={{ color: '#ff6666' }}>true</span></div>
+              <div>窃盗行為 false, チャット系 false</div>
+              <div>内容: この中のわの色が壊れてます（ネザーラックや丸石、げんどがんのIDのひとをなおしてください）</div>
             </div>
             
             <img
