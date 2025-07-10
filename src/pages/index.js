@@ -8,7 +8,7 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import styles from './index.module.css';
 import Heading from '@theme/Heading';
 import Translate from '@docusaurus/Translate';
-import HeroImage from '@site/static/img/Back_KYATAP.png';
+import HeroImage from '@site/static/img/logo_docs.svg';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
