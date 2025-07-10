@@ -64,7 +64,7 @@ const config = {
         title: "24san",
         logo: {
           alt: "24san Logo",
-          src: "https://github.com/KYATAPsan/docs/blob/main/static/img/Back_KYATAP.png?raw=true",
+          src: "https://raw.githubusercontent.com/KYATAPsan/docs/58d2bc608e395ce71bffe75d90e11467e9706572/static/img/logo_docs.svg",
         },
         items: [
           {
